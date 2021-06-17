@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SistemaBiblioteca.Datos
 {
-    public class DLEjemplar
+    public class DEjemplar
     {
         public List<ListarEjemplares_Result> Listar()
         {

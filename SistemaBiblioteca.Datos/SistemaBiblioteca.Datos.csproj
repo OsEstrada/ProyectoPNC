@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="DEjemplar.cs" />
     <Compile Include="DLibro.cs" />
+    <Compile Include="DRol.cs" />
     <Compile Include="Ejemplar.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
