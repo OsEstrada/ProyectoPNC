@@ -65,19 +65,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Biblioteca.edmx</DependentUpon>
     </Compile>
+    <Compile Include="BuscarDevoluciones_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="BuscarEjemplares_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="BuscarLibro_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="BuscarPrestamos_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="DEjemplar.cs" />
     <Compile Include="DLibro.cs" />
-    <Compile Include="DRol.cs" />
+    <Compile Include="DPrestamo.cs" />
+    <Compile Include="DUsuario.cs" />
     <Compile Include="Ejemplar.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="Libro.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListarDevoluciones_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="ListarEjemplares_Result.cs">
@@ -86,11 +96,20 @@
     <Compile Include="ListarLibros_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListarPrestamos_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="Prestamo.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegresarUsuario_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="Rol.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
@@ -101,13 +120,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Biblioteca.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Biblioteca.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Biblioteca.edmx.diagram">
       <DependentUpon>Biblioteca.edmx</DependentUpon>
     </None>
@@ -116,8 +133,8 @@
   <ItemGroup>
     <Content Include="Biblioteca.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Biblioteca.Context.cs</LastGenOutput>
       <DependentUpon>Biblioteca.edmx</DependentUpon>
+      <LastGenOutput>Biblioteca.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Biblioteca.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

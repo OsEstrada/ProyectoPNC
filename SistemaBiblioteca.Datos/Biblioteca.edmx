@@ -321,6 +321,8 @@
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="BuscarDevoluciones_Result">
+          <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Usuario" Nullable="true" MaxLength="121" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="60" />
@@ -341,6 +343,8 @@
           <Property Type="String" Name="ISBN" Nullable="true" MaxLength="13" />
         </ComplexType>
         <ComplexType Name="BuscarPrestamos_Result">
+          <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Usuario" Nullable="true" MaxLength="121" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="60" />
@@ -348,6 +352,8 @@
           <Property Type="DateTime" Name="Fecha_Prestamo" Nullable="false" />
         </ComplexType>
         <ComplexType Name="ListarDevoluciones_Result">
+          <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Usuario" Nullable="true" MaxLength="121" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="60" />
@@ -368,6 +374,8 @@
           <Property Type="String" Name="ISBN" Nullable="true" MaxLength="13" />
         </ComplexType>
         <ComplexType Name="ListarPrestamos_Result">
+          <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Usuario" Nullable="true" MaxLength="121" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="60" />
@@ -457,6 +465,8 @@
           <FunctionImportMapping FunctionImportName="BuscarDevoluciones" FunctionName="BibliotecaModel.Store.BuscarDevoluciones">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.BuscarDevoluciones_Result">
+                <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -489,6 +499,8 @@
           <FunctionImportMapping FunctionImportName="BuscarPrestamos" FunctionName="BibliotecaModel.Store.BuscarPrestamos">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.BuscarPrestamos_Result">
+                <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -500,6 +512,8 @@
           <FunctionImportMapping FunctionImportName="ListarDevoluciones" FunctionName="BibliotecaModel.Store.ListarDevoluciones">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.ListarDevoluciones_Result">
+                <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -532,6 +546,8 @@
           <FunctionImportMapping FunctionImportName="ListarPrestamos" FunctionName="BibliotecaModel.Store.ListarPrestamos">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.ListarPrestamos_Result">
+                <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />

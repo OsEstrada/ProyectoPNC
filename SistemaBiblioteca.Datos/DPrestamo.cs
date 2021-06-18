@@ -113,6 +113,26 @@ namespace SistemaBiblioteca.Datos
             return rpta;
         }
 
+        public string Devolver(int idPrestamo, DateTime FechaDevolucion)
+        {
+            string rpta = "";
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    Prestamo prestamo = db.Prestamo.Find(idPrestamo);
+                    prestamo.Estado = true;
+                    prestamo.FechaDevolucion = FechaDevolucion;
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            return rpta;
+        }
+
         public string Eliminar(int id)
         {
             string rpta = "";

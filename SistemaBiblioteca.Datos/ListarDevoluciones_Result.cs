@@ -13,6 +13,8 @@ namespace SistemaBiblioteca.Datos
     
     public partial class ListarDevoluciones_Result
     {
+        public int IdEjemplar { get; set; }
+        public int IdUsuario { get; set; }
         public int Id { get; set; }
         public string Usuario { get; set; }
         public string Nombre { get; set; }
