@@ -31,20 +31,16 @@ namespace SistemaBiblioteca.Datos
         public virtual DbSet<Libro> Libro { get; set; }
         public virtual DbSet<Prestamo> Prestamo { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
-        public virtual ObjectResult<BuscarLibro_Result> BuscarLibro(string valor)
+        public virtual ObjectResult<BuscarDevoluciones_Result> BuscarDevoluciones(string valor)
         {
             var valorParameter = valor != null ?
                 new ObjectParameter("valor", valor) :
                 new ObjectParameter("valor", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarLibro_Result>("BuscarLibro", valorParameter);
-        }
-    
-        public virtual ObjectResult<ListarLibros_Result> ListarLibros()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarLibros_Result>("ListarLibros");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarDevoluciones_Result>("BuscarDevoluciones", valorParameter);
         }
     
         public virtual ObjectResult<BuscarEjemplares_Result> BuscarEjemplares(string valor)
@@ -56,9 +52,55 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplares_Result>("BuscarEjemplares", valorParameter);
         }
     
+        public virtual ObjectResult<BuscarLibro_Result> BuscarLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarLibro_Result>("BuscarLibro", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarPrestamos_Result> BuscarPrestamos(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarPrestamos_Result>("BuscarPrestamos", valorParameter);
+        }
+    
+        public virtual ObjectResult<ListarDevoluciones_Result> ListarDevoluciones()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarDevoluciones_Result>("ListarDevoluciones");
+        }
+    
         public virtual ObjectResult<ListarEjemplares_Result> ListarEjemplares()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplares_Result>("ListarEjemplares");
+        }
+    
+        public virtual ObjectResult<ListarLibros_Result> ListarLibros()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarLibros_Result>("ListarLibros");
+        }
+    
+        public virtual ObjectResult<ListarPrestamos_Result> ListarPrestamos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPrestamos_Result>("ListarPrestamos");
+        }
+    
+        public virtual ObjectResult<RegresarUsuario_Result> RegresarUsuario(string username, string password)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("username", username) :
+                new ObjectParameter("username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("password", password) :
+                new ObjectParameter("password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RegresarUsuario_Result>("RegresarUsuario", usernameParameter, passwordParameter);
         }
     }
 }

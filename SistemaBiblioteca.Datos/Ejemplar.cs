@@ -22,8 +22,8 @@ namespace SistemaBiblioteca.Datos
     
         public int IdEjemplar { get; set; }
         public Nullable<int> IdLibro { get; set; }
-        public string Estado { get; set; }
         public string Ubicacion { get; set; }
+        public string Estado { get; set; }
     
         public virtual Libro Libro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

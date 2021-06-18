@@ -10,18 +10,13 @@
 namespace SistemaBiblioteca.Datos
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Prestamo
+    public partial class BuscarPrestamos_Result
     {
-        public int IdPrestamo { get; set; }
-        public int IdEjemplar { get; set; }
-        public int IdUsuario { get; set; }
-        public System.DateTime FechaPrestamo { get; set; }
-        public Nullable<System.DateTime> FechaDevolucion { get; set; }
-        public Nullable<bool> Estado { get; set; }
-    
-        public virtual Ejemplar Ejemplar { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public int Id { get; set; }
+        public string Usuario { get; set; }
+        public string Nombre { get; set; }
+        public int Numero_Ejemplar { get; set; }
+        public System.DateTime Fecha_Prestamo { get; set; }
     }
 }

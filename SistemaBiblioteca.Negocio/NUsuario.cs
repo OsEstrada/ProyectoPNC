@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaBiblioteca.Datos
+namespace SistemaBiblioteca.Negocio
 {
-    public class DRol
+    public class NUsuario
     {
 
     }

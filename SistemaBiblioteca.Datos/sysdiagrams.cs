@@ -12,16 +12,12 @@ namespace SistemaBiblioteca.Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Prestamo
+    public partial class sysdiagrams
     {
-        public int IdPrestamo { get; set; }
-        public int IdEjemplar { get; set; }
-        public int IdUsuario { get; set; }
-        public System.DateTime FechaPrestamo { get; set; }
-        public Nullable<System.DateTime> FechaDevolucion { get; set; }
-        public Nullable<bool> Estado { get; set; }
-    
-        public virtual Ejemplar Ejemplar { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
