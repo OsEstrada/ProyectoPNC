@@ -24,13 +24,13 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
-        public RegresarUsuario_Result RegresarUsuario(string username, string password)
+        public Login_Result Login(string username, string password)
         {
              try
             {
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
-                    var user = db.RegresarUsuario(username, password).FirstOrDefault();
+                    var user = db.Login(username, password).FirstOrDefault();
                     return user;
                 }
             }

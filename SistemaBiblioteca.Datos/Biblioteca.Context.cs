@@ -31,7 +31,6 @@ namespace SistemaBiblioteca.Datos
         public virtual DbSet<Libro> Libro { get; set; }
         public virtual DbSet<Prestamo> Prestamo { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
         public virtual ObjectResult<BuscarDevoluciones_Result> BuscarDevoluciones(string valor)
@@ -90,7 +89,7 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPrestamos_Result>("ListarPrestamos");
         }
     
-        public virtual ObjectResult<RegresarUsuario_Result> RegresarUsuario(string username, string password)
+        public virtual ObjectResult<Login_Result> Login(string username, string password)
         {
             var usernameParameter = username != null ?
                 new ObjectParameter("username", username) :
@@ -100,7 +99,7 @@ namespace SistemaBiblioteca.Datos
                 new ObjectParameter("password", password) :
                 new ObjectParameter("password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RegresarUsuario_Result>("RegresarUsuario", usernameParameter, passwordParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Login_Result>("Login", usernameParameter, passwordParameter);
         }
     }
 }

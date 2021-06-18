@@ -10,14 +10,15 @@
 namespace SistemaBiblioteca.Datos
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Login_Result
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IdUsuario { get; set; }
+        public string Username { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public string Password { get; set; }
+        public Nullable<int> IdRol { get; set; }
+        public string Nombre { get; set; }
     }
 }
