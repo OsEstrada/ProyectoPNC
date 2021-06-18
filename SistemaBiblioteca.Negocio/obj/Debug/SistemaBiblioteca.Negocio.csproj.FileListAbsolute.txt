@@ -1,0 +1,12 @@
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\SistemaBiblioteca.Negocio.dll
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\SistemaBiblioteca.Negocio.pdb
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\SistemaBiblioteca.Datos.dll
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\SistemaBiblioteca.Datos.pdb
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\SistemaBiblioteca.Datos.dll.config
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\obj\Debug\SistemaBiblioteca.Negocio.csprojAssemblyReference.cache
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\obj\Debug\SistemaBiblioteca.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\obj\Debug\SistemaBiblioteca.Negocio.csproj.CopyComplete
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\obj\Debug\SistemaBiblioteca.Negocio.dll
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Negocio\obj\Debug\SistemaBiblioteca.Negocio.pdb
