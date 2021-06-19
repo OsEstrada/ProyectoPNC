@@ -103,5 +103,12 @@ namespace SistemaBiblioteca.Presentacion
                 childForm.Close();
             }
         }
+
+        private void librosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmLibro frm = new FrmLibro();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

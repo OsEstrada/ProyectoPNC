@@ -16,3 +16,4 @@ C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presen
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csproj.CopyComplete
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.exe
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.pdb
+C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmLibro.resources
