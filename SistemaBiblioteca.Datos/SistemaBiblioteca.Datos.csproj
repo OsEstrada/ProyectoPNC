@@ -109,9 +109,6 @@
     <Compile Include="Rol.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
     <Compile Include="Transform.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>

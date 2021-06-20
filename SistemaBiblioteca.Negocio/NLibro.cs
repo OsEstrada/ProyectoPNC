@@ -21,7 +21,7 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(string Autor, string Genero, string Nombre, string ISBN)
+        public static string Insertar(string Nombre, string Autor, string ISBN)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();

@@ -1,12 +1,5 @@
 ﻿using SistemaBiblioteca.Negocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaBiblioteca.Presentacion
@@ -105,7 +98,7 @@ namespace SistemaBiblioteca.Presentacion
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro");
                         this.Limpiar();
-                        this.Buscar();
+                        this.Listar();
                     }
                     else
                     {
@@ -136,6 +129,86 @@ namespace SistemaBiblioteca.Presentacion
             {
                 MessageBox.Show("Seleccione desde la celda nombre.");
             }
+        }
+
+        private void BtnInsertar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+                if (TxtNombre.Text == string.Empty)
+                {
+                    this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
+                    ErrorIcono.SetError(TxtNombre, "Ingrese un nombre.");
+                }
+                else
+                {
+                    Rpta = NLibro.Insertar(TxtNombre.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Se insertó de forma correcta el registro.");
+                        this.Limpiar();
+                        this.Listar();
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DgvListadoLibros.SelectedRows.Count == 0)
+                MessageBox.Show("No se ha seleccionado ningun libro para eliminar");
+            else
+            {
+                try
+                {
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) libro(s)?", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (Opcion == DialogResult.OK)
+                    {
+                        int Codigo;
+                        string Rpta = "";
+
+                        foreach (DataGridViewRow row in DgvListadoLibros.SelectedRows)
+                        {
+                            if (Convert.ToBoolean(row.Cells[0].Value))
+                            {
+                                Codigo = Convert.ToInt32(row.Cells[0].Value);
+                                Rpta = NLibro.Eliminar(Codigo);
+
+                                if (Rpta.Equals("OK"))
+                                {
+                                    this.MensajeOk("Se eliminó el libro: " + Convert.ToString(row.Cells[1].Value));
+                                }
+                                else
+                                {
+                                    this.MensajeError(Rpta);
+                                }
+                            }
+                        }
+                        this.Listar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+            }
+           
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            TabPrincipal.SelectedIndex = 0;
         }
     }
 }

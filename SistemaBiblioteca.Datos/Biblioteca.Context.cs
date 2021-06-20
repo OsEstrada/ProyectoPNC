@@ -31,7 +31,6 @@ namespace SistemaBiblioteca.Datos
         public virtual DbSet<Libro> Libro { get; set; }
         public virtual DbSet<Prestamo> Prestamo { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
         public virtual ObjectResult<BuscarDevoluciones_Result> BuscarDevoluciones(string valor)

@@ -34,13 +34,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DgvListadoLibros = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LblTotal = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.TxtISBN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtAutor = new System.Windows.Forms.TextBox();
@@ -52,15 +51,17 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListadoLibros)).BeginInit();
-            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,36 +138,6 @@
             this.DgvListadoLibros.TabIndex = 0;
             this.DgvListadoLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListadoLibros_CellDoubleClick);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.TxtISBN);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.TxtAutor);
-            this.tabPage2.Controls.Add(this.BtnActualizar);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.BtnCancelar);
-            this.tabPage2.Controls.Add(this.BtnInsertar);
-            this.tabPage2.Controls.Add(this.TxtId);
-            this.tabPage2.Controls.Add(this.TxtNombre);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1226, 548);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mantenimiento";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 24);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.BtnBuscar);
@@ -199,6 +170,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnEliminar);
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 493);
@@ -213,9 +185,30 @@
             this.LblTotal.Location = new System.Drawing.Point(967, 13);
             this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(44, 17);
+            this.LblTotal.Size = new System.Drawing.Size(103, 17);
             this.LblTotal.TabIndex = 2;
-            this.LblTotal.Text = "Total:";
+            this.LblTotal.Text = "Total registros:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.TxtISBN);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.TxtAutor);
+            this.tabPage2.Controls.Add(this.BtnActualizar);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.BtnCancelar);
+            this.tabPage2.Controls.Add(this.BtnInsertar);
+            this.tabPage2.Controls.Add(this.TxtId);
+            this.tabPage2.Controls.Add(this.TxtNombre);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1226, 548);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mantenimiento";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // TxtISBN
             // 
@@ -273,6 +266,7 @@
             this.BtnCancelar.TabIndex = 17;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnInsertar
             // 
@@ -283,6 +277,7 @@
             this.BtnInsertar.TabIndex = 16;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = true;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // TxtId
             // 
@@ -322,9 +317,29 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre (*)";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1234, 24);
+            this.panel1.TabIndex = 0;
+            // 
             // ErrorIcono
             // 
             this.ErrorIcono.ContainerControl = this;
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(110, 7);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.BtnEliminar.TabIndex = 8;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // FrmLibro
             // 
@@ -346,12 +361,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvListadoLibros)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
 
@@ -383,5 +398,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider ErrorIcono;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }
