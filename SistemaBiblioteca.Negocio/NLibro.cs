@@ -26,19 +26,17 @@ namespace SistemaBiblioteca.Negocio
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.Autor = Autor;
-            Obj.Genero = Genero;
             Obj.Nombre = Nombre;
             Obj.ISBN = ISBN;
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int id, string Autor, string Genero, string Nombre, string ISBN)
+        public static string Actualizar(int id, string Nombre, string Autor, string ISBN)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.IdLibro = id;
             Obj.Autor = Autor;
-            Obj.Genero = Genero;
             Obj.Nombre = Nombre;
             Obj.ISBN = ISBN;
             return Datos.Actualizar(Obj);

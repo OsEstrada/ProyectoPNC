@@ -16,7 +16,6 @@
         <MappingFragment StoreEntitySet="Libro">
           <ScalarProperty Name="IdLibro" ColumnName="IdLibro" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Genero" ColumnName="Genero" />
           <ScalarProperty Name="Autor" ColumnName="Autor" />
           <ScalarProperty Name="ISBN" ColumnName="ISBN" />
         </MappingFragment>
@@ -94,7 +93,6 @@
         <ComplexTypeMapping TypeName="BibliotecaModel.BuscarLibro_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Genero" ColumnName="Genero" />
           <ScalarProperty Name="Autor" ColumnName="Autor" />
           <ScalarProperty Name="ISBN" ColumnName="ISBN" />
         </ComplexTypeMapping>
@@ -141,7 +139,6 @@
         <ComplexTypeMapping TypeName="BibliotecaModel.ListarLibros_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Genero" ColumnName="Genero" />
           <ScalarProperty Name="Autor" ColumnName="Autor" />
           <ScalarProperty Name="ISBN" ColumnName="ISBN" />
         </ComplexTypeMapping>

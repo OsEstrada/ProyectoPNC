@@ -15,7 +15,6 @@ namespace SistemaBiblioteca.Datos
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Genero { get; set; }
         public string Autor { get; set; }
         public string ISBN { get; set; }
     }

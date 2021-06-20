@@ -25,6 +25,31 @@ namespace SistemaBiblioteca.Presentacion
             this.Listar();
         }
 
+        private void Limpiar()
+        {
+            TxtBuscar.Clear();
+            TxtNombre.Clear();
+            TxtId.Clear();
+            TxtAutor.Clear();
+            TxtISBN.Clear();
+            BtnInsertar.Visible = true;
+            BtnActualizar.Visible = false;
+            ErrorIcono.Clear();
+        }
+
+        private void Buscar()
+        {
+            try
+            {
+                DgvListadoLibros.DataSource = NLibro.Buscar(TxtBuscar.Text);
+                LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoLibros.Rows.Count);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void MensajeError(string Mensaje)
         {
             MessageBox.Show(Mensaje, "Sistema de Bibliotca", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -40,9 +65,8 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 DgvListadoLibros.DataSource = NLibro.Listar();
-                //this.Formato();
-                //this.Limpiar();
-                //LblTotal.Text = "Total registros: " + Convert.ToString(DgvListado.Rows.Count);
+                this.Limpiar();
+                LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoLibros.Rows.Count);
             }
             catch (Exception ex)
             {
@@ -50,5 +74,68 @@ namespace SistemaBiblioteca.Presentacion
             }
         }
 
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Buscar();
+        }
+
+        private void TxtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.Buscar();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+                if (TxtNombre.Text == string.Empty || TxtId.Text == string.Empty)
+                {
+                    this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
+                    ErrorIcono.SetError(TxtNombre, "Ingrese un nombre.");
+                }
+                else
+                {
+                    Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtNombre.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Se actualizó de forma correcta el registro");
+                        this.Limpiar();
+                        this.Buscar();
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void DgvListadoLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.Limpiar();
+                BtnActualizar.Visible = true;
+                BtnInsertar.Visible = false;
+                TxtId.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ID"].Value);
+                TxtNombre.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Nombre"].Value);
+                TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
+                TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
+                TabPrincipal.SelectedIndex = 1;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione desde la celda nombre.");
+            }
+        }
     }
 }

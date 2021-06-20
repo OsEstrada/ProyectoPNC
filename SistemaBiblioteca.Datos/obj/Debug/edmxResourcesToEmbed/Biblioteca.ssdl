@@ -14,10 +14,9 @@
       <PropertyRef Name="IdLibro" />
     </Key>
     <Property Name="IdLibro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="60" />
-    <Property Name="Genero" Type="varchar" MaxLength="60" />
+    <Property Name="Nombre" Type="varchar" MaxLength="150" />
     <Property Name="Autor" Type="varchar" MaxLength="60" />
-    <Property Name="ISBN" Type="varchar" MaxLength="13" />
+    <Property Name="ISBN" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="Prestamo">
     <Key>
