@@ -21,7 +21,7 @@ namespace SistemaBiblioteca.Presentacion
         private void Limpiar()
         {
             TxtBuscar.Clear();
-            TxtNombre.Clear();
+            TxtTitulo.Clear();
             TxtId.Clear();
             TxtAutor.Clear();
             TxtISBN.Clear();
@@ -86,14 +86,14 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 string Rpta = "";
-                if (TxtNombre.Text == string.Empty || TxtId.Text == string.Empty)
+                if (TxtTitulo.Text == string.Empty || TxtId.Text == string.Empty)
                 {
                     this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
-                    ErrorIcono.SetError(TxtNombre, "Ingrese un nombre.");
+                    ErrorIcono.SetError(TxtTitulo, "Ingrese un nombre.");
                 }
                 else
                 {
-                    Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtNombre.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro");
@@ -120,7 +120,7 @@ namespace SistemaBiblioteca.Presentacion
                 BtnActualizar.Visible = true;
                 BtnInsertar.Visible = false;
                 TxtId.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ID"].Value);
-                TxtNombre.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Nombre"].Value);
+                TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Nombre"].Value);
                 TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
                 TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
                 TabPrincipal.SelectedIndex = 1;
@@ -136,14 +136,14 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 string Rpta = "";
-                if (TxtNombre.Text == string.Empty)
+                if (TxtTitulo.Text == string.Empty)
                 {
                     this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
-                    ErrorIcono.SetError(TxtNombre, "Ingrese un nombre.");
+                    ErrorIcono.SetError(TxtTitulo, "Ingrese un nombre.");
                 }
                 else
                 {
-                    Rpta = NLibro.Insertar(TxtNombre.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    Rpta = NLibro.Insertar(TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se insertó de forma correcta el registro.");

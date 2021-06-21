@@ -10,3 +10,15 @@ C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Datos\
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.csproj.CopyComplete
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.dll
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\SistemaBiblioteca.Datos.dll.config
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\SistemaBiblioteca.Datos.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\SistemaBiblioteca.Datos.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\EntityFramework.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\EntityFramework.xml
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.csprojAssemblyReference.cache
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.csproj.CoreCompileInputs.cache
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.csproj.CopyComplete
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Datos\obj\Debug\SistemaBiblioteca.Datos.pdb

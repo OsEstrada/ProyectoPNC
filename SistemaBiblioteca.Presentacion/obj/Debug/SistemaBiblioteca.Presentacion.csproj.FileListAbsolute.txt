@@ -19,3 +19,24 @@ C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presen
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmLibro.resources
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Presentacion.exe.config
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Presentacion.exe
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Presentacion.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Datos.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Negocio.dll
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Datos.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Datos.dll.config
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\SistemaBiblioteca.Negocio.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.xml
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csprojAssemblyReference.cache
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmLibro.resources
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmPrincipal.resources
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.Properties.Resources.resources
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csproj.GenerateResource.cache
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csproj.CopyComplete
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.exe
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.pdb

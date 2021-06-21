@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SistemaBiblioteca.Presentacion"
   ],
+  "SelectedNode": "\\SistemaBiblioteca.Presentacion\\FrmLibro.cs",
   "PreviewInSolutionExplorer": false
 }
