@@ -123,7 +123,10 @@ as begin
 	declare @Estado bit;
 	select @IdEjemplar = d.IdEjemplar,  @Estado = i.Estado from inserted i, deleted d;
 
-	update Ejemplar set Estado = 'Disponible' where IdEjemplar = @IdEjemplar and @Estado = 'Disponible';
+	IF @Estado = 0
+	BEGIN
+		update Ejemplar set Estado = 'Disponible' where IdEjemplar = @IdEjemplar;
+	END
 end;
 go;
 
