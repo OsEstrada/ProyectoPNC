@@ -7,6 +7,9 @@
     <Property Name="IdEjemplar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdLibro" Type="int" />
     <Property Name="Ubicacion" Type="varchar" MaxLength="100" />
+    <Property Name="Editorial" Type="varchar" MaxLength="150" />
+    <Property Name="Idioma" Type="varchar" MaxLength="80" />
+    <Property Name="Pais" Type="varchar" MaxLength="80" />
     <Property Name="Estado" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
   <EntityType Name="Libro">
@@ -14,9 +17,14 @@
       <PropertyRef Name="IdLibro" />
     </Key>
     <Property Name="IdLibro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="150" />
-    <Property Name="Autor" Type="varchar" MaxLength="60" />
+    <Property Name="Titulo" Type="varchar" MaxLength="150" />
+    <Property Name="Autor" Type="varchar" MaxLength="150" />
     <Property Name="ISBN" Type="varchar" MaxLength="30" />
+    <Property Name="Materia" Type="varchar" MaxLength="80" />
+    <Property Name="AnioEdicion" Type="varchar" MaxLength="4" />
+    <Property Name="NoEdicion" Type="int" />
+    <Property Name="NoPaginas" Type="int" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="Prestamo">
     <Key>

@@ -120,7 +120,7 @@ namespace SistemaBiblioteca.Presentacion
                 BtnActualizar.Visible = true;
                 BtnInsertar.Visible = false;
                 TxtId.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ID"].Value);
-                TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Nombre"].Value);
+                TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
                 TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
                 TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
                 TabPrincipal.SelectedIndex = 1;

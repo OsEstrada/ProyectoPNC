@@ -21,23 +21,23 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(string Nombre, string Autor, string ISBN)
+        public static string Insertar(string Titulo, string Autor, string ISBN)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.Autor = Autor;
-            Obj.Nombre = Nombre;
+            Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int id, string Nombre, string Autor, string ISBN)
+        public static string Actualizar(int id, string Titulo, string Autor, string ISBN)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.IdLibro = id;
             Obj.Autor = Autor;
-            Obj.Nombre = Nombre;
+            Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
             return Datos.Actualizar(Obj);
         }
