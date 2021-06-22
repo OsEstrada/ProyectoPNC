@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -43,6 +43,9 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.LblTotal = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnAgregarEjemplar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -67,12 +70,10 @@
             this.TxtTitulo = new System.Windows.Forms.TextBox();
             this.LblAutor = new System.Windows.Forms.Label();
             this.LblTitulo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnAgregarEjemplar = new System.Windows.Forms.Button();
             this.picEditorial = new System.Windows.Forms.PictureBox();
             this.picLibro = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -81,12 +82,12 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -102,7 +103,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(992, 700);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(992, 699);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TabPrincipal
@@ -110,16 +111,18 @@
             this.TabPrincipal.Controls.Add(this.tabPage1);
             this.TabPrincipal.Controls.Add(this.tabPage2);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.TabPrincipal.Location = new System.Drawing.Point(2, 26);
             this.TabPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.SelectedIndex = 0;
-            this.TabPrincipal.Size = new System.Drawing.Size(988, 672);
+            this.TabPrincipal.Size = new System.Drawing.Size(988, 671);
             this.TabPrincipal.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -152,22 +155,24 @@
             // 
             this.DgvListadoLibros.AllowUserToAddRows = false;
             this.DgvListadoLibros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvListadoLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DgvListadoLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvListadoLibros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvListadoLibros.Location = new System.Drawing.Point(2, 42);
             this.DgvListadoLibros.Margin = new System.Windows.Forms.Padding(2);
             this.DgvListadoLibros.Name = "DgvListadoLibros";
             this.DgvListadoLibros.ReadOnly = true;
+            this.DgvListadoLibros.RowHeadersVisible = false;
             this.DgvListadoLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvListadoLibros.RowTemplate.Height = 24;
             this.DgvListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListadoLibros.Size = new System.Drawing.Size(970, 556);
@@ -179,6 +184,7 @@
             this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.TxtBuscar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -199,7 +205,7 @@
             // 
             this.TxtBuscar.Location = new System.Drawing.Point(88, 6);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(603, 20);
+            this.TxtBuscar.Size = new System.Drawing.Size(603, 22);
             this.TxtBuscar.TabIndex = 4;
             this.TxtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyDown);
             // 
@@ -216,11 +222,16 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(88, 6);
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
+            this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
+            this.BtnEliminar.Location = new System.Drawing.Point(3, 3);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(80, 22);
+            this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
             this.BtnEliminar.TabIndex = 8;
-            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
@@ -230,16 +241,15 @@
             this.LblTotal.AutoSize = true;
             this.LblTotal.Location = new System.Drawing.Point(774, 10);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(76, 13);
+            this.LblTotal.Size = new System.Drawing.Size(79, 13);
             this.LblTotal.TabIndex = 2;
             this.LblTotal.Text = "Total registros:";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.BtnAgregarEjemplar);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.picEditorial);
-            this.tabPage2.Controls.Add(this.picLibro);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
@@ -264,15 +274,59 @@
             this.tabPage2.Controls.Add(this.TxtTitulo);
             this.tabPage2.Controls.Add(this.LblAutor);
             this.tabPage2.Controls.Add(this.LblTitulo);
+            this.tabPage2.Controls.Add(this.picEditorial);
+            this.tabPage2.Controls.Add(this.picLibro);
             this.tabPage2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(980, 646);
+            this.tabPage2.Size = new System.Drawing.Size(980, 645);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(700, 541);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Total Ejemplares:";
+            // 
+            // BtnAgregarEjemplar
+            // 
+            this.BtnAgregarEjemplar.BackColor = System.Drawing.Color.White;
+            this.BtnAgregarEjemplar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnAgregarEjemplar.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarEjemplar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarEjemplar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnAgregarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.más_30;
+            this.BtnAgregarEjemplar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(690, 300);
+            this.BtnAgregarEjemplar.Name = "BtnAgregarEjemplar";
+            this.BtnAgregarEjemplar.Size = new System.Drawing.Size(138, 43);
+            this.BtnAgregarEjemplar.TabIndex = 9;
+            this.BtnAgregarEjemplar.Text = "Agregar Ejemplar";
+            this.BtnAgregarEjemplar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnAgregarEjemplar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(144, 353);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(684, 186);
+            this.dataGridView1.TabIndex = 10;
             // 
             // label17
             // 
@@ -388,6 +442,11 @@
             this.NmEdicionNo.Size = new System.Drawing.Size(83, 23);
             this.NmEdicionNo.TabIndex = 7;
             this.NmEdicionNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NmEdicionNo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // NmPaginas
             // 
@@ -397,6 +456,11 @@
             this.NmPaginas.Size = new System.Drawing.Size(83, 23);
             this.NmPaginas.TabIndex = 8;
             this.NmPaginas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NmPaginas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // TxtISBN
             // 
@@ -432,7 +496,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(142, 574);
+            this.BtnActualizar.Location = new System.Drawing.Point(142, 587);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
             this.BtnActualizar.TabIndex = 11;
@@ -454,7 +518,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(628, 574);
+            this.BtnCancelar.Location = new System.Drawing.Point(628, 587);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar.TabIndex = 12;
@@ -470,7 +534,7 @@
             this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(142, 574);
+            this.BtnInsertar.Location = new System.Drawing.Point(142, 587);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
             this.BtnInsertar.TabIndex = 11;
@@ -516,53 +580,6 @@
             this.LblTitulo.TabIndex = 0;
             this.LblTitulo.Text = "Título (*)";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(988, 20);
-            this.panel1.TabIndex = 0;
-            // 
-            // ErrorIcono
-            // 
-            this.ErrorIcono.ContainerControl = this;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(144, 353);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(684, 186);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // BtnAgregarEjemplar
-            // 
-            this.BtnAgregarEjemplar.BackColor = System.Drawing.Color.White;
-            this.BtnAgregarEjemplar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnAgregarEjemplar.FlatAppearance.BorderSize = 0;
-            this.BtnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarEjemplar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregarEjemplar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.BtnAgregarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.más_30;
-            this.BtnAgregarEjemplar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(690, 300);
-            this.BtnAgregarEjemplar.Name = "BtnAgregarEjemplar";
-            this.BtnAgregarEjemplar.Size = new System.Drawing.Size(138, 43);
-            this.BtnAgregarEjemplar.TabIndex = 9;
-            this.BtnAgregarEjemplar.Text = "Agregar Ejemplar";
-            this.BtnAgregarEjemplar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnAgregarEjemplar.UseVisualStyleBackColor = false;
-            // 
             // picEditorial
             // 
             this.picEditorial.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.editorial;
@@ -583,14 +600,30 @@
             this.picLibro.TabIndex = 39;
             this.picLibro.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(988, 20);
+            this.panel1.TabIndex = 0;
+            // 
+            // ErrorIcono
+            // 
+            this.ErrorIcono.ContainerControl = this;
+            // 
             // FrmLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(992, 700);
+            this.ClientSize = new System.Drawing.Size(992, 699);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -610,12 +643,12 @@
             this.panel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -664,5 +697,6 @@
         private System.Windows.Forms.PictureBox picEditorial;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnAgregarEjemplar;
+        private System.Windows.Forms.Label label1;
     }
 }

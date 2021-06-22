@@ -39,6 +39,8 @@
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnInsertar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // TxtUbicacion
@@ -121,22 +123,24 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(47, 200);
+            this.BtnActualizar.Location = new System.Drawing.Point(47, 232);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(150, 30);
             this.BtnActualizar.TabIndex = 5;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(217, 200);
+            this.BtnCancelar.Location = new System.Drawing.Point(217, 232);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(150, 30);
             this.BtnCancelar.TabIndex = 6;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnInsertar
             // 
@@ -146,18 +150,43 @@
             this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(47, 200);
+            this.BtnInsertar.Location = new System.Drawing.Point(47, 232);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(150, 30);
             this.BtnInsertar.TabIndex = 5;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = false;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label1.Location = new System.Drawing.Point(44, 171);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Idioma";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Disponible",
+            "Prestado"});
+            this.comboBox1.Location = new System.Drawing.Point(122, 171);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(245, 21);
+            this.comboBox1.TabIndex = 8;
             // 
             // FrmEjemplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 260);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(434, 297);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnInsertar);
@@ -169,8 +198,12 @@
             this.Controls.Add(this.LblUbicacion);
             this.Controls.Add(this.TxtEditorial);
             this.Controls.Add(this.LblEditorial);
+            this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "FrmEjemplar";
-            this.Text = "FrmEjemplar";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +222,7 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnInsertar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

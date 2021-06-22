@@ -25,6 +25,10 @@ namespace SistemaBiblioteca.Presentacion
             TxtId.Clear();
             TxtAutor.Clear();
             TxtISBN.Clear();
+            TxtDescripcion.Clear();
+            TxtMateria.Clear();
+            NmEdicionNo.Value = 1;
+            NmPaginas.Value = 1;
             BtnInsertar.Visible = true;
             BtnActualizar.Visible = false;
             ErrorIcono.Clear();
@@ -93,7 +97,9 @@ namespace SistemaBiblioteca.Presentacion
                 }
                 else
                 {
-                    Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtTitulo.Text.Trim(), 
+                        TxtAutor.Text.Trim(), TxtISBN.Text.Trim(), CboEdicionAnio.Text, Convert.ToInt32(NmEdicionNo.Value),
+                        Convert.ToInt32(NmPaginas.Value), TxtDescripcion.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro");
@@ -143,7 +149,9 @@ namespace SistemaBiblioteca.Presentacion
                 }
                 else
                 {
-                    Rpta = NLibro.Insertar(TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim());
+                    Rpta = NLibro.Insertar(TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim(),
+                        CboEdicionAnio.Text, Convert.ToInt32(NmEdicionNo.Value),
+                        Convert.ToInt32(NmPaginas.Value), TxtDescripcion.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se insertó de forma correcta el registro.");
