@@ -15,7 +15,7 @@
           <Property Name="Editorial" Type="varchar" MaxLength="150" />
           <Property Name="Idioma" Type="varchar" MaxLength="80" />
           <Property Name="Pais" Type="varchar" MaxLength="80" />
-          <Property Name="Estado" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Estado" Type="bit" />
         </EntityType>
         <EntityType Name="Libro">
           <Key>
@@ -167,7 +167,7 @@
           <Property Name="Editorial" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Idioma" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="Pais" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" />
           <NavigationProperty Name="Libro" Relationship="Self.FK__Ejemplar__IdLibr__3F466844" FromRole="Ejemplar" ToRole="Libro" />
           <NavigationProperty Name="Prestamo" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Ejemplar" ToRole="Prestamo" />
         </EntityType>
@@ -328,7 +328,8 @@
           <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
-          <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
         </ComplexType>
         <ComplexType Name="BuscarLibro_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
@@ -366,7 +367,8 @@
           <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
-          <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
         </ComplexType>
         <ComplexType Name="ListarLibros_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
@@ -487,6 +489,7 @@
                 <ScalarProperty Name="Idioma" ColumnName="Idioma" />
                 <ScalarProperty Name="Pais" ColumnName="Pais" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="EstadoLibro" ColumnName="EstadoLibro" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -541,6 +544,7 @@
                 <ScalarProperty Name="Idioma" ColumnName="Idioma" />
                 <ScalarProperty Name="Pais" ColumnName="Pais" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="EstadoLibro" ColumnName="EstadoLibro" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

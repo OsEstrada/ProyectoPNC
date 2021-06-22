@@ -21,7 +21,7 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(int IdLibro, string Ubicacion, string Estado, string Editorial, string Idioma, string Pais)
+        public static string Insertar(int IdLibro, string Ubicacion, bool Estado, string Editorial, string Idioma, string Pais)
         {
             DEjemplar Datos = new DEjemplar();
             Ejemplar Obj = new Ejemplar();
@@ -34,7 +34,7 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int IdEjemplar, int IdLibro, string Ubicacion, string Estado, string Editorial, string Idioma, string Pais)
+        public static string Actualizar(int IdEjemplar, int IdLibro, string Ubicacion, bool Estado, string Editorial, string Idioma, string Pais)
         {
             DEjemplar Datos = new DEjemplar();
             Ejemplar Obj = new Ejemplar();

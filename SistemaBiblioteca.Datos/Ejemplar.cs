@@ -26,7 +26,7 @@ namespace SistemaBiblioteca.Datos
         public string Editorial { get; set; }
         public string Idioma { get; set; }
         public string Pais { get; set; }
-        public string Estado { get; set; }
+        public Nullable<bool> Estado { get; set; }
     
         public virtual Libro Libro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
