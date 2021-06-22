@@ -17,5 +17,10 @@ namespace SistemaBiblioteca.Datos
         public string Titulo { get; set; }
         public string Autor { get; set; }
         public string ISBN { get; set; }
+        public string Materia { get; set; }
+        public string AnioEdicion { get; set; }
+        public Nullable<int> NoEdicion { get; set; }
+        public Nullable<int> NoPaginas { get; set; }
+        public string Descripcion { get; set; }
     }
 }

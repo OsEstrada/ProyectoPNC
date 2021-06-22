@@ -21,14 +21,14 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(string Titulo, string Autor, string ISBN, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
+        public static string Insertar(string Titulo, string Autor, string ISBN, string Materia, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.Autor = Autor;
             Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
-            Obj.Materia = ISBN;
+            Obj.Materia = Materia;
             Obj.AnioEdicion = AnioEdicion;
             Obj.NoEdicion = NoEdicion;
             Obj.NoPaginas = NoPaginas;
@@ -36,7 +36,7 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int IdLibro, string Titulo, string Autor, string ISBN, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
+        public static string Actualizar(int IdLibro, string Titulo, string Autor, string ISBN, string Materia, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
@@ -44,7 +44,7 @@ namespace SistemaBiblioteca.Negocio
             Obj.Autor = Autor;
             Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
-            Obj.Materia = ISBN;
+            Obj.Materia = Materia;
             Obj.AnioEdicion = AnioEdicion;
             Obj.NoEdicion = NoEdicion;
             Obj.NoPaginas = NoPaginas;
