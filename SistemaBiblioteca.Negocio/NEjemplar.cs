@@ -21,25 +21,31 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(int IdLibro, string Ubicacion, string Estado)
+        public static string Insertar(int IdLibro, string Ubicacion, string Estado, string Editorial, string Idioma, string Pais)
         {
             DEjemplar Datos = new DEjemplar();
             Ejemplar Obj = new Ejemplar();
             Obj.IdLibro = IdLibro;
             Obj.Ubicacion = Ubicacion;
+            Obj.Editorial = Editorial;
+            Obj.Idioma = Idioma;
+            Obj.Pais = Pais;
             Obj.Estado = Estado;
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int IdEjemplar, int IdLibro, string Ubicacion, string Estado)
+        public static string Actualizar(int IdEjemplar, int IdLibro, string Ubicacion, string Estado, string Editorial, string Idioma, string Pais)
         {
             DEjemplar Datos = new DEjemplar();
             Ejemplar Obj = new Ejemplar();
             Obj.IdEjemplar = IdEjemplar;
             Obj.IdLibro = IdLibro;
             Obj.Ubicacion = Ubicacion;
+            Obj.Editorial = Editorial;
+            Obj.Idioma = Idioma;
+            Obj.Pais = Pais;
             Obj.Estado = Estado;
-            return Datos.Insertar(Obj);
+            return Datos.Actualizar(Obj);
         }
 
         public static string Eliminar(int id)

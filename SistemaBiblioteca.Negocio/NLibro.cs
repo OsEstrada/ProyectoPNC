@@ -21,24 +21,34 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
-        public static string Insertar(string Titulo, string Autor, string ISBN)
+        public static string Insertar(string Titulo, string Autor, string ISBN, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
             Obj.Autor = Autor;
             Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
+            Obj.Materia = ISBN;
+            Obj.AnioEdicion = AnioEdicion;
+            Obj.NoEdicion = NoEdicion;
+            Obj.NoPaginas = NoPaginas;
+            Obj.Descripcion = Descripcion;
             return Datos.Insertar(Obj);
         }
 
-        public static string Actualizar(int id, string Titulo, string Autor, string ISBN)
+        public static string Actualizar(int IdLibro, string Titulo, string Autor, string ISBN, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
         {
             DLibro Datos = new DLibro();
             Libro Obj = new Libro();
-            Obj.IdLibro = id;
+            Obj.IdLibro = IdLibro;
             Obj.Autor = Autor;
             Obj.Titulo = Titulo;
             Obj.ISBN = ISBN;
+            Obj.Materia = ISBN;
+            Obj.AnioEdicion = AnioEdicion;
+            Obj.NoEdicion = NoEdicion;
+            Obj.NoPaginas = NoPaginas;
+            Obj.Descripcion = Descripcion;
             return Datos.Actualizar(Obj);
         }
 
