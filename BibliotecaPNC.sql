@@ -36,8 +36,9 @@ Ubicacion varchar(100),
 Editorial varchar(150),
 Idioma varchar(80),
 Pais varchar(80),
-Estado varchar(30) not null CHECK (Estado in('Disponible', 'Prestado', 'En Reparacion')) default 'Disponible',
+Estado bit default 1 --1 disponible, 0 prestado
 );
+
 
 create table Prestamo(
 IdPrestamo int identity(1,1) primary key,
@@ -51,26 +52,26 @@ constraint FK_PRESTAMO_USUARIO foreign key(IdUsuario) references Usuario(IdUsuar
 );
 
 --Insert libros
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'La niña de oro', N'Austin Garrett', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El libro de los gnomos, los gigantes y los duendes', N'Cedric Rosales', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Historia de Malik y Luna Llena', N'Cedric Rosales', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El cascanueces y el rey de los ratones', N'Hanae Fuller', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos + cuentos', N'Cedric Rosales', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Sección policiales', N'Athena Daniels', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Callejón sin salida', N'Hanna Lamb', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El Gigante Amapolas + El matadero', N'Ava Cohen', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Prometeo encadenado + Una libra de carne', N'Jacob Walsh', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Los libros sagrados - Mitología griega', N'Aurelia Maynard', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Los relatos del tiempo', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El centroforward murió al amanecer', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Siete fantásticos latinoamericanos', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Del terror al horror', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Las aventuras de Gilgamesh', N'Anonimo', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Las Mil y una noches', N'Hanae Fuller', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos policiales para chicos curiosos', N'Austin Garrett', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos populares de pícaros y necios', N'Anonimo', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Antiguas leyendas de héroes y princesas', N'Jacob Walsh', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'La isla misteriosa', N'Hanna Lamb', N'978-987-24500')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'La niña de oro', N'Austin Garrett', N'978-987-24500')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'El libro de los gnomos, los gigantes y los duendes', N'Cedric Rosales', N'978-987-24500')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Historia de Malik y Luna Llena', N'Cedric Rosales', N'978-987-24500')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'El cascanueces y el rey de los ratones', N'Hanae Fuller', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Cuentos + cuentos', N'Cedric Rosales', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Sección policiales', N'Athena Daniels', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Callejón sin salida', N'Hanna Lamb', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'El Gigante Amapolas + El matadero', N'Ava Cohen', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Prometeo encadenado + Una libra de carne', N'Jacob Walsh', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Los libros sagrados - Mitología griega', N'Aurelia Maynard', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Los relatos del tiempo', N'Anonimo', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'El centroforward murió al amanecer', N'Anonimo', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Siete fantásticos latinoamericanos', N'Anonimo', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Del terror al horror', N'Anonimo', N'978-987-1565-')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Las aventuras de Gilgamesh', N'Anonimo', N'978-987-24143')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Las Mil y una noches', N'Hanae Fuller', N'978-987-24143')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Cuentos policiales para chicos curiosos', N'Austin Garrett', N'978-987-24143')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Cuentos populares de pícaros y necios', N'Anonimo', N'978-987-24143')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'Antiguas leyendas de héroes y princesas', N'Jacob Walsh', N'978-987-24143')
+INSERT [dbo].[Libro] ([Nombre], [Autor], [ISBN]) VALUES (N'La isla misteriosa', N'Hanna Lamb', N'978-987-24500')
 
 --Insert Ejemplar
 
@@ -133,46 +134,47 @@ as begin
 
 	IF @Estado = 0
 	BEGIN
-		update Ejemplar set Estado = 'Disponible' where IdEjemplar = @IdEjemplar;
+		update Ejemplar set Estado = 1 where IdEjemplar = @IdEjemplar;
 	END
 end;
 go;
+
 create or alter procedure ListarLibros
 as begin
-    select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
-        l.NoPaginas, l.Descripcion
-    from Libro l
-    order by l.IdLibro desc;
+	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
+		l.NoPaginas, l.Descripcion
+	from Libro l
+	order by l.IdLibro desc;
 end;
 go;
 
 create or alter procedure BuscarLibro
 @valor varchar(150)
 as begin
-    select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
-        l.NoPaginas, l.Descripcion
-    from Libro l
-    where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
-    order by l.IdLibro desc
+	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
+		l.NoPaginas, l.Descripcion
+	from Libro l
+	where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+	order by l.IdLibro desc
 end;
 go;
 
 create or alter procedure ListarEjemplares
 as begin
-    select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado
-    from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-    order by l.IdLibro desc;
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	order by l.IdLibro desc;
 end;
 go;
 
 create or alter procedure BuscarEjemplares
 @valor varchar(150)
 as begin
-    select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado
-    from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-    where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
-        or e.Ubicacion like '%' + @valor + '%' or e.Estado like '%' + @valor + '%'
-    order by l.IdLibro desc;
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+		or e.Ubicacion like '%' + @valor + '%'
+	order by l.IdLibro desc;
 end;
 go;
 
@@ -238,5 +240,4 @@ as begin
 		order by FechaPrestamo desc;
 end;
 go;
-
 

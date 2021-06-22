@@ -19,6 +19,7 @@ namespace SistemaBiblioteca.Datos
         public string Editorial { get; set; }
         public string Idioma { get; set; }
         public string Pais { get; set; }
-        public string Estado { get; set; }
+        public Nullable<bool> Estado { get; set; }
+        public string EstadoLibro { get; set; }
     }
 }
