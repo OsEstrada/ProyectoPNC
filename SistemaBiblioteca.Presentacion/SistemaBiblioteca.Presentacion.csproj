@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEjemplar.Designer.cs">
+      <DependentUpon>FrmEjemplar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEjemplar.resx">
+      <DependentUpon>FrmEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLibro.resx">
       <DependentUpon>FrmLibro.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +120,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\más-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

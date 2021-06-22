@@ -40,3 +40,4 @@ C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion
 C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.csproj.CopyComplete
 C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.exe
 C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.pdb
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmEjemplar.resources
