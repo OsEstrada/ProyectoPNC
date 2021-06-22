@@ -325,6 +325,9 @@
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
         </ComplexType>
         <ComplexType Name="BuscarLibro_Result">
@@ -332,6 +335,11 @@
           <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Autor" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="ISBN" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Materia" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="AnioEdicion" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="NoEdicion" Nullable="true" />
+          <Property Type="Int32" Name="NoPaginas" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="200" />
         </ComplexType>
         <ComplexType Name="BuscarPrestamos_Result">
           <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -355,6 +363,9 @@
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
         </ComplexType>
         <ComplexType Name="ListarLibros_Result">
@@ -362,6 +373,11 @@
           <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="Autor" Nullable="true" MaxLength="150" />
           <Property Type="String" Name="ISBN" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Materia" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="AnioEdicion" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="NoEdicion" Nullable="true" />
+          <Property Type="Int32" Name="NoPaginas" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="200" />
         </ComplexType>
         <ComplexType Name="ListarPrestamos_Result">
           <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -467,6 +483,9 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
               </ComplexTypeMapping>
             </ResultMapping>
@@ -478,6 +497,11 @@
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Autor" ColumnName="Autor" />
                 <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Materia" ColumnName="Materia" />
+                <ScalarProperty Name="AnioEdicion" ColumnName="AnioEdicion" />
+                <ScalarProperty Name="NoEdicion" ColumnName="NoEdicion" />
+                <ScalarProperty Name="NoPaginas" ColumnName="NoPaginas" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -513,6 +537,9 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
               </ComplexTypeMapping>
             </ResultMapping>
@@ -524,6 +551,11 @@
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Autor" ColumnName="Autor" />
                 <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Materia" ColumnName="Materia" />
+                <ScalarProperty Name="AnioEdicion" ColumnName="AnioEdicion" />
+                <ScalarProperty Name="NoEdicion" ColumnName="NoEdicion" />
+                <ScalarProperty Name="NoPaginas" ColumnName="NoPaginas" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

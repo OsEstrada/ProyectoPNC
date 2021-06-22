@@ -137,43 +137,42 @@ as begin
 	END
 end;
 go;
-
 create or alter procedure ListarLibros
 as begin
-	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN
-	from Libro l
-	order by l.IdLibro desc;
+    select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
+        l.NoPaginas, l.Descripcion
+    from Libro l
+    order by l.IdLibro desc;
 end;
 go;
 
 create or alter procedure BuscarLibro
 @valor varchar(150)
 as begin
-	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN
-	from Libro l
-	where l.Titulo like '%' + @valor + '%' or l.Autor like '%' + @valor + '%'
-			or l.ISBN like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
-	order by l.IdLibro desc
+    select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
+        l.NoPaginas, l.Descripcion
+    from Libro l
+    where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+    order by l.IdLibro desc
 end;
 go;
 
 create or alter procedure ListarEjemplares
 as begin
-	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Estado
-	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-	order by l.IdLibro desc;
+    select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado
+    from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+    order by l.IdLibro desc;
 end;
 go;
 
 create or alter procedure BuscarEjemplares
 @valor varchar(150)
 as begin
-	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Estado
-	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-	where l.Titulo like '%' + @valor + '%' or l.ISBN like '%' + @valor + '%'
-		or e.IdEjemplar like '%' + @valor + '%' or e.Ubicacion like '%' + @valor + '%'
-		or e.Estado like '%' + @valor + '%'
-	order by l.IdLibro desc;
+    select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado
+    from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+    where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+        or e.Ubicacion like '%' + @valor + '%' or e.Estado like '%' + @valor + '%'
+    order by l.IdLibro desc;
 end;
 go;
 
