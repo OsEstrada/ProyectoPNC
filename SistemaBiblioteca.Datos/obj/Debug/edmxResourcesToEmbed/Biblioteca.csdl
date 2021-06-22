@@ -10,7 +10,7 @@
     <Property Name="Editorial" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Idioma" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="Pais" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Estado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" />
     <NavigationProperty Name="Libro" Relationship="Self.FK__Ejemplar__IdLibr__3F466844" FromRole="Ejemplar" ToRole="Libro" />
     <NavigationProperty Name="Prestamo" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Ejemplar" ToRole="Prestamo" />
   </EntityType>
@@ -168,13 +168,22 @@
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
   </ComplexType>
   <ComplexType Name="BuscarLibro_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="Autor" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="ISBN" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Materia" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="AnioEdicion" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="NoEdicion" Nullable="true" />
+    <Property Type="Int32" Name="NoPaginas" Nullable="true" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="200" />
   </ComplexType>
   <ComplexType Name="BuscarPrestamos_Result">
     <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -198,13 +207,22 @@
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Estado" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
   </ComplexType>
   <ComplexType Name="ListarLibros_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="Autor" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="ISBN" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Materia" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="AnioEdicion" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="NoEdicion" Nullable="true" />
+    <Property Type="Int32" Name="NoPaginas" Nullable="true" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="200" />
   </ComplexType>
   <ComplexType Name="ListarPrestamos_Result">
     <Property Type="Int32" Name="IdEjemplar" Nullable="false" />

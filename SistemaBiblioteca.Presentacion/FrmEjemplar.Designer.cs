@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TxtUbicacion = new System.Windows.Forms.TextBox();
             this.LblUbicacion = new System.Windows.Forms.Label();
             this.TxtEditorial = new System.Windows.Forms.TextBox();
@@ -39,8 +40,10 @@
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnInsertar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LblEstado = new System.Windows.Forms.Label();
+            this.CboEstado = new System.Windows.Forms.ComboBox();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtUbicacion
@@ -126,7 +129,7 @@
             this.BtnActualizar.Location = new System.Drawing.Point(47, 232);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(150, 30);
-            this.BtnActualizar.TabIndex = 5;
+            this.BtnActualizar.TabIndex = 6;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
@@ -137,7 +140,7 @@
             this.BtnCancelar.Location = new System.Drawing.Point(217, 232);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(150, 30);
-            this.BtnCancelar.TabIndex = 6;
+            this.BtnCancelar.TabIndex = 7;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -153,31 +156,36 @@
             this.BtnInsertar.Location = new System.Drawing.Point(47, 232);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(150, 30);
-            this.BtnInsertar.TabIndex = 5;
+            this.BtnInsertar.TabIndex = 6;
             this.BtnInsertar.Text = "Insertar";
             this.BtnInsertar.UseVisualStyleBackColor = false;
             this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
-            // label1
+            // LblEstado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label1.Location = new System.Drawing.Point(44, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Idioma";
+            this.LblEstado.AutoSize = true;
+            this.LblEstado.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblEstado.Location = new System.Drawing.Point(44, 171);
+            this.LblEstado.Name = "LblEstado";
+            this.LblEstado.Size = new System.Drawing.Size(40, 13);
+            this.LblEstado.TabIndex = 0;
+            this.LblEstado.Text = "Estado";
             // 
-            // comboBox1
+            // CboEstado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CboEstado.FormattingEnabled = true;
+            this.CboEstado.Items.AddRange(new object[] {
             "Disponible",
             "Prestado"});
-            this.comboBox1.Location = new System.Drawing.Point(122, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 21);
-            this.comboBox1.TabIndex = 8;
+            this.CboEstado.Location = new System.Drawing.Point(122, 171);
+            this.CboEstado.MaxDropDownItems = 4;
+            this.CboEstado.Name = "CboEstado";
+            this.CboEstado.Size = new System.Drawing.Size(245, 21);
+            this.CboEstado.TabIndex = 5;
+            // 
+            // ErrorIcono
+            // 
+            this.ErrorIcono.ContainerControl = this;
             // 
             // FrmEjemplar
             // 
@@ -185,8 +193,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(434, 297);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CboEstado);
+            this.Controls.Add(this.LblEstado);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnInsertar);
@@ -204,6 +212,7 @@
             this.Name = "FrmEjemplar";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +231,8 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnInsertar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label LblEstado;
+        private System.Windows.Forms.ComboBox CboEstado;
+        private System.Windows.Forms.ErrorProvider ErrorIcono;
     }
 }

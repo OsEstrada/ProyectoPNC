@@ -98,7 +98,7 @@ namespace SistemaBiblioteca.Presentacion
                 else
                 {
                     Rpta = NLibro.Actualizar(Convert.ToInt32(TxtId.Text), this.TxtTitulo.Text.Trim(), 
-                        TxtAutor.Text.Trim(), TxtISBN.Text.Trim(), CboEdicionAnio.Text, Convert.ToInt32(NmEdicionNo.Value),
+                        TxtAutor.Text.Trim(), TxtISBN.Text.Trim(), TxtMateria.Text.Trim(), CboEdicionAnio.Text, Convert.ToInt32(NmEdicionNo.Value),
                         Convert.ToInt32(NmPaginas.Value), TxtDescripcion.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
@@ -149,7 +149,7 @@ namespace SistemaBiblioteca.Presentacion
                 }
                 else
                 {
-                    Rpta = NLibro.Insertar(TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim(),
+                    Rpta = NLibro.Insertar(TxtTitulo.Text.Trim(), TxtAutor.Text.Trim(), TxtISBN.Text.Trim(), TxtMateria.Text.Trim(),
                         CboEdicionAnio.Text, Convert.ToInt32(NmEdicionNo.Value),
                         Convert.ToInt32(NmPaginas.Value), TxtDescripcion.Text.Trim());
                     if (Rpta.Equals("OK"))

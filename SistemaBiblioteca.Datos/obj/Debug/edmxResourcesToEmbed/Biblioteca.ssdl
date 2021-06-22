@@ -10,7 +10,7 @@
     <Property Name="Editorial" Type="varchar" MaxLength="150" />
     <Property Name="Idioma" Type="varchar" MaxLength="80" />
     <Property Name="Pais" Type="varchar" MaxLength="80" />
-    <Property Name="Estado" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Estado" Type="bit" />
   </EntityType>
   <EntityType Name="Libro">
     <Key>
