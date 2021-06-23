@@ -59,6 +59,12 @@
     <Compile Include="FrmEjemplar.Designer.cs">
       <DependentUpon>FrmEjemplar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamo.Designer.cs">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmEjemplar.resx">
       <DependentUpon>FrmEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamo.resx">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLibro.resx">
       <DependentUpon>FrmLibro.cs</DependentUpon>
