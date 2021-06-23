@@ -139,6 +139,28 @@ as begin
 end;
 go;
 
+create or alter procedure InsertarLibros
+@Titulo varchar(150),
+@Autor varchar(150),
+@ISBN varchar(30),
+@Materia varchar(80),
+@AnioEdicion varchar(4),
+@NoEdicion int,
+@NoPaginas int,
+@Descripcion varchar(200),
+@Id int OUTPUT
+as begin
+	begin try
+	insert into Libro(Titulo, Autor, ISBN, Materia, AnioEdicion, NoEdicion, NoPaginas, Descripcion)
+	values (@Titulo, @Autor, @ISBN, @Materia, @AnioEdicion, @NoEdicion, @NoPaginas, @Descripcion);
+	set @Id = SCOPE_IDENTITY();
+	end try
+	begin catch
+	set @Id = -1;
+	end catch
+end;
+go;
+
 create or alter procedure ListarLibros
 as begin
 	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
@@ -160,21 +182,24 @@ end;
 go;
 
 create or alter procedure ListarEjemplares
+@idLibro int
 as begin
 	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
 	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-	order by l.IdLibro desc;
+	where e.IdLibro = @idLibro
+	order by e.IdEjemplar desc;
 end;
 go;
 
 create or alter procedure BuscarEjemplares
-@valor varchar(150)
+@valor varchar(150),
+@idLibro int
 as begin
 	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
 	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
-	where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
-		or e.Ubicacion like '%' + @valor + '%'
-	order by l.IdLibro desc;
+	where (l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+		or e.Ubicacion like '%' + @valor + '%') and e.IdLibro = @idLibro
+	order by e.IdEjemplar desc;
 end;
 go;
 

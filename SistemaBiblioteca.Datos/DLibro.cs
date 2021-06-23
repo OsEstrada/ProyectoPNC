@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,8 +53,9 @@ namespace SistemaBiblioteca.Datos
             {
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
-                    db.Libro.Add(obj);
-                    rpta = db.SaveChanges() > 0 ? "OK" : "No se inserto ningun registro";
+                    ObjectParameter returnId = new ObjectParameter("Id", typeof(int));
+                    db.InsertarLibros(obj.Titulo, obj.Autor, obj.ISBN, obj.Materia, obj.AnioEdicion, obj.NoEdicion, obj.NoPaginas, obj.Descripcion, returnId);
+                    rpta = Convert.ToInt32(returnId.Value) != -1 ? Convert.ToString(returnId.Value) : "No se inserto ningun registro";
                 }
             }
             catch (Exception ex)

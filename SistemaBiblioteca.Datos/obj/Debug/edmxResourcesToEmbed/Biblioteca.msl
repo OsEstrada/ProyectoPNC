@@ -117,6 +117,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertarLibros" FunctionName="BibliotecaModel.Store.InsertarLibros" />
     <FunctionImportMapping FunctionImportName="ListarDevoluciones" FunctionName="BibliotecaModel.Store.ListarDevoluciones">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BibliotecaModel.ListarDevoluciones_Result">

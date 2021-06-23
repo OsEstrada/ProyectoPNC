@@ -9,16 +9,16 @@ namespace SistemaBiblioteca.Negocio
 {
     public class NEjemplar
     {
-        public static List<ListarEjemplares_Result> Listar()
+        public static List<ListarEjemplares_Result> Listar(int idLibro)
         {
             DEjemplar Datos = new DEjemplar();
-            return Datos.Listar();
+            return Datos.Listar(idLibro);
         }
 
-        public static List<BuscarEjemplares_Result> Buscar(string valor)
+        public static List<BuscarEjemplares_Result> Buscar(string valor, int idLibro)
         {
             DEjemplar Datos = new DEjemplar();
-            return Datos.Buscar(valor);
+            return Datos.Buscar(valor, idLibro);
         }
 
         public static string Insertar(int IdLibro, string Ubicacion, bool Estado, string Editorial, string Idioma, string Pais)

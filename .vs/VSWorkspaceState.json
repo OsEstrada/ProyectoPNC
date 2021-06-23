@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\SistemaBiblioteca.Negocio",
     "\\SistemaBiblioteca.Presentacion"
   ],
-  "SelectedNode": "\\SistemaBiblioteca.Presentacion\\FrmLibro.cs",
+  "SelectedNode": "\\BibliotecaPNC.sql",
   "PreviewInSolutionExplorer": false
 }

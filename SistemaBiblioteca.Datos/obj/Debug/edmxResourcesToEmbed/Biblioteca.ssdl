@@ -109,6 +109,7 @@
   </Function>
   <Function Name="BuscarEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="valor" Type="varchar" Mode="In" />
+    <Parameter Name="idLibro" Type="int" Mode="In" />
   </Function>
   <Function Name="BuscarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="valor" Type="varchar" Mode="In" />
@@ -116,8 +117,21 @@
   <Function Name="BuscarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="valor" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="InsertarLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Titulo" Type="varchar" Mode="In" />
+    <Parameter Name="Autor" Type="varchar" Mode="In" />
+    <Parameter Name="ISBN" Type="varchar" Mode="In" />
+    <Parameter Name="Materia" Type="varchar" Mode="In" />
+    <Parameter Name="AnioEdicion" Type="varchar" Mode="In" />
+    <Parameter Name="NoEdicion" Type="int" Mode="In" />
+    <Parameter Name="NoPaginas" Type="int" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="InOut" />
+  </Function>
   <Function Name="ListarDevoluciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="ListarEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ListarEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLibro" Type="int" Mode="In" />
+  </Function>
   <Function Name="ListarLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="ListarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">

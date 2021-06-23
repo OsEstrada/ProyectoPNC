@@ -1,4 +1,5 @@
-﻿using SistemaBiblioteca.Negocio;
+﻿using SistemaBiblioteca.Datos;
+using SistemaBiblioteca.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,24 +68,61 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnInsertar_Click(object sender, EventArgs e)
         {
-            Ubicacion = TxtUbicacion.Text.Trim();
-            Editorial = TxtEditorial.Text.Trim();
-            Pais = txtPais.Text.Trim();
-            Idioma = TxtIdioma.Text.Trim();
+
+            try
+            {
+                string Rpta = "";
+                if (TxtUbicacion.Text == string.Empty || CboEstado.Text == string.Empty)
+                {
+                    this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
+                    ErrorIcono.SetError(TxtUbicacion, "Ingrese una ubicación.");
+                }
+                else
+                {
+                    Estado = (CboEstado.Text == "Disponible") ? true : false;
+
+                    Rpta = NEjemplar.Insertar(LibroId, this.TxtUbicacion.Text.Trim(), Estado,
+                        TxtEditorial.Text.Trim(), txtPais.Text.Trim(), TxtIdioma.Text.Trim());
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Se inserto de forma correcta el registro.");
+                        Dispose();
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
-        public FrmEjemplar()
+
+        public FrmEjemplar(int idLibro)
         {
             InitializeComponent();
+            BtnActualizar.Visible = false;
+            BtnInsertar.Visible = true;
+            LibroId = idLibro;
             CboEstado.SelectedIndex = 0;
         }
 
-        public FrmEjemplar(int idEjemplar, int idLibro)
+        public FrmEjemplar(int idEjemplar, int idLibro, string Ubicacion, string Editorial, string Pais, bool Estado, string Idioma)
         {
             InitializeComponent();
-            CboEstado.SelectedIndex = 0;
+            BtnActualizar.Visible = true;
+            BtnInsertar.Visible = false;
+            CboEstado.SelectedIndex = Estado ? 0 : 1;
+            TxtEditorial.Text = Editorial;
+            TxtIdioma.Text = Idioma;
+            txtPais.Text = Pais;
+            TxtUbicacion.Text = Ubicacion;
             EjemplarId = idEjemplar;
             LibroId = idLibro;
+            CboEstado.SelectedIndex = Estado ? 0 : 1;
         }
     }
 }

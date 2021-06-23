@@ -9,13 +9,13 @@ namespace SistemaBiblioteca.Datos
 {
     public class DEjemplar
     {
-        public List<ListarEjemplares_Result> Listar()
+        public List<ListarEjemplares_Result> Listar(int idLibro)
         {
             try
             {
                 using(BibliotecaEntities db = new BibliotecaEntities())
                 {
-                    var list = db.ListarEjemplares().ToList();
+                    var list = db.ListarEjemplares(idLibro).ToList();
                     return list;
                 }
             }
@@ -27,13 +27,13 @@ namespace SistemaBiblioteca.Datos
         }
 
 
-        public List<BuscarEjemplares_Result> Buscar(string valor)
+        public List<BuscarEjemplares_Result> Buscar(string valor, int IdLibro)
         {
             try
             {
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
-                    var list = db.BuscarEjemplares(valor).ToList();
+                    var list = db.BuscarEjemplares(valor, IdLibro).ToList();
                     return list;
                 }
             }

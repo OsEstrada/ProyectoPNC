@@ -42,13 +42,17 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarDevoluciones_Result>("BuscarDevoluciones", valorParameter);
         }
     
-        public virtual ObjectResult<BuscarEjemplares_Result> BuscarEjemplares(string valor)
+        public virtual ObjectResult<BuscarEjemplares_Result> BuscarEjemplares(string valor, Nullable<int> idLibro)
         {
             var valorParameter = valor != null ?
                 new ObjectParameter("valor", valor) :
                 new ObjectParameter("valor", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplares_Result>("BuscarEjemplares", valorParameter);
+            var idLibroParameter = idLibro.HasValue ?
+                new ObjectParameter("idLibro", idLibro) :
+                new ObjectParameter("idLibro", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplares_Result>("BuscarEjemplares", valorParameter, idLibroParameter);
         }
     
         public virtual ObjectResult<BuscarLibro_Result> BuscarLibro(string valor)
@@ -69,14 +73,55 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarPrestamos_Result>("BuscarPrestamos", valorParameter);
         }
     
+        public virtual int InsertarLibros(string titulo, string autor, string iSBN, string materia, string anioEdicion, Nullable<int> noEdicion, Nullable<int> noPaginas, string descripcion, ObjectParameter id)
+        {
+            var tituloParameter = titulo != null ?
+                new ObjectParameter("Titulo", titulo) :
+                new ObjectParameter("Titulo", typeof(string));
+    
+            var autorParameter = autor != null ?
+                new ObjectParameter("Autor", autor) :
+                new ObjectParameter("Autor", typeof(string));
+    
+            var iSBNParameter = iSBN != null ?
+                new ObjectParameter("ISBN", iSBN) :
+                new ObjectParameter("ISBN", typeof(string));
+    
+            var materiaParameter = materia != null ?
+                new ObjectParameter("Materia", materia) :
+                new ObjectParameter("Materia", typeof(string));
+    
+            var anioEdicionParameter = anioEdicion != null ?
+                new ObjectParameter("AnioEdicion", anioEdicion) :
+                new ObjectParameter("AnioEdicion", typeof(string));
+    
+            var noEdicionParameter = noEdicion.HasValue ?
+                new ObjectParameter("NoEdicion", noEdicion) :
+                new ObjectParameter("NoEdicion", typeof(int));
+    
+            var noPaginasParameter = noPaginas.HasValue ?
+                new ObjectParameter("NoPaginas", noPaginas) :
+                new ObjectParameter("NoPaginas", typeof(int));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("Descripcion", descripcion) :
+                new ObjectParameter("Descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertarLibros", tituloParameter, autorParameter, iSBNParameter, materiaParameter, anioEdicionParameter, noEdicionParameter, noPaginasParameter, descripcionParameter, id);
+        }
+    
         public virtual ObjectResult<ListarDevoluciones_Result> ListarDevoluciones()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarDevoluciones_Result>("ListarDevoluciones");
         }
     
-        public virtual ObjectResult<ListarEjemplares_Result> ListarEjemplares()
+        public virtual ObjectResult<ListarEjemplares_Result> ListarEjemplares(Nullable<int> idLibro)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplares_Result>("ListarEjemplares");
+            var idLibroParameter = idLibro.HasValue ?
+                new ObjectParameter("idLibro", idLibro) :
+                new ObjectParameter("idLibro", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplares_Result>("ListarEjemplares", idLibroParameter);
         }
     
         public virtual ObjectResult<ListarLibros_Result> ListarLibros()
