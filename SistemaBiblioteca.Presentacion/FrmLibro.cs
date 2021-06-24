@@ -326,7 +326,7 @@ namespace SistemaBiblioteca.Presentacion
                             if (Convert.ToBoolean(row.Cells[0].Value))
                             {
                                 Codigo = Convert.ToInt32(row.Cells["Id"].Value);
-                                Rpta = NLibro.Eliminar(Codigo);
+                                Rpta = NEjemplar.Eliminar(Codigo);
 
                                 if (Rpta.Equals("OK"))
                                 {
@@ -338,14 +338,14 @@ namespace SistemaBiblioteca.Presentacion
                                 }
                             }
                         }
-                        this.Listar();
+                        this.ListarEjemplares();
                     }
                 }
-                catch (Exception ex)
+                    catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message + ex.StackTrace);
                 }
-            }
+        }
         }
     }
 }

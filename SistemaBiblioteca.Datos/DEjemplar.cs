@@ -88,7 +88,7 @@ namespace SistemaBiblioteca.Datos
             {
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
-                    db.Ejemplar.Remove(db.Ejemplar.FirstOrDefault(l => l.IdLibro == id));
+                    db.Ejemplar.Remove(db.Ejemplar.FirstOrDefault(l => l.IdEjemplar == id));
                     rpta = db.SaveChanges() > 0 ? "OK" : "No se elimino ningun registro";
                 }
             }
