@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -74,12 +78,14 @@
             this.picLibro = new System.Windows.Forms.PictureBox();
             this.PicAgregarEjemplar = new System.Windows.Forms.PictureBox();
             this.GrpEjemplares = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnEliminarEjemplares = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnCancelar2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblId = new System.Windows.Forms.Label();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SeleccionarEjemplar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -137,7 +143,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(980, 646);
+            this.tabPage1.Size = new System.Drawing.Size(1478, 731);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -159,34 +165,35 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(974, 640);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1472, 725);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoLibros
             // 
             this.DgvListadoLibros.AllowUserToAddRows = false;
             this.DgvListadoLibros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DgvListadoLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DgvListadoLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListadoLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seleccionar});
             this.DgvListadoLibros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvListadoLibros.Location = new System.Drawing.Point(2, 42);
             this.DgvListadoLibros.Margin = new System.Windows.Forms.Padding(2);
             this.DgvListadoLibros.Name = "DgvListadoLibros";
-            this.DgvListadoLibros.ReadOnly = true;
             this.DgvListadoLibros.RowHeadersVisible = false;
             this.DgvListadoLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvListadoLibros.RowTemplate.Height = 24;
             this.DgvListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoLibros.Size = new System.Drawing.Size(970, 556);
+            this.DgvListadoLibros.Size = new System.Drawing.Size(1468, 641);
             this.DgvListadoLibros.TabIndex = 0;
             this.DgvListadoLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListadoLibros_CellDoubleClick);
             // 
@@ -201,7 +208,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(970, 36);
+            this.panel2.Size = new System.Drawing.Size(1468, 36);
             this.panel2.TabIndex = 1;
             // 
             // TxtBuscar
@@ -217,10 +224,10 @@
             this.panel3.Controls.Add(this.BtnEliminar);
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 602);
+            this.panel3.Location = new System.Drawing.Point(2, 687);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(970, 36);
+            this.panel3.Size = new System.Drawing.Size(1468, 36);
             this.panel3.TabIndex = 2;
             // 
             // LblTotal
@@ -269,11 +276,45 @@
             // 
             this.DgvEjemplares.AllowUserToAddRows = false;
             this.DgvEjemplares.AllowUserToDeleteRows = false;
+            this.DgvEjemplares.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DgvEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SeleccionarEjemplar});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEjemplares.DefaultCellStyle = dataGridViewCellStyle9;
             this.DgvEjemplares.Location = new System.Drawing.Point(31, 57);
             this.DgvEjemplares.Margin = new System.Windows.Forms.Padding(2);
             this.DgvEjemplares.Name = "DgvEjemplares";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.DgvEjemplares.RowHeadersVisible = false;
             this.DgvEjemplares.RowHeadersWidth = 51;
             this.DgvEjemplares.RowTemplate.Height = 24;
             this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -520,7 +561,7 @@
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.plus_blue;
-            this.btnAgregar.Location = new System.Drawing.Point(937, 3);
+            this.btnAgregar.Location = new System.Drawing.Point(1435, 3);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(30, 29);
             this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -549,7 +590,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
             this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminar.Location = new System.Drawing.Point(937, 3);
+            this.BtnEliminar.Location = new System.Drawing.Point(1435, 3);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
             this.BtnEliminar.TabIndex = 8;
@@ -592,34 +633,35 @@
             // GrpEjemplares
             // 
             this.GrpEjemplares.Controls.Add(this.label2);
-            this.GrpEjemplares.Controls.Add(this.button1);
+            this.GrpEjemplares.Controls.Add(this.BtnEliminarEjemplares);
             this.GrpEjemplares.Controls.Add(this.DgvEjemplares);
             this.GrpEjemplares.Controls.Add(this.PicAgregarEjemplar);
             this.GrpEjemplares.Controls.Add(this.LblTotalEjemplares);
             this.GrpEjemplares.Controls.Add(this.picEditorial);
-            this.GrpEjemplares.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.GrpEjemplares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrpEjemplares.Location = new System.Drawing.Point(39, 336);
             this.GrpEjemplares.Name = "GrpEjemplares";
             this.GrpEjemplares.Size = new System.Drawing.Size(727, 283);
             this.GrpEjemplares.TabIndex = 44;
             this.GrpEjemplares.TabStop = false;
-            this.GrpEjemplares.Text = "          Ejemplares";
+            this.GrpEjemplares.Text = "          ";
             this.GrpEjemplares.Visible = false;
             // 
-            // button1
+            // BtnEliminarEjemplares
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Firebrick;
-            this.button1.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.button1.Location = new System.Drawing.Point(685, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 29);
-            this.button1.TabIndex = 44;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnEliminarEjemplares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminarEjemplares.FlatAppearance.BorderSize = 0;
+            this.BtnEliminarEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminarEjemplares.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarEjemplares.ForeColor = System.Drawing.Color.Firebrick;
+            this.BtnEliminarEjemplares.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
+            this.BtnEliminarEjemplares.Location = new System.Drawing.Point(685, 246);
+            this.BtnEliminarEjemplares.Name = "BtnEliminarEjemplares";
+            this.BtnEliminarEjemplares.Size = new System.Drawing.Size(30, 29);
+            this.BtnEliminarEjemplares.TabIndex = 44;
+            this.BtnEliminarEjemplares.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEliminarEjemplares.UseVisualStyleBackColor = true;
+            this.BtnEliminarEjemplares.Click += new System.EventHandler(this.BtnEliminarEjemplares_Click);
             // 
             // label2
             // 
@@ -703,6 +745,20 @@
             this.LblId.TabIndex = 0;
             this.LblId.Text = "No.";
             this.LblId.Visible = false;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.Width = 69;
+            // 
+            // SeleccionarEjemplar
+            // 
+            this.SeleccionarEjemplar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SeleccionarEjemplar.HeaderText = "Seleccionar";
+            this.SeleccionarEjemplar.Name = "SeleccionarEjemplar";
+            this.SeleccionarEjemplar.Width = 71;
             // 
             // FrmLibro
             // 
@@ -795,10 +851,12 @@
         private System.Windows.Forms.PictureBox PicAgregarEjemplar;
         private System.Windows.Forms.GroupBox GrpEjemplares;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnEliminarEjemplares;
         private System.Windows.Forms.Button BtnCancelar2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label LblId;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SeleccionarEjemplar;
     }
 }

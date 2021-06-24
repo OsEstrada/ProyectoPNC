@@ -140,29 +140,29 @@ namespace SistemaBiblioteca.Presentacion
 
         private void DgvListadoLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                Cursor.Current = Cursors.Default;
-                this.Limpiar();
-                BtnActualizar.Visible = true;
-                BtnInsertar.Visible = false;
-                BtnCancelar.Visible = false;
-                LblId.Visible = true;
-                GrpEjemplares.Visible = true;
-                BtnCancelar2.Visible = true;
-                LblidLibro.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Id"].Value);
-                TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
-                TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
-                TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
-                this.ListarEjemplares();
-                if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
-                TabPrincipal.SelectedIndex = 1;
-                Cursor.Current = Cursors.WaitCursor;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione desde la celda nombre.");
-            }
+            Cursor.Current = Cursors.Default;
+            this.Limpiar();
+            BtnActualizar.Visible = true;
+            BtnInsertar.Visible = false;
+            BtnCancelar.Visible = false;
+            LblId.Visible = true;
+            GrpEjemplares.Visible = true;
+            BtnCancelar2.Visible = true;
+
+            LblidLibro.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Id"].Value);
+            TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
+            TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
+            TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
+            TxtDescripcion.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Descripcion"].Value);
+            TxtMateria.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Materia"].Value);
+            CboEdicionAnio.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["AnioEdicion"].Value);
+            NmEdicionNo.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoEdicion"].Value);
+            NmPaginas.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoPaginas"].Value);
+
+            this.ListarEjemplares();
+            if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
+            TabPrincipal.SelectedIndex = 1;
+            Cursor.Current = Cursors.WaitCursor;
         }
 
         private void BtnInsertar_Click(object sender, EventArgs e)
@@ -217,7 +217,7 @@ namespace SistemaBiblioteca.Presentacion
                 try
                 {
                     DialogResult Opcion;
-                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) libro(s)?", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) libro(s)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (Opcion == DialogResult.OK)
                     {
                         int Codigo;
@@ -227,12 +227,12 @@ namespace SistemaBiblioteca.Presentacion
                         {
                             if (Convert.ToBoolean(row.Cells[0].Value))
                             {
-                                Codigo = Convert.ToInt32(row.Cells[0].Value);
+                                Codigo = Convert.ToInt32(row.Cells[1].Value);
                                 Rpta = NLibro.Eliminar(Codigo);
 
                                 if (Rpta.Equals("OK"))
                                 {
-                                    this.MensajeOk("Se eliminó el libro: " + Convert.ToString(row.Cells[1].Value));
+                                    this.MensajeOk("Se eliminó el libro: " + Convert.ToString(row.Cells[2].Value));
                                 }
                                 else
                                 {
@@ -253,8 +253,8 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            Limpiar();
             TabPrincipal.SelectedIndex = 0;
+            Limpiar();
             TabPrincipal.Controls.Remove(tabPage2);
         }
 
@@ -304,6 +304,48 @@ namespace SistemaBiblioteca.Presentacion
         private void BtnCancelar2_Click(object sender, EventArgs e)
         {
             this.BtnCancelar_Click(sender, e);
+        }
+
+        private void BtnEliminarEjemplares_Click(object sender, EventArgs e)
+        {
+            if (DgvEjemplares.SelectedRows.Count == 0)
+                MessageBox.Show("No se ha seleccionado ningun ejemplar para eliminar");
+            else
+            {
+                try
+                {
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) ejemplar(es)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (Opcion == DialogResult.OK)
+                    {
+                        int Codigo;
+                        string Rpta = "";
+
+                        foreach (DataGridViewRow row in DgvEjemplares.SelectedRows)
+                        {
+                            if (Convert.ToBoolean(row.Cells[0].Value))
+                            {
+                                Codigo = Convert.ToInt32(row.Cells["Id"].Value);
+                                Rpta = NLibro.Eliminar(Codigo);
+
+                                if (Rpta.Equals("OK"))
+                                {
+                                    this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(row.Cells["Id"].Value));
+                                }
+                                else
+                                {
+                                    this.MensajeError(Rpta);
+                                }
+                            }
+                        }
+                        this.Listar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+            }
         }
     }
 }
