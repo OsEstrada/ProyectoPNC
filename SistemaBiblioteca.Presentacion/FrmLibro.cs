@@ -18,6 +18,7 @@ namespace SistemaBiblioteca.Presentacion
         private void FrmLibro_Load(object sender, EventArgs e)
         {
             this.Listar();
+            TabPrincipal.Controls.Remove(tabPage2);
         }
 
         private void Limpiar()
@@ -29,12 +30,15 @@ namespace SistemaBiblioteca.Presentacion
             TxtISBN.Clear();
             TxtDescripcion.Clear();
             TxtMateria.Clear();
-            LblId.Visible = true;
             LblidLibro.Visible = true;
             NmEdicionNo.Value = 1;
             NmPaginas.Value = 1;
+            LblId.Visible = false;
             BtnInsertar.Visible = true;
             BtnActualizar.Visible = false;
+            GrpEjemplares.Visible = false;
+            BtnCancelar2.Visible = false;
+            BtnCancelar.Visible = true;
             DgvEjemplares.DataSource = null;
             ErrorIcono.Clear();
             this.ListarEjemplares();
@@ -119,7 +123,7 @@ namespace SistemaBiblioteca.Presentacion
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro");
-                        this.Limpiar();
+                        this.BtnCancelar_Click(sender, e);
                         this.Listar();
                     }
                     else
@@ -138,15 +142,22 @@ namespace SistemaBiblioteca.Presentacion
         {
             try
             {
+                Cursor.Current = Cursors.Default;
                 this.Limpiar();
                 BtnActualizar.Visible = true;
                 BtnInsertar.Visible = false;
+                BtnCancelar.Visible = false;
+                LblId.Visible = true;
+                GrpEjemplares.Visible = true;
+                BtnCancelar2.Visible = true;
                 LblidLibro.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Id"].Value);
                 TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
                 TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
                 TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
                 this.ListarEjemplares();
+                if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
                 TabPrincipal.SelectedIndex = 1;
+                Cursor.Current = Cursors.WaitCursor;
             }
             catch (Exception)
             {
@@ -171,8 +182,19 @@ namespace SistemaBiblioteca.Presentacion
                         Convert.ToInt32(NmPaginas.Value), TxtDescripcion.Text.Trim());
                     if (char.IsDigit(Rpta[0]))
                     {
-                        this.MensajeOk("Se insertó de forma correcta el registro.");
-                        LblidLibro.Text = Rpta;
+                        DialogResult Opcion;
+                        Opcion = MessageBox.Show("Se insertó de forma correcta el registro. ¿Desea agregar ejemplares?", "Sistema de libros", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (Opcion == DialogResult.Yes)
+                        {
+                            LblidLibro.Text = Rpta;
+                            LblId.Visible = true;
+                            BtnInsertar.Visible = false;
+                            BtnCancelar.Visible = false;
+                            BtnCancelar2.Visible = true;
+                            GrpEjemplares.Visible = true;
+                        }
+                        else
+                            this.BtnCancelar_Click(sender, e);
                     }
                     else
                     {
@@ -233,18 +255,7 @@ namespace SistemaBiblioteca.Presentacion
         {
             Limpiar();
             TabPrincipal.SelectedIndex = 0;
-        }
-
-        private void BtnAgregarEjemplar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(LblidLibro.Text))
-                MessageBox.Show("Debe registrar un libro primero");
-            else
-            {
-                FrmEjemplar frm = new FrmEjemplar(Convert.ToInt32(LblidLibro.Text.Trim()));
-                frm.ShowDialog();
-                ListarEjemplares();
-            }
+            TabPrincipal.Controls.Remove(tabPage2);
         }
 
         private void TabPrincipal_SelectedIndexChanged(object sender, EventArgs e)
@@ -266,6 +277,33 @@ namespace SistemaBiblioteca.Presentacion
             FrmEjemplar frm = new FrmEjemplar(IdEjemplar, IdLibro, Ubicacion, Editorial, Pais, Estado, Idioma);
             frm.ShowDialog();
             ListarEjemplares();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(TabPrincipal.TabPages.Count < 2)
+            {
+                TabPrincipal.Controls.Add(tabPage2);
+            }
+            TabPrincipal.SelectedIndex = 1;
+        }
+
+
+        private void PicAgregarEjemplar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(LblidLibro.Text))
+                MessageBox.Show("Debe registrar un libro primero");
+            else
+            {
+                FrmEjemplar frm = new FrmEjemplar(Convert.ToInt32(LblidLibro.Text.Trim()));
+                frm.ShowDialog();
+                ListarEjemplares();
+            }
+        }
+
+        private void BtnCancelar2_Click(object sender, EventArgs e)
+        {
+            this.BtnCancelar_Click(sender, e);
         }
     }
 }
