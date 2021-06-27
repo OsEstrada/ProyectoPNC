@@ -21,6 +21,12 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor);
         }
 
+        public static List<BuscarLibroPorId_Result> BuscarLibroPorId(int valor)
+        {
+            DLibro Datos = new DLibro();
+            return Datos.BuscarPorId(valor);
+        }
+
         public static string Insertar(string Titulo, string Autor, string ISBN, string Materia, string AnioEdicion, int NoEdicion, int NoPaginas, string Descripcion)
         {
             DLibro Datos = new DLibro();

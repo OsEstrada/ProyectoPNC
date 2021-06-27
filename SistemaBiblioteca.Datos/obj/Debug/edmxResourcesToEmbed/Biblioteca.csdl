@@ -41,6 +41,7 @@
     <Property Name="Estado" Type="Boolean" />
     <NavigationProperty Name="Ejemplar" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Prestamo" ToRole="Ejemplar" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_PRESTAMO_USUARIO" FromRole="Prestamo" ToRole="Usuario" />
+    <Property Name="FechaDevuelto" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -176,6 +177,25 @@
     </FunctionImport>
     <FunctionImport Name="ListarProfesores" ReturnType="Collection(BibliotecaModel.ListarProfesores_Result)" />
     <FunctionImport Name="ListarEjemplaresDisponibles" ReturnType="Collection(BibliotecaModel.ListarEjemplaresDisponibles_Result)" />
+    <FunctionImport Name="BuscarEjemplaresPorCodigoEjemplar" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoEjemplar_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="BuscarEjemplaresPorCodigoLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoLibro_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="BuscarEjemplaresPorEditorial" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorEditorial_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="BuscarEjemplaresPorLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorLibro_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarTodosEjemplares" ReturnType="Collection(BibliotecaModel.ListarTodosEjemplares_Result)" />
+    <FunctionImport Name="BuscarLibroPorId" ReturnType="Collection(BibliotecaModel.BuscarLibroPorId_Result)">
+      <Parameter Name="valor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="BuscarEjemplaresSinIdLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresSinIdLibro_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="BuscarDevoluciones_Result">
     <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -289,5 +309,69 @@
     <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
     <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
     <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="BuscarEjemplaresPorCodigoEjemplar_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="BuscarEjemplaresPorCodigoLibro_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="BuscarEjemplaresPorEditorial_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="BuscarEjemplaresPorLibro_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="ListarTodosEjemplares_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="BuscarLibroPorId_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Autor" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ISBN" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Materia" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="AnioEdicion" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="NoEdicion" Nullable="true" />
+    <Property Type="Int32" Name="NoPaginas" Nullable="true" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="BuscarEjemplaresSinIdLibro_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="IdLibro" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="EstadoLibro" Nullable="false" MaxLength="10" />
   </ComplexType>
 </Schema>

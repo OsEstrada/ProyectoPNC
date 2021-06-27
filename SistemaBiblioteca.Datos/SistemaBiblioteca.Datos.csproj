@@ -80,7 +80,13 @@
     <Compile Include="BuscarEjemplaresPorLibro_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="BuscarEjemplaresSinIdLibro_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="BuscarEjemplares_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarLibroPorId_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="BuscarLibro_Result.cs">
@@ -121,6 +127,9 @@
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="ListarProfesores_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListarTodosEjemplares_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="Login_Result.cs">

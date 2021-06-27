@@ -17,6 +17,12 @@ namespace SistemaBiblioteca.Presentacion
         private void Limpiar()
         {
             TxtBuscar.Clear();
+            DgvActivosDevolucion.DataSource = null;
+            DgvPrestamosActivos.DataSource = null;
+            DgvEjemplares.DataSource = null;
+            DgvProfesoresPrestamo.DataSource = null;
+            DgvProfesoresDevolucion.DataSource = null;
+
             RdbVerPrestamos.Checked = true;
         }
 
@@ -26,8 +32,9 @@ namespace SistemaBiblioteca.Presentacion
             {
                 if(RdbVerPrestamos.Checked == true) 
                     DgvListadoPrestamos.DataSource = NPrestamo.BuscarPrestamos(TxtBuscar.Text);
-                else
+                else 
                     DgvListadoPrestamos.DataSource = NPrestamo.BuscarDevoluciones(TxtBuscar.Text);
+
                 LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoPrestamos.Rows.Count);
             }
             catch (Exception ex)
@@ -329,5 +336,6 @@ namespace SistemaBiblioteca.Presentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
     }
 }

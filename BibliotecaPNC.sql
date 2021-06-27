@@ -182,6 +182,17 @@ as begin
 end;
 go;
 
+create or alter procedure BuscarLibroPorId
+@valor int
+as begin
+	select l.IdLibro as Id, l.Titulo, l.Autor, l.ISBN, l.Materia, l.AnioEdicion, l.NoEdicion,
+		l.NoPaginas, l.Descripcion
+	from Libro l
+	where l.IdLibro = @valor
+	order by l.IdLibro desc
+end;
+go;
+
 create or alter procedure ListarEjemplares
 @idLibro int
 as begin
@@ -192,6 +203,13 @@ as begin
 end;
 go;
 
+create or alter procedure ListarTodosEjemplares
+as begin
+	select e.IdEjemplar as Id, l.IdLibro, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	order by e.IdEjemplar desc;
+end;
+go;
 
 create or alter procedure ListarEjemplaresDisponibles
 as begin
@@ -210,6 +228,17 @@ as begin
 	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
 	where (l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
 		or e.Ubicacion like '%' + @valor + '%') and e.IdLibro = @idLibro
+	order by e.IdEjemplar desc;
+end;
+go;
+
+create or alter procedure BuscarEjemplaresSinIdLibro
+@valor varchar(150)
+as begin
+	select e.IdEjemplar as Id, l.IdLibro, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais, e.Estado, IIF(e.Estado = 1, 'Disponible', 'Prestado') as 'EstadoLibro'
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where (l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
+		or e.Ubicacion like '%' + @valor + '%' or e.Editorial like '%' + @valor + '%' or e.Pais like '%' + @valor + '%')
 	order by e.IdEjemplar desc;
 end;
 go;

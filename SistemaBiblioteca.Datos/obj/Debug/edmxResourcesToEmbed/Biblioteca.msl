@@ -32,6 +32,7 @@
     <EntitySetMapping Name="Prestamo">
       <EntityTypeMapping TypeName="BibliotecaModel.Prestamo">
         <MappingFragment StoreEntitySet="Prestamo">
+          <ScalarProperty Name="FechaDevuelto" ColumnName="FechaDevuelto" />
           <ScalarProperty Name="IdPrestamo" ColumnName="IdPrestamo" />
           <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
@@ -225,6 +226,98 @@
           <ScalarProperty Name="Editorial" ColumnName="Editorial" />
           <ScalarProperty Name="Idioma" ColumnName="Idioma" />
           <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorCodigoEjemplar" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorCodigoEjemplar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorCodigoEjemplar_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorCodigoLibro" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorCodigoLibro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorCodigoLibro_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorEditorial" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorEditorial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorEditorial_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorLibro" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorLibro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorLibro_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarTodosEjemplares" FunctionName="BibliotecaModel.Store.ListarTodosEjemplares">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.ListarTodosEjemplares_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="EstadoLibro" ColumnName="EstadoLibro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarLibroPorId" FunctionName="BibliotecaModel.Store.BuscarLibroPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarLibroPorId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Autor" ColumnName="Autor" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Materia" ColumnName="Materia" />
+          <ScalarProperty Name="AnioEdicion" ColumnName="AnioEdicion" />
+          <ScalarProperty Name="NoEdicion" ColumnName="NoEdicion" />
+          <ScalarProperty Name="NoPaginas" ColumnName="NoPaginas" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarEjemplaresSinIdLibro" FunctionName="BibliotecaModel.Store.BuscarEjemplaresSinIdLibro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresSinIdLibro_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdLibro" ColumnName="IdLibro" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="EstadoLibro" ColumnName="EstadoLibro" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

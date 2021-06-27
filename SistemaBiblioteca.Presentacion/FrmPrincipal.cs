@@ -117,5 +117,19 @@ namespace SistemaBiblioteca.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void ejemplaresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEjemplarPrincipal frm = new FrmEjemplarPrincipal();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmElegirReporte frm = new FrmElegirReporte();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

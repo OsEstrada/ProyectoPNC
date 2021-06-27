@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="60c11b2a5bf540d6b5c22c6455b8a5b9" Name="Diagram1">
-        <EntityTypeShape EntityType="BibliotecaModel.Ejemplar" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaModel.Libro" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+      <Diagram DiagramId="fe310c1a8cd84ecebba83f1a85511a9b" Name="Diagram1">
+        <EntityTypeShape EntityType="BibliotecaModel.Ejemplar" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Libro" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Prestamo" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaModel.Rol" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Rol" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BibliotecaModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="BibliotecaModel.FK__Ejemplar__IdLibr__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="BibliotecaModel.FK_PRESTAMO_EJEMPLAR" ManuallyRouted="false" />

@@ -21,6 +21,12 @@ namespace SistemaBiblioteca.Negocio
             return Datos.ListarEjemplaresDisponibles();
         }
 
+        public static List<ListarTodosEjemplares_Result> ListarTodosEjemplares()
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.ListarTodos();
+        }
+
         public static List<BuscarEjemplares_Result> Buscar(string valor, int idLibro)
         {
             DEjemplar Datos = new DEjemplar();
@@ -43,6 +49,12 @@ namespace SistemaBiblioteca.Negocio
         {
             DEjemplar Datos = new DEjemplar();
             return Datos.BuscarEjemplaresPorCodigoEjemplar(valor);
+        }
+
+        public static List<BuscarEjemplaresSinIdLibro_Result> BuscarEjemplaresSinIdLibro(string valor)
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.BuscarSinIdLibro(valor);
         }
 
         public static List<BuscarEjemplaresPorEditorial_Result> BuscarPorEditorial(string valor)

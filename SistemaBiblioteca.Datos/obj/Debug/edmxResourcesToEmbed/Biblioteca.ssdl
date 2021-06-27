@@ -36,6 +36,7 @@
     <Property Name="FechaPrestamo" Type="date" Nullable="false" />
     <Property Name="FechaDevolucion" Type="date" />
     <Property Name="Estado" Type="bit" />
+    <Property Name="FechaDevuelto" Type="date" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -111,8 +112,26 @@
     <Parameter Name="valor" Type="varchar" Mode="In" />
     <Parameter Name="idLibro" Type="int" Mode="In" />
   </Function>
+  <Function Name="BuscarEjemplaresPorCodigoEjemplar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="BuscarEjemplaresPorCodigoLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="BuscarEjemplaresPorEditorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="BuscarEjemplaresPorLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="BuscarEjemplaresSinIdLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="BuscarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="BuscarLibroPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="valor" Type="int" Mode="In" />
   </Function>
   <Function Name="BuscarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="valor" Type="varchar" Mode="In" />
@@ -142,6 +161,7 @@
   <Function Name="ListarLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="ListarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="ListarProfesores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ListarTodosEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="username" Type="varchar" Mode="In" />
     <Parameter Name="password" Type="varchar" Mode="In" />

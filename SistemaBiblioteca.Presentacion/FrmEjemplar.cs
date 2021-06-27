@@ -38,10 +38,16 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 string Rpta = "";
-                if (TxtUbicacion.Text == string.Empty || CboEstado.Text == string.Empty)
+                if (TxtUbicacion.Text == string.Empty || TxtEditorial.Text == string.Empty || CboEstado.Text == string.Empty)
                 {
                     this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
-                    ErrorIcono.SetError(TxtUbicacion, "Ingrese una ubicación.");
+
+                    if (TxtUbicacion.Text == string.Empty)
+                        ErrorIcono.SetError(TxtUbicacion, "Ingrese una ubicación.");
+                    else if (TxtEditorial.Text == string.Empty)
+                        ErrorIcono.SetError(TxtEditorial, "Ingrese una editorial.");
+                    else
+                        ErrorIcono.SetError(TxtEditorial, "Ingrese una estado.");
                 }
                 else
                 {
@@ -72,10 +78,16 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 string Rpta = "";
-                if (TxtUbicacion.Text == string.Empty || CboEstado.Text == string.Empty)
+                if (TxtUbicacion.Text == string.Empty || TxtEditorial.Text == string.Empty || CboEstado.Text == string.Empty)
                 {
                     this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
-                    ErrorIcono.SetError(TxtUbicacion, "Ingrese una ubicación.");
+
+                    if (TxtUbicacion.Text == string.Empty)
+                        ErrorIcono.SetError(TxtUbicacion, "Ingrese una ubicación.");
+                    else if (TxtEditorial.Text == string.Empty)
+                        ErrorIcono.SetError(TxtEditorial, "Ingrese una editorial.");
+                    else
+                        ErrorIcono.SetError(TxtEditorial, "Ingrese una estado.");
                 }
                 else
                 {

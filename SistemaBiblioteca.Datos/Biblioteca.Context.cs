@@ -55,6 +55,51 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplares_Result>("BuscarEjemplares", valorParameter, idLibroParameter);
         }
     
+        public virtual ObjectResult<BuscarEjemplaresPorCodigoEjemplar_Result> BuscarEjemplaresPorCodigoEjemplar(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoEjemplar_Result>("BuscarEjemplaresPorCodigoEjemplar", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorCodigoLibro_Result> BuscarEjemplaresPorCodigoLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoLibro_Result>("BuscarEjemplaresPorCodigoLibro", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorEditorial_Result> BuscarEjemplaresPorEditorial(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorEditorial_Result>("BuscarEjemplaresPorEditorial", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorLibro_Result> BuscarEjemplaresPorLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorLibro_Result>("BuscarEjemplaresPorLibro", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresSinIdLibro_Result> BuscarEjemplaresSinIdLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresSinIdLibro_Result>("BuscarEjemplaresSinIdLibro", valorParameter);
+        }
+    
         public virtual ObjectResult<BuscarLibro_Result> BuscarLibro(string valor)
         {
             var valorParameter = valor != null ?
@@ -64,6 +109,15 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarLibro_Result>("BuscarLibro", valorParameter);
         }
     
+        public virtual ObjectResult<BuscarLibroPorId_Result> BuscarLibroPorId(Nullable<int> valor)
+        {
+            var valorParameter = valor.HasValue ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarLibroPorId_Result>("BuscarLibroPorId", valorParameter);
+        }
+    
         public virtual ObjectResult<BuscarPrestamos_Result> BuscarPrestamos(string valor)
         {
             var valorParameter = valor != null ?
@@ -71,6 +125,24 @@ namespace SistemaBiblioteca.Datos
                 new ObjectParameter("valor", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarPrestamos_Result>("BuscarPrestamos", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarPrestamosActivosProfesor_Result> BuscarPrestamosActivosProfesor(Nullable<int> valor)
+        {
+            var valorParameter = valor.HasValue ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarPrestamosActivosProfesor_Result>("BuscarPrestamosActivosProfesor", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarProfesor_Result> BuscarProfesor(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarProfesor_Result>("BuscarProfesor", valorParameter);
         }
     
         public virtual int InsertarLibros(string titulo, string autor, string iSBN, string materia, string anioEdicion, Nullable<int> noEdicion, Nullable<int> noPaginas, string descripcion, ObjectParameter id)
@@ -124,6 +196,11 @@ namespace SistemaBiblioteca.Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplares_Result>("ListarEjemplares", idLibroParameter);
         }
     
+        public virtual ObjectResult<ListarEjemplaresDisponibles_Result> ListarEjemplaresDisponibles()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplaresDisponibles_Result>("ListarEjemplaresDisponibles");
+        }
+    
         public virtual ObjectResult<ListarLibros_Result> ListarLibros()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarLibros_Result>("ListarLibros");
@@ -132,6 +209,16 @@ namespace SistemaBiblioteca.Datos
         public virtual ObjectResult<ListarPrestamos_Result> ListarPrestamos()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarPrestamos_Result>("ListarPrestamos");
+        }
+    
+        public virtual ObjectResult<ListarProfesores_Result> ListarProfesores()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarProfesores_Result>("ListarProfesores");
+        }
+    
+        public virtual ObjectResult<ListarTodosEjemplares_Result> ListarTodosEjemplares()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarTodosEjemplares_Result>("ListarTodosEjemplares");
         }
     
         public virtual ObjectResult<Login_Result> Login(string username, string password)
@@ -145,70 +232,6 @@ namespace SistemaBiblioteca.Datos
                 new ObjectParameter("password", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Login_Result>("Login", usernameParameter, passwordParameter);
-        }
-    
-        public virtual ObjectResult<BuscarPrestamosActivosProfesor_Result> BuscarPrestamosActivosProfesor(Nullable<int> valor)
-        {
-            var valorParameter = valor.HasValue ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarPrestamosActivosProfesor_Result>("BuscarPrestamosActivosProfesor", valorParameter);
-        }
-    
-        public virtual ObjectResult<BuscarProfesor_Result> BuscarProfesor(string valor)
-        {
-            var valorParameter = valor != null ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarProfesor_Result>("BuscarProfesor", valorParameter);
-        }
-    
-        public virtual ObjectResult<ListarProfesores_Result> ListarProfesores()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarProfesores_Result>("ListarProfesores");
-        }
-    
-        public virtual ObjectResult<ListarEjemplaresDisponibles_Result> ListarEjemplaresDisponibles()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplaresDisponibles_Result>("ListarEjemplaresDisponibles");
-        }
-    
-        public virtual ObjectResult<BuscarEjemplaresPorCodigoEjemplar_Result> BuscarEjemplaresPorCodigoEjemplar(string valor)
-        {
-            var valorParameter = valor != null ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoEjemplar_Result>("BuscarEjemplaresPorCodigoEjemplar", valorParameter);
-        }
-    
-        public virtual ObjectResult<BuscarEjemplaresPorCodigoLibro_Result> BuscarEjemplaresPorCodigoLibro(string valor)
-        {
-            var valorParameter = valor != null ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoLibro_Result>("BuscarEjemplaresPorCodigoLibro", valorParameter);
-        }
-    
-        public virtual ObjectResult<BuscarEjemplaresPorEditorial_Result> BuscarEjemplaresPorEditorial(string valor)
-        {
-            var valorParameter = valor != null ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorEditorial_Result>("BuscarEjemplaresPorEditorial", valorParameter);
-        }
-    
-        public virtual ObjectResult<BuscarEjemplaresPorLibro_Result> BuscarEjemplaresPorLibro(string valor)
-        {
-            var valorParameter = valor != null ?
-                new ObjectParameter("valor", valor) :
-                new ObjectParameter("valor", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorLibro_Result>("BuscarEjemplaresPorLibro", valorParameter);
         }
     }
 }

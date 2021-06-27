@@ -45,6 +45,23 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<BuscarLibroPorId_Result> BuscarPorId(int valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarLibroPorId(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
         public string Insertar(Libro obj)
         {

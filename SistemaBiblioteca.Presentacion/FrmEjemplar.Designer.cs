@@ -43,13 +43,14 @@
             this.LblEstado = new System.Windows.Forms.Label();
             this.CboEstado = new System.Windows.Forms.ComboBox();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtUbicacion
             // 
             this.TxtUbicacion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtUbicacion.Location = new System.Drawing.Point(122, 35);
+            this.TxtUbicacion.Location = new System.Drawing.Point(122, 42);
             this.TxtUbicacion.Name = "TxtUbicacion";
             this.TxtUbicacion.Size = new System.Drawing.Size(245, 22);
             this.TxtUbicacion.TabIndex = 1;
@@ -58,16 +59,16 @@
             // 
             this.LblUbicacion.AutoSize = true;
             this.LblUbicacion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblUbicacion.Location = new System.Drawing.Point(44, 38);
+            this.LblUbicacion.Location = new System.Drawing.Point(44, 45);
             this.LblUbicacion.Name = "LblUbicacion";
-            this.LblUbicacion.Size = new System.Drawing.Size(55, 13);
+            this.LblUbicacion.Size = new System.Drawing.Size(69, 13);
             this.LblUbicacion.TabIndex = 0;
-            this.LblUbicacion.Text = "Ubicación";
+            this.LblUbicacion.Text = "Ubicación (*)";
             // 
             // TxtEditorial
             // 
             this.TxtEditorial.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtEditorial.Location = new System.Drawing.Point(122, 66);
+            this.TxtEditorial.Location = new System.Drawing.Point(122, 73);
             this.TxtEditorial.Name = "TxtEditorial";
             this.TxtEditorial.Size = new System.Drawing.Size(245, 22);
             this.TxtEditorial.TabIndex = 2;
@@ -76,17 +77,17 @@
             // 
             this.LblEditorial.AutoSize = true;
             this.LblEditorial.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblEditorial.Location = new System.Drawing.Point(44, 69);
+            this.LblEditorial.Location = new System.Drawing.Point(44, 76);
             this.LblEditorial.Name = "LblEditorial";
-            this.LblEditorial.Size = new System.Drawing.Size(48, 13);
+            this.LblEditorial.Size = new System.Drawing.Size(62, 13);
             this.LblEditorial.TabIndex = 0;
-            this.LblEditorial.Text = "Editorial";
+            this.LblEditorial.Text = "Editorial (*)";
             // 
             // LblIdioma
             // 
             this.LblIdioma.AutoSize = true;
             this.LblIdioma.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblIdioma.Location = new System.Drawing.Point(44, 136);
+            this.LblIdioma.Location = new System.Drawing.Point(44, 143);
             this.LblIdioma.Name = "LblIdioma";
             this.LblIdioma.Size = new System.Drawing.Size(40, 13);
             this.LblIdioma.TabIndex = 0;
@@ -95,7 +96,7 @@
             // TxtIdioma
             // 
             this.TxtIdioma.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtIdioma.Location = new System.Drawing.Point(122, 133);
+            this.TxtIdioma.Location = new System.Drawing.Point(122, 140);
             this.TxtIdioma.Name = "TxtIdioma";
             this.TxtIdioma.Size = new System.Drawing.Size(245, 22);
             this.TxtIdioma.TabIndex = 4;
@@ -103,7 +104,7 @@
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.txtPais.Location = new System.Drawing.Point(122, 102);
+            this.txtPais.Location = new System.Drawing.Point(122, 109);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(245, 22);
             this.txtPais.TabIndex = 3;
@@ -112,7 +113,7 @@
             // 
             this.LblPais.AutoSize = true;
             this.LblPais.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblPais.Location = new System.Drawing.Point(44, 102);
+            this.LblPais.Location = new System.Drawing.Point(44, 109);
             this.LblPais.Name = "LblPais";
             this.LblPais.Size = new System.Drawing.Size(27, 13);
             this.LblPais.TabIndex = 0;
@@ -165,11 +166,11 @@
             // 
             this.LblEstado.AutoSize = true;
             this.LblEstado.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblEstado.Location = new System.Drawing.Point(44, 171);
+            this.LblEstado.Location = new System.Drawing.Point(44, 178);
             this.LblEstado.Name = "LblEstado";
-            this.LblEstado.Size = new System.Drawing.Size(40, 13);
+            this.LblEstado.Size = new System.Drawing.Size(54, 13);
             this.LblEstado.TabIndex = 0;
-            this.LblEstado.Text = "Estado";
+            this.LblEstado.Text = "Estado (*)";
             // 
             // CboEstado
             // 
@@ -177,7 +178,7 @@
             this.CboEstado.Items.AddRange(new object[] {
             "Disponible",
             "Prestado"});
-            this.CboEstado.Location = new System.Drawing.Point(122, 171);
+            this.CboEstado.Location = new System.Drawing.Point(122, 178);
             this.CboEstado.MaxDropDownItems = 4;
             this.CboEstado.Name = "CboEstado";
             this.CboEstado.Size = new System.Drawing.Size(245, 21);
@@ -187,12 +188,24 @@
             // 
             this.ErrorIcono.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(44, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "(*) Indica que el dato es obligatorio.";
+            // 
             // FrmEjemplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(434, 297);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.CboEstado);
             this.Controls.Add(this.LblEstado);
             this.Controls.Add(this.BtnActualizar);
@@ -234,5 +247,6 @@
         private System.Windows.Forms.Label LblEstado;
         private System.Windows.Forms.ComboBox CboEstado;
         private System.Windows.Forms.ErrorProvider ErrorIcono;
+        private System.Windows.Forms.Label label3;
     }
 }

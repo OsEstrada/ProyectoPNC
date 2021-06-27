@@ -59,6 +59,18 @@
     <Compile Include="FrmEjemplar.Designer.cs">
       <DependentUpon>FrmEjemplar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEjemplarPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEjemplarPrincipal.Designer.cs">
+      <DependentUpon>FrmEjemplarPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmElegirReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmElegirReporte.Designer.cs">
+      <DependentUpon>FrmElegirReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmEjemplar.resx">
       <DependentUpon>FrmEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEjemplarPrincipal.resx">
+      <DependentUpon>FrmEjemplarPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmElegirReporte.resx">
+      <DependentUpon>FrmElegirReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamo.resx">
       <DependentUpon>FrmPrestamo.cs</DependentUpon>

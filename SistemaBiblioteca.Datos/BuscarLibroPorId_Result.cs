@@ -11,14 +11,16 @@ namespace SistemaBiblioteca.Datos
 {
     using System;
     
-    public partial class BuscarPrestamosActivosProfesor_Result
+    public partial class BuscarLibroPorId_Result
     {
-        public int IdUsuario { get; set; }
         public int Id { get; set; }
-        public string Profesor { get; set; }
         public string Titulo { get; set; }
-        public int Numero_Ejemplar { get; set; }
-        public System.DateTime Fecha_Prestamo { get; set; }
-        public Nullable<System.DateTime> Fecha_Limite_de_Devolucion { get; set; }
+        public string Autor { get; set; }
+        public string ISBN { get; set; }
+        public string Materia { get; set; }
+        public string AnioEdicion { get; set; }
+        public Nullable<int> NoEdicion { get; set; }
+        public Nullable<int> NoPaginas { get; set; }
+        public string Descripcion { get; set; }
     }
 }

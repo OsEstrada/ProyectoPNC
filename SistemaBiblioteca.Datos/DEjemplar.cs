@@ -26,6 +26,23 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<ListarTodosEjemplares_Result> ListarTodos()
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.ListarTodosEjemplares().ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public List<ListarEjemplaresDisponibles_Result> ListarEjemplaresDisponibles()
         {
             try
@@ -118,6 +135,23 @@ namespace SistemaBiblioteca.Datos
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
                     var list = db.BuscarEjemplares(valor, IdLibro).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<BuscarEjemplaresSinIdLibro_Result> BuscarSinIdLibro(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarEjemplaresSinIdLibro(valor).ToList();
                     return list;
                 }
             }
