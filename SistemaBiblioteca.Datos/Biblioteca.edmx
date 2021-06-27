@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ejemplar">
           <Key>
             <PropertyRef Name="IdEjemplar" />
@@ -194,8 +194,7 @@
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -335,41 +334,41 @@
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
           <FunctionImport Name="BuscarDevoluciones" ReturnType="Collection(BibliotecaModel.BuscarDevoluciones_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplares" ReturnType="Collection(BibliotecaModel.BuscarEjemplares_Result)">
             <Parameter Name="valor" Mode="In" Type="String" />
             <Parameter Name="idLibro" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplaresPorCodigoEjemplar" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoEjemplar_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplaresPorCodigoLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoLibro_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplaresPorEditorial" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorEditorial_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplaresPorLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorLibro_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplaresSinIdLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresSinIdLibro_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarLibro" ReturnType="Collection(BibliotecaModel.BuscarLibro_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarLibroPorId" ReturnType="Collection(BibliotecaModel.BuscarLibroPorId_Result)">
-            <Parameter Name="valor" Mode="In" Type="Int32" />
+          <Parameter Name="valor" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BuscarPrestamos" ReturnType="Collection(BibliotecaModel.BuscarPrestamos_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarPrestamosActivosProfesor" ReturnType="Collection(BibliotecaModel.BuscarPrestamosActivosProfesor_Result)">
-            <Parameter Name="valor" Mode="In" Type="Int32" />
+          <Parameter Name="valor" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BuscarProfesor" ReturnType="Collection(BibliotecaModel.BuscarProfesor_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertarLibros">
             <Parameter Name="Titulo" Mode="In" Type="String" />
@@ -384,7 +383,7 @@
           </FunctionImport>
           <FunctionImport Name="ListarDevoluciones" ReturnType="Collection(BibliotecaModel.ListarDevoluciones_Result)" />
           <FunctionImport Name="ListarEjemplares" ReturnType="Collection(BibliotecaModel.ListarEjemplares_Result)">
-            <Parameter Name="idLibro" Mode="In" Type="Int32" />
+          <Parameter Name="idLibro" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ListarEjemplaresDisponibles" ReturnType="Collection(BibliotecaModel.ListarEjemplaresDisponibles_Result)" />
           <FunctionImport Name="ListarLibros" ReturnType="Collection(BibliotecaModel.ListarLibros_Result)" />

@@ -40,8 +40,27 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,10 +84,10 @@
     <Compile Include="FrmEjemplarPrincipal.Designer.cs">
       <DependentUpon>FrmEjemplarPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmElegirReporte.cs">
+    <Compile Include="Reportes\FrmElegirReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmElegirReporte.Designer.cs">
+    <Compile Include="Reportes\FrmElegirReporte.Designer.cs">
       <DependentUpon>FrmElegirReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrestamo.cs">
@@ -97,13 +116,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DsBiblioteca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsBiblioteca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReportePrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportePrestamos.Designer.cs">
+      <DependentUpon>FrmReportePrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteLibros.Designer.cs">
+      <DependentUpon>FrmReporteLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FrmEjemplar.resx">
       <DependentUpon>FrmEjemplar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEjemplarPrincipal.resx">
       <DependentUpon>FrmEjemplarPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmElegirReporte.resx">
+    <EmbeddedResource Include="Reportes\FrmElegirReporte.resx">
       <DependentUpon>FrmElegirReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamo.resx">
@@ -128,6 +165,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\FrmReportePrestamos.resx">
+      <DependentUpon>FrmReportePrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteLibros.resx">
+      <DependentUpon>FrmReporteLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptPrestamosActivos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptLibros.rdlc" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +198,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DsBiblioteca.xsc">
+      <DependentUpon>DsBiblioteca.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DsBiblioteca.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsBiblioteca.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DsBiblioteca.xss">
+      <DependentUpon>DsBiblioteca.xsd</DependentUpon>
+    </None>
     <None Include="Resources\libro.png" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +261,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -127,7 +127,8 @@ namespace SistemaBiblioteca.Presentacion
 
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmElegirReporte frm = new FrmElegirReporte();
+            Reportes.FrmElegirReporte frm = new Reportes.FrmElegirReporte();
+
             frm.MdiParent = this;
             frm.Show();
         }
