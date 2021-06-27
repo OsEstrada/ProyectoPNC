@@ -41,7 +41,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -50,8 +49,10 @@
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrarDevolucion = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.btnAgregarPrestamo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.RdbVerDevoluciones = new System.Windows.Forms.RadioButton();
@@ -60,11 +61,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.DtpFechaDevolucion = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnInsertarPrestamo = new System.Windows.Forms.Button();
+            this.PicDevolucion = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DgvPrestamosActivos = new System.Windows.Forms.DataGridView();
             this.DgvProfesoresPrestamo = new System.Windows.Forms.DataGridView();
@@ -79,29 +82,25 @@
             this.BtnBuscarLibro = new System.Windows.Forms.Button();
             this.TxtBuscarPorLibro = new System.Windows.Forms.TextBox();
             this.LblBusqueda = new System.Windows.Forms.Label();
+            this.PicProfesor = new System.Windows.Forms.PictureBox();
+            this.picLibro = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCancelar2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.BtnRegistraDevolucion = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DgvActivosDevolucion = new System.Windows.Forms.DataGridView();
-            this.seleccionarDevolucion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DgvProfesoresDevolucion = new System.Windows.Forms.DataGridView();
             this.BtnBuscarProfesorDevolucion = new System.Windows.Forms.Button();
             this.TxtBuscarPorNombreDev = new System.Windows.Forms.TextBox();
             this.LblNombreDev = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.BtnCancelar2 = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.PicDevolucion = new System.Windows.Forms.PictureBox();
-            this.PicProfesor = new System.Windows.Forms.PictureBox();
-            this.picLibro = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.seleccionarDevolucion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -112,22 +111,22 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicDevolucion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrestamosActivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesoresPrestamo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicProfesor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivosDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesoresDevolucion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicDevolucion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -267,6 +266,22 @@
             this.btnRegistrarDevolucion.UseVisualStyleBackColor = false;
             this.btnRegistrarDevolucion.Click += new System.EventHandler(this.btnRegistrarDevolucion_Click_1);
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
+            this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
+            this.BtnEliminar.Location = new System.Drawing.Point(1445, 2);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
+            this.BtnEliminar.TabIndex = 8;
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // btnAgregarPrestamo
             // 
             this.btnAgregarPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -292,6 +307,19 @@
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Frase o código";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.busqueda;
+            this.BtnBuscar.Location = new System.Drawing.Point(631, 1);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(42, 30);
+            this.BtnBuscar.TabIndex = 5;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // TxtBuscar
             // 
@@ -411,6 +439,17 @@
             this.panel4.Size = new System.Drawing.Size(1147, 687);
             this.panel4.TabIndex = 0;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(918, 787);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(200, 30);
+            this.btnCancelar.TabIndex = 70;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -464,6 +503,16 @@
             this.BtnInsertarPrestamo.Text = "Registrar Prestámo";
             this.BtnInsertarPrestamo.UseVisualStyleBackColor = false;
             this.BtnInsertarPrestamo.Click += new System.EventHandler(this.BtnInsertarPrestamo_Click);
+            // 
+            // PicDevolucion
+            // 
+            this.PicDevolucion.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.devolucion;
+            this.PicDevolucion.Location = new System.Drawing.Point(16, 657);
+            this.PicDevolucion.Name = "PicDevolucion";
+            this.PicDevolucion.Size = new System.Drawing.Size(33, 31);
+            this.PicDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicDevolucion.TabIndex = 66;
+            this.PicDevolucion.TabStop = false;
             // 
             // groupBox1
             // 
@@ -668,6 +717,26 @@
             this.LblBusqueda.TabIndex = 51;
             this.LblBusqueda.Text = "Frase o palabra de búsqueda";
             // 
+            // PicProfesor
+            // 
+            this.PicProfesor.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.profesor;
+            this.PicProfesor.Location = new System.Drawing.Point(18, 354);
+            this.PicProfesor.Name = "PicProfesor";
+            this.PicProfesor.Size = new System.Drawing.Size(33, 31);
+            this.PicProfesor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicProfesor.TabIndex = 58;
+            this.PicProfesor.TabStop = false;
+            // 
+            // picLibro
+            // 
+            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
+            this.picLibro.Location = new System.Drawing.Point(18, 92);
+            this.picLibro.Name = "picLibro";
+            this.picLibro.Size = new System.Drawing.Size(33, 31);
+            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLibro.TabIndex = 57;
+            this.picLibro.TabStop = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel4);
@@ -715,6 +784,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1147, 687);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnCancelar2
+            // 
+            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar2.Location = new System.Drawing.Point(904, 622);
+            this.BtnCancelar2.Name = "BtnCancelar2";
+            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
+            this.BtnCancelar2.TabIndex = 76;
+            this.BtnCancelar2.Text = "Cancelar";
+            this.BtnCancelar2.UseVisualStyleBackColor = true;
+            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click_1);
             // 
             // label7
             // 
@@ -766,43 +846,29 @@
             this.DgvActivosDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvActivosDevolucion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.seleccionarDevolucion});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvActivosDevolucion.DefaultCellStyle = dataGridViewCellStyle10;
             this.DgvActivosDevolucion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvActivosDevolucion.Location = new System.Drawing.Point(3, 18);
             this.DgvActivosDevolucion.Margin = new System.Windows.Forms.Padding(2);
             this.DgvActivosDevolucion.Name = "DgvActivosDevolucion";
             this.DgvActivosDevolucion.RowHeadersVisible = false;
             this.DgvActivosDevolucion.RowHeadersWidth = 51;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvActivosDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvActivosDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.DgvActivosDevolucion.RowTemplate.Height = 24;
             this.DgvActivosDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvActivosDevolucion.Size = new System.Drawing.Size(1011, 203);
             this.DgvActivosDevolucion.TabIndex = 47;
             // 
-            // seleccionarDevolucion
-            // 
-            this.seleccionarDevolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.seleccionarDevolucion.HeaderText = "Seleccionar";
-            this.seleccionarDevolucion.Name = "seleccionarDevolucion";
-            // 
             // DgvProfesoresDevolucion
             // 
             this.DgvProfesoresDevolucion.AllowUserToAddRows = false;
             this.DgvProfesoresDevolucion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.DgvProfesoresDevolucion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProfesoresDevolucion.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvProfesoresDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -811,10 +877,10 @@
             this.DgvProfesoresDevolucion.Name = "DgvProfesoresDevolucion";
             this.DgvProfesoresDevolucion.RowHeadersVisible = false;
             this.DgvProfesoresDevolucion.RowHeadersWidth = 51;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvProfesoresDevolucion.RowTemplate.Height = 24;
             this.DgvProfesoresDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProfesoresDevolucion.Size = new System.Drawing.Size(1019, 186);
@@ -865,93 +931,6 @@
             this.label6.TabIndex = 69;
             this.label6.Text = "Búsqueda de profesor";
             // 
-            // ErrorIcono
-            // 
-            this.ErrorIcono.ContainerControl = this;
-            // 
-            // BtnCancelar2
-            // 
-            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(904, 622);
-            this.BtnCancelar2.Name = "BtnCancelar2";
-            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
-            this.BtnCancelar2.TabIndex = 76;
-            this.BtnCancelar2.Text = "Cancelar";
-            this.BtnCancelar2.UseVisualStyleBackColor = true;
-            this.BtnCancelar2.Visible = false;
-            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click_1);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(918, 787);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(200, 30);
-            this.btnCancelar.TabIndex = 70;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Visible = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEliminar.FlatAppearance.BorderSize = 0;
-            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
-            this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminar.Location = new System.Drawing.Point(1445, 2);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
-            this.BtnEliminar.TabIndex = 8;
-            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.busqueda;
-            this.BtnBuscar.Location = new System.Drawing.Point(631, 1);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(42, 30);
-            this.BtnBuscar.TabIndex = 5;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // PicDevolucion
-            // 
-            this.PicDevolucion.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.devolucion;
-            this.PicDevolucion.Location = new System.Drawing.Point(16, 657);
-            this.PicDevolucion.Name = "PicDevolucion";
-            this.PicDevolucion.Size = new System.Drawing.Size(33, 31);
-            this.PicDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicDevolucion.TabIndex = 66;
-            this.PicDevolucion.TabStop = false;
-            // 
-            // PicProfesor
-            // 
-            this.PicProfesor.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.profesor;
-            this.PicProfesor.Location = new System.Drawing.Point(18, 354);
-            this.PicProfesor.Name = "PicProfesor";
-            this.PicProfesor.Size = new System.Drawing.Size(33, 31);
-            this.PicProfesor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicProfesor.TabIndex = 58;
-            this.PicProfesor.TabStop = false;
-            // 
-            // picLibro
-            // 
-            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.picLibro.Location = new System.Drawing.Point(18, 92);
-            this.picLibro.Name = "picLibro";
-            this.picLibro.Size = new System.Drawing.Size(33, 31);
-            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLibro.TabIndex = 57;
-            this.picLibro.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.profesor;
@@ -971,6 +950,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
+            // 
+            // ErrorIcono
+            // 
+            this.ErrorIcono.ContainerControl = this;
+            // 
+            // seleccionarDevolucion
+            // 
+            this.seleccionarDevolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.seleccionarDevolucion.HeaderText = "Seleccionar";
+            this.seleccionarDevolucion.Name = "seleccionarDevolucion";
             // 
             // FrmPrestamo
             // 
@@ -1003,10 +992,13 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicDevolucion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrestamosActivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesoresPrestamo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicProfesor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1014,12 +1006,9 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivosDevolucion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesoresDevolucion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicDevolucion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicProfesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1079,12 +1068,12 @@
         private System.Windows.Forms.Label LblNombreDev;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn seleccionarDevolucion;
         private System.Windows.Forms.Button btnAgregarPrestamo;
         private System.Windows.Forms.Button btnRegistrarDevolucion;
         private System.Windows.Forms.RadioButton RdbVerDevoluciones;
         private System.Windows.Forms.RadioButton RdbVerPrestamos;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button BtnCancelar2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn seleccionarDevolucion;
     }
 }

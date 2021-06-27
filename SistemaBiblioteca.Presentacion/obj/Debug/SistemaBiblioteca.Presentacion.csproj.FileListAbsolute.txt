@@ -46,3 +46,4 @@ C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presen
 C:\Users\Oscar Alejandro\source\repos\SistemaBiblioteca\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmPrestamo.resources
 C:\Users\asple\source\repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmLogin.resources
 C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmEjemplarPrincipal.resources
+C:\Users\asple\Source\Repos\OsEstrada\ProyectoPNC\SistemaBiblioteca.Presentacion\obj\Debug\SistemaBiblioteca.Presentacion.FrmElegirReporte.resources

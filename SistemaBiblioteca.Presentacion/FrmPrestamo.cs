@@ -188,7 +188,7 @@ namespace SistemaBiblioteca.Presentacion
 
         private void btnAgregarPrestamo_Click(object sender, EventArgs e)
         {
-            if (TabPrincipal.TabPages.Count < 3)
+            if (TabPrincipal.TabPages.Count < 2)
             {
                 TabPrincipal.Controls.Add(tabPage2);
             }
@@ -200,13 +200,13 @@ namespace SistemaBiblioteca.Presentacion
 
         private void btnRegistrarDevolucion_Click_1(object sender, EventArgs e)
         {
-            if (TabPrincipal.TabPages.Count < 3)
+            if (TabPrincipal.TabPages.Count < 2)
             {
                 TabPrincipal.Controls.Add(tabPage3);
             }
 
             this.ListarProfesoresDev();
-            TabPrincipal.SelectedIndex = 2;
+            TabPrincipal.SelectedTab = tabPage3;
         }
 
         private void DgvProfesoresPrestamo_SelectionChanged(object sender, EventArgs e)
@@ -270,16 +270,19 @@ namespace SistemaBiblioteca.Presentacion
             {
                 string Rpta = "";
 
-                Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells[0].Value), DateTime.UtcNow.Date);
+                foreach (DataGridViewRow row in DgvActivosDevolucion.SelectedRows)
+                {
+                    Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells[1].Value), DateTime.UtcNow.Date);
 
-                if (char.IsDigit(Rpta[0]))
-                {
-                    this.MensajeOk(Rpta);
-                }
-                else
-                {
-                    this.MensajeError(Rpta);
-                }
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Registro agregado con éxito.");
+                    }
+                    else
+                    {
+                        this.MensajeError("Hubo un error. Favor Intente de nuevo");
+                    }
+                }   
             }
             catch (Exception ex)
             {
@@ -298,11 +301,11 @@ namespace SistemaBiblioteca.Presentacion
 
                 if (char.IsDigit(Rpta[0]))
                 {
-                    this.MensajeOk(Rpta);
+                    this.MensajeOk("Registro agregado con éxito.");
                 }
                 else
                 {
-                    this.MensajeError(Rpta);
+                    this.MensajeError("Hubo un error. Favor Intente de nuevo");
                 }
             }
             catch (Exception ex)

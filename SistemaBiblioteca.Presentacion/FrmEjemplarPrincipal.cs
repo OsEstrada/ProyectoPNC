@@ -27,6 +27,8 @@ namespace SistemaBiblioteca.Presentacion
             TxtUbicacion.Clear();
             CboEstado.SelectedIndex = 0;
             DgvListadoLibro.DataSource = null;
+            btnAgregar.Visible = true;
+            BtnActualizar.Visible = false;
             ErrorIcono.Clear();
         }
 
@@ -188,13 +190,6 @@ namespace SistemaBiblioteca.Presentacion
            
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            TabPrincipal.SelectedIndex = 0;
-            Limpiar();
-            TabPrincipal.Controls.Remove(tabPage2);
-        }
-
         private void TabPrincipal_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(TabPrincipal.SelectedIndex == 0)
@@ -203,7 +198,9 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnCancelar2_Click(object sender, EventArgs e)
         {
-            this.BtnCancelar_Click(sender, e);
+            TabPrincipal.SelectedIndex = 0;
+            Limpiar();
+            TabPrincipal.Controls.Remove(tabPage2);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -233,6 +230,9 @@ namespace SistemaBiblioteca.Presentacion
 
             if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
             TabPrincipal.SelectedIndex = 1;
+
+            btnAgregar.Visible = false;
+            BtnActualizar.Visible = true;
 
             Cursor.Current = Cursors.Default;
         }
@@ -281,7 +281,7 @@ namespace SistemaBiblioteca.Presentacion
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se inserto de forma correcta el registro.");
-                        Dispose();
+                        BtnCancelar2_Click(sender, e);
                     }
                     else
                     {

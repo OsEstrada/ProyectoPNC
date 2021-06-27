@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -53,12 +53,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.BtnCancelar2 = new System.Windows.Forms.Button();
-            this.picLibro = new System.Windows.Forms.PictureBox();
-            this.DgvListadoLibro = new System.Windows.Forms.DataGridView();
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnAgregarEjemplar = new System.Windows.Forms.Button();
+            this.BtnBuscarLibro = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBuscarLibro = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CboEstado = new System.Windows.Forms.ComboBox();
             this.LblEstado = new System.Windows.Forms.Label();
             this.LblIdioma = new System.Windows.Forms.Label();
@@ -69,13 +70,12 @@
             this.LblUbicacion = new System.Windows.Forms.Label();
             this.TxtEditorial = new System.Windows.Forms.TextBox();
             this.LblEditorial = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBuscarLibro = new System.Windows.Forms.TextBox();
-            this.BtnBuscarLibro = new System.Windows.Forms.Button();
-            this.BtnAgregarEjemplar = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.BtnCancelar2 = new System.Windows.Forms.Button();
+            this.picLibro = new System.Windows.Forms.PictureBox();
+            this.DgvListadoLibro = new System.Windows.Forms.DataGridView();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -86,10 +86,10 @@
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListadoLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -162,10 +162,10 @@
             this.DgvListadoEjemplares.AllowUserToAddRows = false;
             this.DgvListadoEjemplares.AllowUserToDeleteRows = false;
             this.DgvListadoEjemplares.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvListadoEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvListadoEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DgvListadoEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -177,10 +177,10 @@
             this.DgvListadoEjemplares.Name = "DgvListadoEjemplares";
             this.DgvListadoEjemplares.RowHeadersVisible = false;
             this.DgvListadoEjemplares.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvListadoEjemplares.RowTemplate.Height = 24;
             this.DgvListadoEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListadoEjemplares.Size = new System.Drawing.Size(1482, 632);
@@ -366,105 +366,84 @@
             this.panel4.Size = new System.Drawing.Size(953, 706);
             this.panel4.TabIndex = 0;
             // 
-            // label15
+            // BtnAgregarEjemplar
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(68, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(137, 19);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Seleccionar Libro";
+            this.BtnAgregarEjemplar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnAgregarEjemplar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnAgregarEjemplar.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarEjemplar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarEjemplar.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(72, 590);
+            this.BtnAgregarEjemplar.Name = "BtnAgregarEjemplar";
+            this.BtnAgregarEjemplar.Size = new System.Drawing.Size(200, 30);
+            this.BtnAgregarEjemplar.TabIndex = 65;
+            this.BtnAgregarEjemplar.Text = "Agregar Ejemplar";
+            this.BtnAgregarEjemplar.UseVisualStyleBackColor = false;
+            this.BtnAgregarEjemplar.Click += new System.EventHandler(this.BtnAgregarEjemplar_Click_1);
             // 
-            // BtnCancelar2
+            // BtnBuscarLibro
             // 
-            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(712, 590);
-            this.BtnCancelar2.Name = "BtnCancelar2";
-            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
-            this.BtnCancelar2.TabIndex = 45;
-            this.BtnCancelar2.Text = "Cancelar";
-            this.BtnCancelar2.UseVisualStyleBackColor = true;
-            this.BtnCancelar2.Visible = false;
-            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click);
+            this.BtnBuscarLibro.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnBuscarLibro.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnBuscarLibro.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarLibro.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscarLibro.Location = new System.Drawing.Point(697, 49);
+            this.BtnBuscarLibro.Name = "BtnBuscarLibro";
+            this.BtnBuscarLibro.Size = new System.Drawing.Size(136, 30);
+            this.BtnBuscarLibro.TabIndex = 64;
+            this.BtnBuscarLibro.Text = "Buscar Libro";
+            this.BtnBuscarLibro.UseVisualStyleBackColor = false;
+            this.BtnBuscarLibro.Click += new System.EventHandler(this.BtnBuscarLibro_Click);
             // 
-            // picLibro
+            // label4
             // 
-            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.picLibro.Location = new System.Drawing.Point(29, 20);
-            this.picLibro.Name = "picLibro";
-            this.picLibro.Size = new System.Drawing.Size(33, 31);
-            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLibro.TabIndex = 39;
-            this.picLibro.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(76, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Frase o código";
             // 
-            // DgvListadoLibro
+            // txtBuscarLibro
             // 
-            this.DgvListadoLibro.AllowUserToAddRows = false;
-            this.DgvListadoLibro.AllowUserToDeleteRows = false;
-            this.DgvListadoLibro.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DgvListadoLibro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvListadoLibro.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvListadoLibro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.DgvListadoLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvListadoLibro.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DgvListadoLibro.Location = new System.Drawing.Point(72, 94);
-            this.DgvListadoLibro.Margin = new System.Windows.Forms.Padding(2);
-            this.DgvListadoLibro.Name = "DgvListadoLibro";
-            this.DgvListadoLibro.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvListadoLibro.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.DgvListadoLibro.RowHeadersVisible = false;
-            this.DgvListadoLibro.RowHeadersWidth = 51;
-            this.DgvListadoLibro.RowTemplate.Height = 24;
-            this.DgvListadoLibro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoLibro.Size = new System.Drawing.Size(840, 196);
-            this.DgvListadoLibro.TabIndex = 10;
+            this.txtBuscarLibro.Location = new System.Drawing.Point(158, 55);
+            this.txtBuscarLibro.Name = "txtBuscarLibro";
+            this.txtBuscarLibro.Size = new System.Drawing.Size(531, 22);
+            this.txtBuscarLibro.TabIndex = 62;
             // 
-            // BtnActualizar
+            // label3
             // 
-            this.BtnActualizar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnActualizar.FlatAppearance.BorderSize = 0;
-            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(72, 590);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
-            this.BtnActualizar.TabIndex = 11;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = false;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(69, 343);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 13);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "(*) Indica que el dato es obligatorio.";
             // 
-            // ErrorIcono
+            // label2
             // 
-            this.ErrorIcono.ContainerControl = this;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(68, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 19);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Datos Ejemplar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 324);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
             // 
             // CboEstado
             // 
@@ -560,84 +539,104 @@
             this.LblEditorial.TabIndex = 50;
             this.LblEditorial.Text = "Editorial (*)";
             // 
-            // label2
+            // label15
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 324);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 19);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Datos Ejemplar";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(68, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(137, 19);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Seleccionar Libro";
             // 
-            // pictureBox1
+            // BtnCancelar2
             // 
-            this.pictureBox1.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 324);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
+            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar2.Location = new System.Drawing.Point(712, 590);
+            this.BtnCancelar2.Name = "BtnCancelar2";
+            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
+            this.BtnCancelar2.TabIndex = 45;
+            this.BtnCancelar2.Text = "Cancelar";
+            this.BtnCancelar2.UseVisualStyleBackColor = true;
+            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click);
             // 
-            // label3
+            // picLibro
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(69, 343);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 13);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "(*) Indica que el dato es obligatorio.";
+            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
+            this.picLibro.Location = new System.Drawing.Point(29, 20);
+            this.picLibro.Name = "picLibro";
+            this.picLibro.Size = new System.Drawing.Size(33, 31);
+            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLibro.TabIndex = 39;
+            this.picLibro.TabStop = false;
             // 
-            // label4
+            // DgvListadoLibro
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "Frase o código";
+            this.DgvListadoLibro.AllowUserToAddRows = false;
+            this.DgvListadoLibro.AllowUserToDeleteRows = false;
+            this.DgvListadoLibro.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvListadoLibro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvListadoLibro.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvListadoLibro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvListadoLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvListadoLibro.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DgvListadoLibro.Location = new System.Drawing.Point(72, 94);
+            this.DgvListadoLibro.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvListadoLibro.Name = "DgvListadoLibro";
+            this.DgvListadoLibro.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvListadoLibro.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DgvListadoLibro.RowHeadersVisible = false;
+            this.DgvListadoLibro.RowHeadersWidth = 51;
+            this.DgvListadoLibro.RowTemplate.Height = 24;
+            this.DgvListadoLibro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvListadoLibro.Size = new System.Drawing.Size(840, 196);
+            this.DgvListadoLibro.TabIndex = 10;
             // 
-            // txtBuscarLibro
+            // BtnActualizar
             // 
-            this.txtBuscarLibro.Location = new System.Drawing.Point(158, 55);
-            this.txtBuscarLibro.Name = "txtBuscarLibro";
-            this.txtBuscarLibro.Size = new System.Drawing.Size(531, 22);
-            this.txtBuscarLibro.TabIndex = 62;
+            this.BtnActualizar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnActualizar.Location = new System.Drawing.Point(72, 590);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
+            this.BtnActualizar.TabIndex = 11;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // BtnBuscarLibro
+            // ErrorIcono
             // 
-            this.BtnBuscarLibro.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnBuscarLibro.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnBuscarLibro.FlatAppearance.BorderSize = 0;
-            this.BtnBuscarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscarLibro.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarLibro.Location = new System.Drawing.Point(697, 49);
-            this.BtnBuscarLibro.Name = "BtnBuscarLibro";
-            this.BtnBuscarLibro.Size = new System.Drawing.Size(136, 30);
-            this.BtnBuscarLibro.TabIndex = 64;
-            this.BtnBuscarLibro.Text = "Buscar Libro";
-            this.BtnBuscarLibro.UseVisualStyleBackColor = false;
-            this.BtnBuscarLibro.Click += new System.EventHandler(this.BtnBuscarLibro_Click);
-            // 
-            // BtnAgregarEjemplar
-            // 
-            this.BtnAgregarEjemplar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnAgregarEjemplar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnAgregarEjemplar.FlatAppearance.BorderSize = 0;
-            this.BtnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarEjemplar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregarEjemplar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(72, 590);
-            this.BtnAgregarEjemplar.Name = "BtnAgregarEjemplar";
-            this.BtnAgregarEjemplar.Size = new System.Drawing.Size(200, 30);
-            this.BtnAgregarEjemplar.TabIndex = 65;
-            this.BtnAgregarEjemplar.Text = "Agregar Ejemplar";
-            this.BtnAgregarEjemplar.UseVisualStyleBackColor = false;
-            this.BtnAgregarEjemplar.Click += new System.EventHandler(this.BtnAgregarEjemplar_Click_1);
+            this.ErrorIcono.ContainerControl = this;
             // 
             // FrmEjemplarPrincipal
             // 
@@ -670,10 +669,10 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListadoLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

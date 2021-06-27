@@ -67,7 +67,6 @@ namespace SistemaBiblioteca.Negocio
         public static string Devolver(int idPrestamo, DateTime FechaDevolucion)
         {
             DPrestamo Datos = new DPrestamo();
-            Prestamo Obj = new Prestamo();
             return Datos.Devolver(idPrestamo, FechaDevolucion);
         }
 
