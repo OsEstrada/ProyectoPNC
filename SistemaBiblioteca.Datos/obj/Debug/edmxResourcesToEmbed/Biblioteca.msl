@@ -186,5 +186,47 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarPrestamosActivosProfesor" FunctionName="BibliotecaModel.Store.BuscarPrestamosActivosProfesor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarPrestamosActivosProfesor_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Numero_Ejemplar" ColumnName="Numero Ejemplar" />
+          <ScalarProperty Name="Fecha_Prestamo" ColumnName="Fecha Prestamo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="BuscarProfesor" FunctionName="BibliotecaModel.Store.BuscarProfesor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.BuscarProfesor_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarProfesores" FunctionName="BibliotecaModel.Store.ListarProfesores">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.ListarProfesores_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarEjemplaresDisponibles" FunctionName="BibliotecaModel.Store.ListarEjemplaresDisponibles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BibliotecaModel.ListarEjemplaresDisponibles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

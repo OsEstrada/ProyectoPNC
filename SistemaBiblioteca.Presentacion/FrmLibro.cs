@@ -138,32 +138,6 @@ namespace SistemaBiblioteca.Presentacion
             }
         }
 
-        private void DgvListadoLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Cursor.Current = Cursors.Default;
-            this.Limpiar();
-            BtnActualizar.Visible = true;
-            BtnInsertar.Visible = false;
-            BtnCancelar.Visible = false;
-            LblId.Visible = true;
-            GrpEjemplares.Visible = true;
-            BtnCancelar2.Visible = true;
-
-            LblidLibro.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Id"].Value);
-            TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
-            TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
-            TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
-            TxtDescripcion.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Descripcion"].Value);
-            TxtMateria.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Materia"].Value);
-            CboEdicionAnio.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["AnioEdicion"].Value);
-            NmEdicionNo.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoEdicion"].Value);
-            NmPaginas.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoPaginas"].Value);
-
-            this.ListarEjemplares();
-            if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
-            TabPrincipal.SelectedIndex = 1;
-            Cursor.Current = Cursors.WaitCursor;
-        }
 
         private void BtnInsertar_Click(object sender, EventArgs e)
         {
@@ -264,43 +238,6 @@ namespace SistemaBiblioteca.Presentacion
                 this.Listar();
         }
 
-        private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var Ubicacion = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Ubicacion"].Value);
-            var Pais = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Pais"].Value);
-            var Idioma = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Idioma"].Value);
-            var Editorial = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Editorial"].Value);
-            var Estado = Convert.ToBoolean(DgvEjemplares.CurrentRow.Cells["Estado"].Value);
-            var IdEjemplar = Convert.ToInt32(DgvEjemplares.CurrentRow.Cells["Id"].Value);
-            var IdLibro = Convert.ToInt32(LblidLibro.Text.Trim());
-
-            FrmEjemplar frm = new FrmEjemplar(IdEjemplar, IdLibro, Ubicacion, Editorial, Pais, Estado, Idioma);
-            frm.ShowDialog();
-            ListarEjemplares();
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if(TabPrincipal.TabPages.Count < 2)
-            {
-                TabPrincipal.Controls.Add(tabPage2);
-            }
-            TabPrincipal.SelectedIndex = 1;
-        }
-
-
-        private void PicAgregarEjemplar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(LblidLibro.Text))
-                MessageBox.Show("Debe registrar un libro primero");
-            else
-            {
-                FrmEjemplar frm = new FrmEjemplar(Convert.ToInt32(LblidLibro.Text.Trim()));
-                frm.ShowDialog();
-                ListarEjemplares();
-            }
-        }
-
         private void BtnCancelar2_Click(object sender, EventArgs e)
         {
             this.BtnCancelar_Click(sender, e);
@@ -346,6 +283,69 @@ namespace SistemaBiblioteca.Presentacion
                     MessageBox.Show(ex.Message + ex.StackTrace);
                 }
         }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (TabPrincipal.TabPages.Count < 2)
+            {
+                TabPrincipal.Controls.Add(tabPage2);
+            }
+            TabPrincipal.SelectedIndex = 1;
+        }
+
+        private void btnAgregarEjemplar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(LblidLibro.Text))
+                MessageBox.Show("Debe registrar un libro primero");
+            else
+            {
+                FrmEjemplar frm = new FrmEjemplar(Convert.ToInt32(LblidLibro.Text.Trim()));
+                frm.ShowDialog();
+                ListarEjemplares();
+            }
+        }
+
+        private void btnModificarEjemplar_Click(object sender, EventArgs e)
+        {
+            var Ubicacion = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Ubicacion"].Value);
+            var Pais = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Pais"].Value);
+            var Idioma = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Idioma"].Value);
+            var Editorial = Convert.ToString(DgvEjemplares.CurrentRow.Cells["Editorial"].Value);
+            var Estado = Convert.ToBoolean(DgvEjemplares.CurrentRow.Cells["Estado"].Value);
+            var IdEjemplar = Convert.ToInt32(DgvEjemplares.CurrentRow.Cells["Id"].Value);
+            var IdLibro = Convert.ToInt32(LblidLibro.Text.Trim());
+
+            FrmEjemplar frm = new FrmEjemplar(IdEjemplar, IdLibro, Ubicacion, Editorial, Pais, Estado, Idioma);
+            frm.ShowDialog();
+            ListarEjemplares();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Default;
+            this.Limpiar();
+            BtnActualizar.Visible = true;
+            BtnInsertar.Visible = false;
+            BtnCancelar.Visible = false;
+            LblId.Visible = true;
+            GrpEjemplares.Visible = true;
+            BtnCancelar2.Visible = true;
+
+            LblidLibro.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Id"].Value);
+            TxtTitulo.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Titulo"].Value);
+            TxtAutor.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Autor"].Value);
+            TxtISBN.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["ISBN"].Value);
+            TxtDescripcion.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Descripcion"].Value);
+            TxtMateria.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["Materia"].Value);
+            CboEdicionAnio.Text = Convert.ToString(DgvListadoLibros.CurrentRow.Cells["AnioEdicion"].Value);
+            NmEdicionNo.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoEdicion"].Value);
+            NmPaginas.Value = Convert.ToInt64(DgvListadoLibros.CurrentRow.Cells["NoPaginas"].Value);
+
+            this.ListarEjemplares();
+            if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
+            TabPrincipal.SelectedIndex = 1;
+            Cursor.Current = Cursors.WaitCursor;
         }
     }
 }

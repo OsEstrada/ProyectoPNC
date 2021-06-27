@@ -11,15 +11,10 @@ namespace SistemaBiblioteca.Datos
 {
     using System;
     
-    public partial class BuscarEjemplares_Result
+    public partial class ListarProfesores_Result
     {
         public int Id { get; set; }
-        public string Titulo { get; set; }
-        public string Ubicacion { get; set; }
-        public string Editorial { get; set; }
-        public string Idioma { get; set; }
-        public string Pais { get; set; }
-        public Nullable<bool> Estado { get; set; }
-        public string EstadoLibro { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
     }
 }

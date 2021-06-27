@@ -111,7 +111,7 @@ namespace SistemaBiblioteca.Presentacion
             frm.Show();
         }
 
-        private void prestamosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void prestamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPrestamo frm = new FrmPrestamo();
             frm.MdiParent = this;

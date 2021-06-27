@@ -22,5 +22,18 @@ namespace SistemaBiblioteca.Negocio
             }
         }
 
+        public static List<ListarProfesores_Result> ListarProfesores()
+        {
+            DUsuario Datos = new DUsuario();
+            return Datos.ListarProfesores();
+        }
+
+        public static List<BuscarProfesor_Result> BuscarProfesor(string valor)
+        {
+            DUsuario Datos = new DUsuario();
+            return Datos.BuscarProfesor(valor);
+        }
+
+
     }
 }

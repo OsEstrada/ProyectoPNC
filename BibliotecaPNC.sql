@@ -191,6 +191,16 @@ as begin
 end;
 go;
 
+
+create or alter procedure ListarEjemplaresDisponibles
+as begin
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where e.Estado = 1
+	order by e.IdEjemplar desc;
+end;
+go;
+
 create or alter procedure BuscarEjemplares
 @valor varchar(150),
 @idLibro int
@@ -210,6 +220,25 @@ as begin
 	select TOP 1 u.*, r.Nombre 
 	from Usuario u inner join Rol r on u.IdRol = r.IdRol
 	where u.Username = @username and u.Password = @password
+end;
+go;
+
+create or alter procedure ListarProfesores
+as begin
+	select IdUsuario 'Id', Nombres 'Nombre', Apellidos 'Apellidos'
+	from Usuario
+	where IdRol = 2
+	order by Id;
+end;
+go;
+
+create or alter procedure BuscarProfesor
+@valor varchar(150)
+as begin
+	select u.IdUsuario as Id, u.Nombres as Nombres, u.Apellidos as Apellidos
+	from Usuario u
+	where IdRol = 2 and u.Nombres like '%' + @valor + '%' or u.Apellidos like '%' + @valor + '%'
+	order by Id;
 end;
 go;
 
@@ -249,6 +278,19 @@ as begin
 			   or l.Titulo like '%'+@valor+'%' or e.IdEjemplar like '%'+@valor+'%') and p.Estado = 1
 		order by FechaPrestamo desc;
 
+end;
+go;
+
+create or alter procedure BuscarPrestamosActivosProfesor
+@valor int
+as begin
+	select p.IdUsuario, p.IdPrestamo 'Id', u.Nombres+' '+u.Apellidos 'Profesor', l.Titulo, e.IdEjemplar 'Numero Ejemplar',
+			p.FechaPrestamo 'Fecha Prestamo'
+	from Prestamo p inner join Usuario u on p.IdUsuario = u.IdUsuario
+	inner join Ejemplar e on p.IdEjemplar = e.IdEjemplar
+	inner join Libro l on e.IdLibro = l.IdLibro
+	where p.Estado = 1 and p.IdUsuario = @valor and u.IdRol = 2
+	order by FechaPrestamo desc;
 end;
 go;
 

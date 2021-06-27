@@ -24,6 +24,40 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<ListarProfesores_Result> ListarProfesores()
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.ListarProfesores().ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<BuscarProfesor_Result> BuscarProfesor(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarProfesor(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public Login_Result Login(string username, string password)
         {
              try

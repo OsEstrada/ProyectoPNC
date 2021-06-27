@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BibliotecaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ejemplar">
           <Key>
             <PropertyRef Name="IdEjemplar" />
@@ -122,6 +122,12 @@
         <Function Name="BuscarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="valor" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="BuscarPrestamosActivosProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="BuscarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="InsertarLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Titulo" Type="varchar" Mode="In" />
           <Parameter Name="Autor" Type="varchar" Mode="In" />
@@ -137,8 +143,10 @@
         <Function Name="ListarEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idLibro" Type="int" Mode="In" />
         </Function>
+        <Function Name="ListarEjemplaresDisponibles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="ListarLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="ListarPrestamos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ListarProfesores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="username" Type="varchar" Mode="In" />
           <Parameter Name="password" Type="varchar" Mode="In" />
@@ -166,8 +174,7 @@
             <End Role="Prestamo" EntitySet="Prestamo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -306,17 +313,17 @@
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
           <FunctionImport Name="BuscarDevoluciones" ReturnType="Collection(BibliotecaModel.BuscarDevoluciones_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarEjemplares" ReturnType="Collection(BibliotecaModel.BuscarEjemplares_Result)">
             <Parameter Name="valor" Mode="In" Type="String" />
             <Parameter Name="idLibro" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BuscarLibro" ReturnType="Collection(BibliotecaModel.BuscarLibro_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="BuscarPrestamos" ReturnType="Collection(BibliotecaModel.BuscarPrestamos_Result)">
-            <Parameter Name="valor" Mode="In" Type="String" />
+          <Parameter Name="valor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertarLibros">
             <Parameter Name="Titulo" Mode="In" Type="String" />
@@ -331,7 +338,7 @@
           </FunctionImport>
           <FunctionImport Name="ListarDevoluciones" ReturnType="Collection(BibliotecaModel.ListarDevoluciones_Result)" />
           <FunctionImport Name="ListarEjemplares" ReturnType="Collection(BibliotecaModel.ListarEjemplares_Result)">
-            <Parameter Name="idLibro" Mode="In" Type="Int32" />
+          <Parameter Name="idLibro" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ListarLibros" ReturnType="Collection(BibliotecaModel.ListarLibros_Result)" />
           <FunctionImport Name="ListarPrestamos" ReturnType="Collection(BibliotecaModel.ListarPrestamos_Result)" />
@@ -339,6 +346,14 @@
             <Parameter Name="username" Mode="In" Type="String" />
             <Parameter Name="password" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="BuscarPrestamosActivosProfesor" ReturnType="Collection(BibliotecaModel.BuscarPrestamosActivosProfesor_Result)">
+          <Parameter Name="valor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="BuscarProfesor" ReturnType="Collection(BibliotecaModel.BuscarProfesor_Result)">
+          <Parameter Name="valor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ListarProfesores" ReturnType="Collection(BibliotecaModel.ListarProfesores_Result)" />
+          <FunctionImport Name="ListarEjemplaresDisponibles" ReturnType="Collection(BibliotecaModel.ListarEjemplaresDisponibles_Result)" />
         </EntityContainer>
         <ComplexType Name="BuscarDevoluciones_Result">
           <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -426,6 +441,32 @@
           <Property Type="String" Name="Password" Nullable="true" MaxLength="30" />
           <Property Type="Int32" Name="IdRol" Nullable="true" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="BuscarPrestamosActivosProfesor_Result">
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Profesor" Nullable="true" MaxLength="121" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="Numero_Ejemplar" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Prestamo" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="BuscarProfesor_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="60" />
+        </ComplexType>
+        <ComplexType Name="ListarProfesores_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="60" />
+        </ComplexType>
+        <ComplexType Name="ListarEjemplaresDisponibles_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -615,6 +656,48 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IdRol" ColumnName="IdRol" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarPrestamosActivosProfesor" FunctionName="BibliotecaModel.Store.BuscarPrestamosActivosProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarPrestamosActivosProfesor_Result">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Numero_Ejemplar" ColumnName="Numero Ejemplar" />
+                <ScalarProperty Name="Fecha_Prestamo" ColumnName="Fecha Prestamo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarProfesor" FunctionName="BibliotecaModel.Store.BuscarProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarProfesor_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarProfesores" FunctionName="BibliotecaModel.Store.ListarProfesores">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.ListarProfesores_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ListarEjemplaresDisponibles" FunctionName="BibliotecaModel.Store.ListarEjemplaresDisponibles">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.ListarEjemplaresDisponibles_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

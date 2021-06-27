@@ -60,6 +60,23 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<BuscarPrestamosActivosProfesor_Result> BuscarPrestamosActivosProfesor(int valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarPrestamosActivosProfesor(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public List<BuscarDevoluciones_Result> BuscarDevoliciones(string valor)
         {
             try

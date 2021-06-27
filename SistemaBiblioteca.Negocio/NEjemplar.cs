@@ -15,6 +15,12 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Listar(idLibro);
         }
 
+        public static List<ListarEjemplaresDisponibles_Result> ListarEjemplaresDisponibles()
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.ListarEjemplaresDisponibles();
+        }
+
         public static List<BuscarEjemplares_Result> Buscar(string valor, int idLibro)
         {
             DEjemplar Datos = new DEjemplar();

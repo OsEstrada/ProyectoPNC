@@ -21,6 +21,12 @@ namespace SistemaBiblioteca.Negocio
             return Datos.BuscarPrestamos(valor);
         }
 
+        public static List<BuscarPrestamosActivosProfesor_Result> BuscarPrestamosActivosProfesor(int valor)
+        {
+            DPrestamo Datos = new DPrestamo();
+            return Datos.BuscarPrestamosActivosProfesor(valor);
+        }
+
         public static List<ListarDevoluciones_Result> ListarDevoluciones()
         {
             DPrestamo Datos = new DPrestamo();

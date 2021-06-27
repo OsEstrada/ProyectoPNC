@@ -29,63 +29,65 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DgvListadoLibros = new System.Windows.Forms.DataGridView();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LblTotal = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.LblidLibro = new System.Windows.Forms.Label();
-            this.LblTotalEjemplares = new System.Windows.Forms.Label();
-            this.DgvEjemplares = new System.Windows.Forms.DataGridView();
-            this.label15 = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.TxtMateria = new System.Windows.Forms.TextBox();
-            this.LblMateria = new System.Windows.Forms.Label();
-            this.LblNoPaginas = new System.Windows.Forms.Label();
-            this.LblNoEdicion = new System.Windows.Forms.Label();
-            this.LblAnioEdicion = new System.Windows.Forms.Label();
-            this.CboEdicionAnio = new System.Windows.Forms.ComboBox();
-            this.NmEdicionNo = new System.Windows.Forms.NumericUpDown();
-            this.NmPaginas = new System.Windows.Forms.NumericUpDown();
-            this.TxtISBN = new System.Windows.Forms.TextBox();
-            this.LblISBN = new System.Windows.Forms.Label();
-            this.TxtAutor = new System.Windows.Forms.TextBox();
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnInsertar = new System.Windows.Forms.Button();
-            this.TxtTitulo = new System.Windows.Forms.TextBox();
-            this.LblAutor = new System.Windows.Forms.Label();
-            this.LblTitulo = new System.Windows.Forms.Label();
-            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.PictureBox();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.picEditorial = new System.Windows.Forms.PictureBox();
-            this.picLibro = new System.Windows.Forms.PictureBox();
-            this.PicAgregarEjemplar = new System.Windows.Forms.PictureBox();
-            this.GrpEjemplares = new System.Windows.Forms.GroupBox();
-            this.BtnEliminarEjemplares = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnCancelar2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblId = new System.Windows.Forms.Label();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.BtnCancelar2 = new System.Windows.Forms.Button();
+            this.picLibro = new System.Windows.Forms.PictureBox();
+            this.GrpEjemplares = new System.Windows.Forms.GroupBox();
+            this.btnAgregarEjemplar = new System.Windows.Forms.Button();
+            this.btnModificarEjemplar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnEliminarEjemplares = new System.Windows.Forms.Button();
+            this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.SeleccionarEjemplar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.LblTotalEjemplares = new System.Windows.Forms.Label();
+            this.picEditorial = new System.Windows.Forms.PictureBox();
+            this.LblTitulo = new System.Windows.Forms.Label();
+            this.LblidLibro = new System.Windows.Forms.Label();
+            this.LblAutor = new System.Windows.Forms.Label();
+            this.TxtTitulo = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.BtnInsertar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.TxtMateria = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.TxtAutor = new System.Windows.Forms.TextBox();
+            this.LblMateria = new System.Windows.Forms.Label();
+            this.LblISBN = new System.Windows.Forms.Label();
+            this.LblNoPaginas = new System.Windows.Forms.Label();
+            this.TxtISBN = new System.Windows.Forms.TextBox();
+            this.LblNoEdicion = new System.Windows.Forms.Label();
+            this.NmPaginas = new System.Windows.Forms.NumericUpDown();
+            this.LblAnioEdicion = new System.Windows.Forms.Label();
+            this.NmEdicionNo = new System.Windows.Forms.NumericUpDown();
+            this.CboEdicionAnio = new System.Windows.Forms.ComboBox();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,17 +96,15 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicAgregarEjemplar)).BeginInit();
-            this.GrpEjemplares.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).BeginInit();
+            this.GrpEjemplares.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -124,15 +124,18 @@
             // 
             // TabPrincipal
             // 
+            this.TabPrincipal.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.TabPrincipal.Controls.Add(this.tabPage1);
             this.TabPrincipal.Controls.Add(this.tabPage2);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.TabPrincipal.Location = new System.Drawing.Point(2, 26);
             this.TabPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.TabPrincipal.Multiline = true;
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.SelectedIndex = 0;
             this.TabPrincipal.Size = new System.Drawing.Size(1486, 733);
+            this.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabPrincipal.TabIndex = 1;
             this.TabPrincipal.SelectedIndexChanged += new System.EventHandler(this.TabPrincipal_SelectedIndexChanged);
             // 
@@ -140,10 +143,10 @@
             // 
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1478, 731);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1478, 707);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,18 +167,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1472, 725);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1472, 701);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoLibros
             // 
             this.DgvListadoLibros.AllowUserToAddRows = false;
             this.DgvListadoLibros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.DgvListadoLibros.AllowUserToResizeRows = false;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.DgvListadoLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DgvListadoLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -187,19 +190,27 @@
             this.DgvListadoLibros.Name = "DgvListadoLibros";
             this.DgvListadoLibros.RowHeadersVisible = false;
             this.DgvListadoLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.DgvListadoLibros.RowTemplate.Height = 24;
             this.DgvListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoLibros.Size = new System.Drawing.Size(1468, 641);
+            this.DgvListadoLibros.Size = new System.Drawing.Size(1468, 617);
             this.DgvListadoLibros.TabIndex = 0;
-            this.DgvListadoLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListadoLibros_CellDoubleClick);
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.Width = 69;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnAgregar);
+            this.panel2.Controls.Add(this.btnEditar);
+            this.panel2.Controls.Add(this.BtnEliminar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.TxtBuscar);
@@ -211,6 +222,76 @@
             this.panel2.Size = new System.Drawing.Size(1468, 36);
             this.panel2.TabIndex = 1;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnAgregar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.más_24;
+            this.btnAgregar.Location = new System.Drawing.Point(1377, 1);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(30, 29);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnEditar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.Editar;
+            this.btnEditar.Location = new System.Drawing.Point(1409, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(30, 29);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
+            this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
+            this.BtnEliminar.Location = new System.Drawing.Point(1435, 2);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
+            this.BtnEliminar.TabIndex = 8;
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Frase o código";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.busqueda;
+            this.BtnBuscar.Location = new System.Drawing.Point(631, 1);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(42, 30);
+            this.BtnBuscar.TabIndex = 5;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // TxtBuscar
             // 
             this.TxtBuscar.Location = new System.Drawing.Point(97, 6);
@@ -221,10 +302,9 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.BtnEliminar);
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 687);
+            this.panel3.Location = new System.Drawing.Point(2, 663);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1468, 36);
@@ -243,7 +323,7 @@
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
             this.tabPage2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
@@ -252,441 +332,10 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // LblidLibro
-            // 
-            this.LblidLibro.AutoSize = true;
-            this.LblidLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.LblidLibro.ForeColor = System.Drawing.Color.DarkRed;
-            this.LblidLibro.Location = new System.Drawing.Point(699, 26);
-            this.LblidLibro.Name = "LblidLibro";
-            this.LblidLibro.Size = new System.Drawing.Size(0, 13);
-            this.LblidLibro.TabIndex = 42;
-            // 
-            // LblTotalEjemplares
-            // 
-            this.LblTotalEjemplares.AutoSize = true;
-            this.LblTotalEjemplares.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTotalEjemplares.Location = new System.Drawing.Point(30, 254);
-            this.LblTotalEjemplares.Name = "LblTotalEjemplares";
-            this.LblTotalEjemplares.Size = new System.Drawing.Size(90, 13);
-            this.LblTotalEjemplares.TabIndex = 41;
-            this.LblTotalEjemplares.Text = "Total Ejemplares:";
-            // 
-            // DgvEjemplares
-            // 
-            this.DgvEjemplares.AllowUserToAddRows = false;
-            this.DgvEjemplares.AllowUserToDeleteRows = false;
-            this.DgvEjemplares.AllowUserToResizeRows = false;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
-            this.DgvEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SeleccionarEjemplar});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEjemplares.DefaultCellStyle = dataGridViewCellStyle29;
-            this.DgvEjemplares.Location = new System.Drawing.Point(31, 57);
-            this.DgvEjemplares.Margin = new System.Windows.Forms.Padding(2);
-            this.DgvEjemplares.Name = "DgvEjemplares";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEjemplares.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.DgvEjemplares.RowHeadersVisible = false;
-            this.DgvEjemplares.RowHeadersWidth = 51;
-            this.DgvEjemplares.RowTemplate.Height = 24;
-            this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvEjemplares.Size = new System.Drawing.Size(684, 186);
-            this.DgvEjemplares.TabIndex = 10;
-            this.DgvEjemplares.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEjemplares_CellDoubleClick);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(68, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 19);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Información Básica";
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtDescripcion.Location = new System.Drawing.Point(147, 181);
-            this.TxtDescripcion.Multiline = true;
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(609, 55);
-            this.TxtDescripcion.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label13.Location = new System.Drawing.Point(68, 184);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Descripción";
-            // 
-            // TxtMateria
-            // 
-            this.TxtMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtMateria.Location = new System.Drawing.Point(511, 144);
-            this.TxtMateria.Name = "TxtMateria";
-            this.TxtMateria.Size = new System.Drawing.Size(245, 22);
-            this.TxtMateria.TabIndex = 4;
-            // 
-            // LblMateria
-            // 
-            this.LblMateria.AutoSize = true;
-            this.LblMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblMateria.Location = new System.Drawing.Point(440, 147);
-            this.LblMateria.Name = "LblMateria";
-            this.LblMateria.Size = new System.Drawing.Size(46, 13);
-            this.LblMateria.TabIndex = 0;
-            this.LblMateria.Text = "Materia";
-            // 
-            // LblNoPaginas
-            // 
-            this.LblNoPaginas.AutoSize = true;
-            this.LblNoPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoPaginas.Location = new System.Drawing.Point(568, 248);
-            this.LblNoPaginas.Name = "LblNoPaginas";
-            this.LblNoPaginas.Size = new System.Drawing.Size(79, 13);
-            this.LblNoPaginas.TabIndex = 35;
-            this.LblNoPaginas.Text = "No. de Páginas";
-            // 
-            // LblNoEdicion
-            // 
-            this.LblNoEdicion.AutoSize = true;
-            this.LblNoEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoEdicion.Location = new System.Drawing.Point(347, 248);
-            this.LblNoEdicion.Name = "LblNoEdicion";
-            this.LblNoEdicion.Size = new System.Drawing.Size(76, 13);
-            this.LblNoEdicion.TabIndex = 29;
-            this.LblNoEdicion.Text = "No. de Edición";
-            // 
-            // LblAnioEdicion
-            // 
-            this.LblAnioEdicion.AutoSize = true;
-            this.LblAnioEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 248);
-            this.LblAnioEdicion.Name = "LblAnioEdicion";
-            this.LblAnioEdicion.Size = new System.Drawing.Size(64, 13);
-            this.LblAnioEdicion.TabIndex = 28;
-            this.LblAnioEdicion.Text = "Año Edición";
-            // 
-            // CboEdicionAnio
-            // 
-            this.CboEdicionAnio.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.CboEdicionAnio.FormattingEnabled = true;
-            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 246);
-            this.CboEdicionAnio.Name = "CboEdicionAnio";
-            this.CboEdicionAnio.Size = new System.Drawing.Size(127, 23);
-            this.CboEdicionAnio.TabIndex = 6;
-            // 
-            // NmEdicionNo
-            // 
-            this.NmEdicionNo.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmEdicionNo.Location = new System.Drawing.Point(443, 246);
-            this.NmEdicionNo.Name = "NmEdicionNo";
-            this.NmEdicionNo.Size = new System.Drawing.Size(83, 23);
-            this.NmEdicionNo.TabIndex = 7;
-            this.NmEdicionNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NmEdicionNo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // NmPaginas
-            // 
-            this.NmPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmPaginas.Location = new System.Drawing.Point(673, 246);
-            this.NmPaginas.Name = "NmPaginas";
-            this.NmPaginas.Size = new System.Drawing.Size(83, 23);
-            this.NmPaginas.TabIndex = 8;
-            this.NmPaginas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NmPaginas.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // TxtISBN
-            // 
-            this.TxtISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtISBN.Location = new System.Drawing.Point(147, 144);
-            this.TxtISBN.Name = "TxtISBN";
-            this.TxtISBN.Size = new System.Drawing.Size(245, 22);
-            this.TxtISBN.TabIndex = 3;
-            // 
-            // LblISBN
-            // 
-            this.LblISBN.AutoSize = true;
-            this.LblISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblISBN.Location = new System.Drawing.Point(68, 147);
-            this.LblISBN.Name = "LblISBN";
-            this.LblISBN.Size = new System.Drawing.Size(30, 13);
-            this.LblISBN.TabIndex = 0;
-            this.LblISBN.Text = "ISBN";
-            // 
-            // TxtAutor
-            // 
-            this.TxtAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtAutor.Location = new System.Drawing.Point(148, 106);
-            this.TxtAutor.Name = "TxtAutor";
-            this.TxtAutor.Size = new System.Drawing.Size(608, 22);
-            this.TxtAutor.TabIndex = 2;
-            // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnActualizar.FlatAppearance.BorderSize = 0;
-            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(39, 676);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
-            this.BtnActualizar.TabIndex = 11;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = false;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(68, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "(*) Indica que el dato es obligatorio.";
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(556, 290);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(200, 30);
-            this.BtnCancelar.TabIndex = 12;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnInsertar
-            // 
-            this.BtnInsertar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnInsertar.FlatAppearance.BorderSize = 0;
-            this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(70, 290);
-            this.BtnInsertar.Name = "BtnInsertar";
-            this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
-            this.BtnInsertar.TabIndex = 11;
-            this.BtnInsertar.Text = "Insertar";
-            this.BtnInsertar.UseVisualStyleBackColor = false;
-            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
-            // 
-            // TxtTitulo
-            // 
-            this.TxtTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtTitulo.Location = new System.Drawing.Point(148, 71);
-            this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(608, 22);
-            this.TxtTitulo.TabIndex = 1;
-            // 
-            // LblAutor
-            // 
-            this.LblAutor.AutoSize = true;
-            this.LblAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAutor.Location = new System.Drawing.Point(68, 109);
-            this.LblAutor.Name = "LblAutor";
-            this.LblAutor.Size = new System.Drawing.Size(51, 13);
-            this.LblAutor.TabIndex = 0;
-            this.LblAutor.Text = "Autor(es)";
-            // 
-            // LblTitulo
-            // 
-            this.LblTitulo.AutoSize = true;
-            this.LblTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTitulo.Location = new System.Drawing.Point(69, 74);
-            this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(49, 13);
-            this.LblTitulo.TabIndex = 0;
-            this.LblTitulo.Text = "Título (*)";
-            // 
-            // ErrorIcono
-            // 
-            this.ErrorIcono.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Frase o código";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.plus_blue;
-            this.btnAgregar.Location = new System.Drawing.Point(1435, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(30, 29);
-            this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.TabStop = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.busqueda;
-            this.BtnBuscar.Location = new System.Drawing.Point(631, 1);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(42, 30);
-            this.BtnBuscar.TabIndex = 5;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEliminar.FlatAppearance.BorderSize = 0;
-            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
-            this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminar.Location = new System.Drawing.Point(1435, 3);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
-            this.BtnEliminar.TabIndex = 8;
-            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // picEditorial
-            // 
-            this.picEditorial.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.editorial;
-            this.picEditorial.Location = new System.Drawing.Point(10, -4);
-            this.picEditorial.Name = "picEditorial";
-            this.picEditorial.Size = new System.Drawing.Size(33, 31);
-            this.picEditorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picEditorial.TabIndex = 40;
-            this.picEditorial.TabStop = false;
-            // 
-            // picLibro
-            // 
-            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.picLibro.Location = new System.Drawing.Point(29, 20);
-            this.picLibro.Name = "picLibro";
-            this.picLibro.Size = new System.Drawing.Size(33, 31);
-            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLibro.TabIndex = 39;
-            this.picLibro.TabStop = false;
-            // 
-            // PicAgregarEjemplar
-            // 
-            this.PicAgregarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PicAgregarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.plus_blue;
-            this.PicAgregarEjemplar.Location = new System.Drawing.Point(685, 25);
-            this.PicAgregarEjemplar.Name = "PicAgregarEjemplar";
-            this.PicAgregarEjemplar.Size = new System.Drawing.Size(30, 29);
-            this.PicAgregarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicAgregarEjemplar.TabIndex = 43;
-            this.PicAgregarEjemplar.TabStop = false;
-            this.PicAgregarEjemplar.Click += new System.EventHandler(this.PicAgregarEjemplar_Click);
-            // 
-            // GrpEjemplares
-            // 
-            this.GrpEjemplares.Controls.Add(this.label2);
-            this.GrpEjemplares.Controls.Add(this.BtnEliminarEjemplares);
-            this.GrpEjemplares.Controls.Add(this.DgvEjemplares);
-            this.GrpEjemplares.Controls.Add(this.PicAgregarEjemplar);
-            this.GrpEjemplares.Controls.Add(this.LblTotalEjemplares);
-            this.GrpEjemplares.Controls.Add(this.picEditorial);
-            this.GrpEjemplares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpEjemplares.Location = new System.Drawing.Point(39, 336);
-            this.GrpEjemplares.Name = "GrpEjemplares";
-            this.GrpEjemplares.Size = new System.Drawing.Size(727, 283);
-            this.GrpEjemplares.TabIndex = 44;
-            this.GrpEjemplares.TabStop = false;
-            this.GrpEjemplares.Text = "          ";
-            this.GrpEjemplares.Visible = false;
-            // 
-            // BtnEliminarEjemplares
-            // 
-            this.BtnEliminarEjemplares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEliminarEjemplares.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarEjemplares.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarEjemplares.ForeColor = System.Drawing.Color.Firebrick;
-            this.BtnEliminarEjemplares.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminarEjemplares.Location = new System.Drawing.Point(685, 246);
-            this.BtnEliminarEjemplares.Name = "BtnEliminarEjemplares";
-            this.BtnEliminarEjemplares.Size = new System.Drawing.Size(30, 29);
-            this.BtnEliminarEjemplares.TabIndex = 44;
-            this.BtnEliminarEjemplares.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEliminarEjemplares.UseVisualStyleBackColor = true;
-            this.BtnEliminarEjemplares.Click += new System.EventHandler(this.BtnEliminarEjemplares_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label2.Location = new System.Drawing.Point(30, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 13);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Mantenimiento de ejemplares";
-            // 
-            // BtnCancelar2
-            // 
-            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(566, 676);
-            this.BtnCancelar2.Name = "BtnCancelar2";
-            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
-            this.BtnCancelar2.TabIndex = 45;
-            this.BtnCancelar2.Text = "Cancelar";
-            this.BtnCancelar2.UseVisualStyleBackColor = true;
-            this.BtnCancelar2.Visible = false;
-            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click);
-            // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.AutoScroll = true;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 800F));
@@ -702,6 +351,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.LblId);
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.BtnCancelar2);
@@ -746,12 +396,162 @@
             this.LblId.Text = "No.";
             this.LblId.Visible = false;
             // 
-            // Seleccionar
+            // label15
             // 
-            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Width = 69;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(68, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(153, 19);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Información Básica";
+            // 
+            // BtnCancelar2
+            // 
+            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar2.Location = new System.Drawing.Point(566, 649);
+            this.BtnCancelar2.Name = "BtnCancelar2";
+            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
+            this.BtnCancelar2.TabIndex = 45;
+            this.BtnCancelar2.Text = "Cancelar";
+            this.BtnCancelar2.UseVisualStyleBackColor = true;
+            this.BtnCancelar2.Visible = false;
+            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click);
+            // 
+            // picLibro
+            // 
+            this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
+            this.picLibro.Location = new System.Drawing.Point(29, 20);
+            this.picLibro.Name = "picLibro";
+            this.picLibro.Size = new System.Drawing.Size(33, 31);
+            this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLibro.TabIndex = 39;
+            this.picLibro.TabStop = false;
+            // 
+            // GrpEjemplares
+            // 
+            this.GrpEjemplares.Controls.Add(this.btnAgregarEjemplar);
+            this.GrpEjemplares.Controls.Add(this.btnModificarEjemplar);
+            this.GrpEjemplares.Controls.Add(this.label2);
+            this.GrpEjemplares.Controls.Add(this.BtnEliminarEjemplares);
+            this.GrpEjemplares.Controls.Add(this.DgvEjemplares);
+            this.GrpEjemplares.Controls.Add(this.LblTotalEjemplares);
+            this.GrpEjemplares.Controls.Add(this.picEditorial);
+            this.GrpEjemplares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrpEjemplares.Location = new System.Drawing.Point(39, 336);
+            this.GrpEjemplares.Name = "GrpEjemplares";
+            this.GrpEjemplares.Size = new System.Drawing.Size(727, 283);
+            this.GrpEjemplares.TabIndex = 44;
+            this.GrpEjemplares.TabStop = false;
+            this.GrpEjemplares.Text = "          ";
+            this.GrpEjemplares.Visible = false;
+            // 
+            // btnAgregarEjemplar
+            // 
+            this.btnAgregarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEjemplar.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEjemplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEjemplar.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnAgregarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.más_24;
+            this.btnAgregarEjemplar.Location = new System.Drawing.Point(624, 23);
+            this.btnAgregarEjemplar.Name = "btnAgregarEjemplar";
+            this.btnAgregarEjemplar.Size = new System.Drawing.Size(30, 29);
+            this.btnAgregarEjemplar.TabIndex = 48;
+            this.btnAgregarEjemplar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarEjemplar.UseVisualStyleBackColor = true;
+            this.btnAgregarEjemplar.Click += new System.EventHandler(this.btnAgregarEjemplar_Click);
+            // 
+            // btnModificarEjemplar
+            // 
+            this.btnModificarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarEjemplar.FlatAppearance.BorderSize = 0;
+            this.btnModificarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarEjemplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarEjemplar.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnModificarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.Editar;
+            this.btnModificarEjemplar.Location = new System.Drawing.Point(657, 23);
+            this.btnModificarEjemplar.Name = "btnModificarEjemplar";
+            this.btnModificarEjemplar.Size = new System.Drawing.Size(30, 29);
+            this.btnModificarEjemplar.TabIndex = 47;
+            this.btnModificarEjemplar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificarEjemplar.UseVisualStyleBackColor = true;
+            this.btnModificarEjemplar.Click += new System.EventHandler(this.btnModificarEjemplar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label2.Location = new System.Drawing.Point(30, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 13);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Mantenimiento de ejemplares";
+            // 
+            // BtnEliminarEjemplares
+            // 
+            this.BtnEliminarEjemplares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminarEjemplares.FlatAppearance.BorderSize = 0;
+            this.BtnEliminarEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminarEjemplares.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarEjemplares.ForeColor = System.Drawing.Color.Firebrick;
+            this.BtnEliminarEjemplares.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
+            this.BtnEliminarEjemplares.Location = new System.Drawing.Point(685, 23);
+            this.BtnEliminarEjemplares.Name = "BtnEliminarEjemplares";
+            this.BtnEliminarEjemplares.Size = new System.Drawing.Size(30, 29);
+            this.BtnEliminarEjemplares.TabIndex = 44;
+            this.BtnEliminarEjemplares.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEliminarEjemplares.UseVisualStyleBackColor = true;
+            this.BtnEliminarEjemplares.Click += new System.EventHandler(this.BtnEliminarEjemplares_Click);
+            // 
+            // DgvEjemplares
+            // 
+            this.DgvEjemplares.AllowUserToAddRows = false;
+            this.DgvEjemplares.AllowUserToDeleteRows = false;
+            this.DgvEjemplares.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.DgvEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SeleccionarEjemplar});
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEjemplares.DefaultCellStyle = dataGridViewCellStyle23;
+            this.DgvEjemplares.Location = new System.Drawing.Point(31, 57);
+            this.DgvEjemplares.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvEjemplares.Name = "DgvEjemplares";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.DgvEjemplares.RowHeadersVisible = false;
+            this.DgvEjemplares.RowHeadersWidth = 51;
+            this.DgvEjemplares.RowTemplate.Height = 24;
+            this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvEjemplares.Size = new System.Drawing.Size(684, 186);
+            this.DgvEjemplares.TabIndex = 10;
             // 
             // SeleccionarEjemplar
             // 
@@ -759,6 +559,252 @@
             this.SeleccionarEjemplar.HeaderText = "Seleccionar";
             this.SeleccionarEjemplar.Name = "SeleccionarEjemplar";
             this.SeleccionarEjemplar.Width = 71;
+            // 
+            // LblTotalEjemplares
+            // 
+            this.LblTotalEjemplares.AutoSize = true;
+            this.LblTotalEjemplares.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblTotalEjemplares.Location = new System.Drawing.Point(30, 254);
+            this.LblTotalEjemplares.Name = "LblTotalEjemplares";
+            this.LblTotalEjemplares.Size = new System.Drawing.Size(90, 13);
+            this.LblTotalEjemplares.TabIndex = 41;
+            this.LblTotalEjemplares.Text = "Total Ejemplares:";
+            // 
+            // picEditorial
+            // 
+            this.picEditorial.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.editorial;
+            this.picEditorial.Location = new System.Drawing.Point(10, -4);
+            this.picEditorial.Name = "picEditorial";
+            this.picEditorial.Size = new System.Drawing.Size(33, 31);
+            this.picEditorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEditorial.TabIndex = 40;
+            this.picEditorial.TabStop = false;
+            // 
+            // LblTitulo
+            // 
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblTitulo.Location = new System.Drawing.Point(69, 74);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(49, 13);
+            this.LblTitulo.TabIndex = 0;
+            this.LblTitulo.Text = "Título (*)";
+            // 
+            // LblidLibro
+            // 
+            this.LblidLibro.AutoSize = true;
+            this.LblidLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.LblidLibro.ForeColor = System.Drawing.Color.DarkRed;
+            this.LblidLibro.Location = new System.Drawing.Point(699, 26);
+            this.LblidLibro.Name = "LblidLibro";
+            this.LblidLibro.Size = new System.Drawing.Size(0, 13);
+            this.LblidLibro.TabIndex = 42;
+            // 
+            // LblAutor
+            // 
+            this.LblAutor.AutoSize = true;
+            this.LblAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblAutor.Location = new System.Drawing.Point(68, 109);
+            this.LblAutor.Name = "LblAutor";
+            this.LblAutor.Size = new System.Drawing.Size(51, 13);
+            this.LblAutor.TabIndex = 0;
+            this.LblAutor.Text = "Autor(es)";
+            // 
+            // TxtTitulo
+            // 
+            this.TxtTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.TxtTitulo.Location = new System.Drawing.Point(148, 71);
+            this.TxtTitulo.Name = "TxtTitulo";
+            this.TxtTitulo.Size = new System.Drawing.Size(608, 22);
+            this.TxtTitulo.TabIndex = 1;
+            // 
+            // TxtDescripcion
+            // 
+            this.TxtDescripcion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.TxtDescripcion.Location = new System.Drawing.Point(147, 181);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(609, 55);
+            this.TxtDescripcion.TabIndex = 5;
+            // 
+            // BtnInsertar
+            // 
+            this.BtnInsertar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnInsertar.FlatAppearance.BorderSize = 0;
+            this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInsertar.ForeColor = System.Drawing.Color.White;
+            this.BtnInsertar.Location = new System.Drawing.Point(70, 290);
+            this.BtnInsertar.Name = "BtnInsertar";
+            this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
+            this.BtnInsertar.TabIndex = 11;
+            this.BtnInsertar.Text = "Insertar";
+            this.BtnInsertar.UseVisualStyleBackColor = false;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label13.Location = new System.Drawing.Point(68, 184);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Descripción";
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Location = new System.Drawing.Point(556, 290);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(200, 30);
+            this.BtnCancelar.TabIndex = 12;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // TxtMateria
+            // 
+            this.TxtMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.TxtMateria.Location = new System.Drawing.Point(511, 144);
+            this.TxtMateria.Name = "TxtMateria";
+            this.TxtMateria.Size = new System.Drawing.Size(245, 22);
+            this.TxtMateria.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(68, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "(*) Indica que el dato es obligatorio.";
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnActualizar.Location = new System.Drawing.Point(39, 649);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
+            this.BtnActualizar.TabIndex = 11;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
+            // TxtAutor
+            // 
+            this.TxtAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.TxtAutor.Location = new System.Drawing.Point(148, 106);
+            this.TxtAutor.Name = "TxtAutor";
+            this.TxtAutor.Size = new System.Drawing.Size(608, 22);
+            this.TxtAutor.TabIndex = 2;
+            // 
+            // LblMateria
+            // 
+            this.LblMateria.AutoSize = true;
+            this.LblMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblMateria.Location = new System.Drawing.Point(440, 147);
+            this.LblMateria.Name = "LblMateria";
+            this.LblMateria.Size = new System.Drawing.Size(46, 13);
+            this.LblMateria.TabIndex = 0;
+            this.LblMateria.Text = "Materia";
+            // 
+            // LblISBN
+            // 
+            this.LblISBN.AutoSize = true;
+            this.LblISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblISBN.Location = new System.Drawing.Point(68, 147);
+            this.LblISBN.Name = "LblISBN";
+            this.LblISBN.Size = new System.Drawing.Size(30, 13);
+            this.LblISBN.TabIndex = 0;
+            this.LblISBN.Text = "ISBN";
+            // 
+            // LblNoPaginas
+            // 
+            this.LblNoPaginas.AutoSize = true;
+            this.LblNoPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblNoPaginas.Location = new System.Drawing.Point(568, 248);
+            this.LblNoPaginas.Name = "LblNoPaginas";
+            this.LblNoPaginas.Size = new System.Drawing.Size(79, 13);
+            this.LblNoPaginas.TabIndex = 35;
+            this.LblNoPaginas.Text = "No. de Páginas";
+            // 
+            // TxtISBN
+            // 
+            this.TxtISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.TxtISBN.Location = new System.Drawing.Point(147, 144);
+            this.TxtISBN.Name = "TxtISBN";
+            this.TxtISBN.Size = new System.Drawing.Size(245, 22);
+            this.TxtISBN.TabIndex = 3;
+            // 
+            // LblNoEdicion
+            // 
+            this.LblNoEdicion.AutoSize = true;
+            this.LblNoEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblNoEdicion.Location = new System.Drawing.Point(347, 248);
+            this.LblNoEdicion.Name = "LblNoEdicion";
+            this.LblNoEdicion.Size = new System.Drawing.Size(76, 13);
+            this.LblNoEdicion.TabIndex = 29;
+            this.LblNoEdicion.Text = "No. de Edición";
+            // 
+            // NmPaginas
+            // 
+            this.NmPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.NmPaginas.Location = new System.Drawing.Point(673, 246);
+            this.NmPaginas.Name = "NmPaginas";
+            this.NmPaginas.Size = new System.Drawing.Size(83, 23);
+            this.NmPaginas.TabIndex = 8;
+            this.NmPaginas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NmPaginas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // LblAnioEdicion
+            // 
+            this.LblAnioEdicion.AutoSize = true;
+            this.LblAnioEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 248);
+            this.LblAnioEdicion.Name = "LblAnioEdicion";
+            this.LblAnioEdicion.Size = new System.Drawing.Size(64, 13);
+            this.LblAnioEdicion.TabIndex = 28;
+            this.LblAnioEdicion.Text = "Año Edición";
+            // 
+            // NmEdicionNo
+            // 
+            this.NmEdicionNo.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.NmEdicionNo.Location = new System.Drawing.Point(443, 246);
+            this.NmEdicionNo.Name = "NmEdicionNo";
+            this.NmEdicionNo.Size = new System.Drawing.Size(83, 23);
+            this.NmEdicionNo.TabIndex = 7;
+            this.NmEdicionNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NmEdicionNo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CboEdicionAnio
+            // 
+            this.CboEdicionAnio.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.CboEdicionAnio.FormattingEnabled = true;
+            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 246);
+            this.CboEdicionAnio.Name = "CboEdicionAnio";
+            this.CboEdicionAnio.Size = new System.Drawing.Size(127, 23);
+            this.CboEdicionAnio.TabIndex = 6;
+            // 
+            // ErrorIcono
+            // 
+            this.ErrorIcono.ContainerControl = this;
             // 
             // FrmLibro
             // 
@@ -788,19 +834,17 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicAgregarEjemplar)).EndInit();
-            this.GrpEjemplares.ResumeLayout(false);
-            this.GrpEjemplares.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
+            this.GrpEjemplares.ResumeLayout(false);
+            this.GrpEjemplares.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NmEdicionNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -847,8 +891,6 @@
         private System.Windows.Forms.Label LblTotalEjemplares;
         private System.Windows.Forms.Label LblidLibro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox btnAgregar;
-        private System.Windows.Forms.PictureBox PicAgregarEjemplar;
         private System.Windows.Forms.GroupBox GrpEjemplares;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnEliminarEjemplares;
@@ -858,5 +900,9 @@
         private System.Windows.Forms.Label LblId;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SeleccionarEjemplar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAgregarEjemplar;
+        private System.Windows.Forms.Button btnModificarEjemplar;
     }
 }

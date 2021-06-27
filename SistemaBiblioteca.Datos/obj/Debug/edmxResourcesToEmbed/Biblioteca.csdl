@@ -168,6 +168,14 @@
       <Parameter Name="username" Mode="In" Type="String" />
       <Parameter Name="password" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="BuscarPrestamosActivosProfesor" ReturnType="Collection(BibliotecaModel.BuscarPrestamosActivosProfesor_Result)">
+      <Parameter Name="valor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="BuscarProfesor" ReturnType="Collection(BibliotecaModel.BuscarProfesor_Result)">
+      <Parameter Name="valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarProfesores" ReturnType="Collection(BibliotecaModel.ListarProfesores_Result)" />
+    <FunctionImport Name="ListarEjemplaresDisponibles" ReturnType="Collection(BibliotecaModel.ListarEjemplaresDisponibles_Result)" />
   </EntityContainer>
   <ComplexType Name="BuscarDevoluciones_Result">
     <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -255,5 +263,31 @@
     <Property Type="String" Name="Password" Nullable="true" MaxLength="30" />
     <Property Type="Int32" Name="IdRol" Nullable="true" />
     <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="BuscarPrestamosActivosProfesor_Result">
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Profesor" Nullable="true" MaxLength="121" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Numero_Ejemplar" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Prestamo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="BuscarProfesor_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Nombres" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="ListarProfesores_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Nombres" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="ListarEjemplaresDisponibles_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
   </ComplexType>
 </Schema>

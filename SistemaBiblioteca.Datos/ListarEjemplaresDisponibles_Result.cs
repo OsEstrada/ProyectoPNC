@@ -11,7 +11,7 @@ namespace SistemaBiblioteca.Datos
 {
     using System;
     
-    public partial class BuscarEjemplares_Result
+    public partial class ListarEjemplaresDisponibles_Result
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
@@ -19,7 +19,5 @@ namespace SistemaBiblioteca.Datos
         public string Editorial { get; set; }
         public string Idioma { get; set; }
         public string Pais { get; set; }
-        public Nullable<bool> Estado { get; set; }
-        public string EstadoLibro { get; set; }
     }
 }

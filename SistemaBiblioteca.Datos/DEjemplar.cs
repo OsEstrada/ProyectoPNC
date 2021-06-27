@@ -26,6 +26,23 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<ListarEjemplaresDisponibles_Result> ListarEjemplaresDisponibles()
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.ListarEjemplaresDisponibles().ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
         public List<BuscarEjemplares_Result> Buscar(string valor, int IdLibro)
         {

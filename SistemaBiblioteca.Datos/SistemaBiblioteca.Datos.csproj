@@ -74,7 +74,13 @@
     <Compile Include="BuscarLibro_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="BuscarPrestamosActivosProfesor_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="BuscarPrestamos_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProfesor_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="DEjemplar.cs" />
@@ -90,6 +96,9 @@
     <Compile Include="ListarDevoluciones_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListarEjemplaresDisponibles_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="ListarEjemplares_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
@@ -97,6 +106,9 @@
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="ListarPrestamos_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListarProfesores_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="Login_Result.cs">
