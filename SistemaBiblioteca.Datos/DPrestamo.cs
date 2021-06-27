@@ -138,9 +138,9 @@ namespace SistemaBiblioteca.Datos
                 using (BibliotecaEntities db = new BibliotecaEntities())
                 {
                     Prestamo prestamo = db.Prestamo.Find(idPrestamo);
-                    prestamo.Estado = true;
+                    prestamo.Estado = false;
                     prestamo.FechaDevuelto = FechaDevolucion;
-                    db.SaveChanges();
+                    rpta = db.SaveChanges() > 0 ? "OK" : "No se actualizo ningun registro";
                 }
             }
             catch (Exception ex)

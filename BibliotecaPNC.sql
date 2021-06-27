@@ -255,7 +255,7 @@ go;
 
 create or alter procedure ListarProfesores
 as begin
-	select IdUsuario 'Id', Nombres 'Nombre', Apellidos 'Apellidos'
+	select IdUsuario 'Id', Nombres, Apellidos
 	from Usuario
 	where IdRol = 2
 	order by Id;

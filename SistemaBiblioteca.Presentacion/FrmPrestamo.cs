@@ -272,7 +272,7 @@ namespace SistemaBiblioteca.Presentacion
 
                 foreach (DataGridViewRow row in DgvActivosDevolucion.SelectedRows)
                 {
-                    Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells[1].Value), DateTime.UtcNow.Date);
+                    Rpta = NPrestamo.Devolver(Convert.ToInt32(row.Cells["Id"].Value), DateTime.UtcNow.Date);
 
                     if (Rpta.Equals("OK"))
                     {
@@ -281,6 +281,7 @@ namespace SistemaBiblioteca.Presentacion
                     else
                     {
                         this.MensajeError("Hubo un error. Favor Intente de nuevo");
+                        MessageBox.Show(Rpta);
                     }
                 }   
             }
