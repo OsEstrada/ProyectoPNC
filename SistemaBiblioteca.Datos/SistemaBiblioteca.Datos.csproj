@@ -68,6 +68,18 @@
     <Compile Include="BuscarDevoluciones_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="BuscarEjemplaresPorCodigoEjemplar_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEjemplaresPorCodigoLibro_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEjemplaresPorEditorial_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEjemplaresPorLibro_Result.cs">
+      <DependentUpon>Biblioteca.tt</DependentUpon>
+    </Compile>
     <Compile Include="BuscarEjemplares_Result.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>

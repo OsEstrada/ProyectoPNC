@@ -39,13 +39,14 @@ namespace SistemaBiblioteca.Negocio
             return Datos.BuscarDevoliciones(valor);
         }
 
-        public static string Insertar(int IdUsuario, int IdEjemplar, DateTime FechaPrestamo)
+        public static string Insertar(int IdUsuario, int IdEjemplar, DateTime FechaPrestamo, DateTime FechaLimiteDevolucion)
         {
             DPrestamo Datos = new DPrestamo();
             Prestamo Obj = new Prestamo();
             Obj.IdUsuario = IdUsuario;
             Obj.IdEjemplar = IdEjemplar;
             Obj.FechaPrestamo = FechaPrestamo;
+            Obj.FechaDevolucion = FechaLimiteDevolucion;
             Obj.Estado = true;
             return Datos.Insertar(Obj);
         }

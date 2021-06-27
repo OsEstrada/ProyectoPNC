@@ -27,6 +27,30 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Buscar(valor, idLibro);
         }
 
+        public static List<BuscarEjemplaresPorLibro_Result> BuscarPorLibro(string valor)
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.BuscarEjemplaresPorLibro(valor);
+        }
+
+        public static List<BuscarEjemplaresPorCodigoLibro_Result> BuscarPorCodigoLibro(string valor)
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.BuscarEjemplaresPorCodigoLibro(valor);
+        }
+
+        public static List<BuscarEjemplaresPorCodigoEjemplar_Result> BuscarPorCodigoEjemplar(string valor)
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.BuscarEjemplaresPorCodigoEjemplar(valor);
+        }
+
+        public static List<BuscarEjemplaresPorEditorial_Result> BuscarPorEditorial(string valor)
+        {
+            DEjemplar Datos = new DEjemplar();
+            return Datos.BuscarEjemplaresPorEditorial(valor);
+        }
+
         public static string Insertar(int IdLibro, string Ubicacion, bool Estado, string Editorial, string Idioma, string Pais)
         {
             DEjemplar Datos = new DEjemplar();

@@ -41,6 +41,7 @@
           <Property Name="FechaPrestamo" Type="date" Nullable="false" />
           <Property Name="FechaDevolucion" Type="date" />
           <Property Name="Estado" Type="bit" />
+          <Property Name="FechaDevuelto" Type="date" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -115,6 +116,18 @@
         <Function Name="BuscarEjemplares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="valor" Type="varchar" Mode="In" />
           <Parameter Name="idLibro" Type="int" Mode="In" />
+        </Function>
+        <Function Name="BuscarEjemplaresPorCodigoEjemplar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="BuscarEjemplaresPorCodigoLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="BuscarEjemplaresPorEditorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="BuscarEjemplaresPorLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="valor" Type="varchar" Mode="In" />
         </Function>
         <Function Name="BuscarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="valor" Type="varchar" Mode="In" />
@@ -219,6 +232,7 @@
           <Property Name="Estado" Type="Boolean" />
           <NavigationProperty Name="Ejemplar" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Prestamo" ToRole="Ejemplar" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_PRESTAMO_USUARIO" FromRole="Prestamo" ToRole="Usuario" />
+          <Property Name="FechaDevuelto" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -354,6 +368,18 @@
           </FunctionImport>
           <FunctionImport Name="ListarProfesores" ReturnType="Collection(BibliotecaModel.ListarProfesores_Result)" />
           <FunctionImport Name="ListarEjemplaresDisponibles" ReturnType="Collection(BibliotecaModel.ListarEjemplaresDisponibles_Result)" />
+          <FunctionImport Name="BuscarEjemplaresPorCodigoEjemplar" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoEjemplar_Result)">
+            <Parameter Name="valor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="BuscarEjemplaresPorCodigoLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorCodigoLibro_Result)">
+            <Parameter Name="valor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="BuscarEjemplaresPorEditorial" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorEditorial_Result)">
+            <Parameter Name="valor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="BuscarEjemplaresPorLibro" ReturnType="Collection(BibliotecaModel.BuscarEjemplaresPorLibro_Result)">
+            <Parameter Name="valor" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="BuscarDevoluciones_Result">
           <Property Type="Int32" Name="IdEjemplar" Nullable="false" />
@@ -468,6 +494,38 @@
           <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
         </ComplexType>
+        <ComplexType Name="BuscarEjemplaresPorCodigoEjemplar_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="BuscarEjemplaresPorCodigoLibro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="BuscarEjemplaresPorEditorial_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="BuscarEjemplaresPorLibro_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Ubicacion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Editorial" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Idioma" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="Pais" Nullable="true" MaxLength="80" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -505,6 +563,7 @@
           <EntitySetMapping Name="Prestamo">
             <EntityTypeMapping TypeName="BibliotecaModel.Prestamo">
               <MappingFragment StoreEntitySet="Prestamo">
+                <ScalarProperty Name="FechaDevuelto" ColumnName="FechaDevuelto" />
                 <ScalarProperty Name="IdPrestamo" ColumnName="IdPrestamo" />
                 <ScalarProperty Name="IdEjemplar" ColumnName="IdEjemplar" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
@@ -692,6 +751,54 @@
           <FunctionImportMapping FunctionImportName="ListarEjemplaresDisponibles" FunctionName="BibliotecaModel.Store.ListarEjemplaresDisponibles">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BibliotecaModel.ListarEjemplaresDisponibles_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorCodigoEjemplar" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorCodigoEjemplar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorCodigoEjemplar_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorCodigoLibro" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorCodigoLibro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorCodigoLibro_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorEditorial" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorEditorial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorEditorial_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+                <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+                <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="BuscarEjemplaresPorLibro" FunctionName="BibliotecaModel.Store.BuscarEjemplaresPorLibro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BibliotecaModel.BuscarEjemplaresPorLibro_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />

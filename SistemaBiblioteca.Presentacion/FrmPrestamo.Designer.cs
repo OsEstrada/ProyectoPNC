@@ -29,18 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -65,7 +71,7 @@
             this.DtpFechaDevolucion = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnInsertar = new System.Windows.Forms.Button();
+            this.BtnInsertarPrestamo = new System.Windows.Forms.Button();
             this.PicDevolucion = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DgvPrestamosActivos = new System.Windows.Forms.DataGridView();
@@ -99,6 +105,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnCancelar2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -129,6 +137,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 1);
@@ -151,12 +160,13 @@
             this.TabPrincipal.Controls.Add(this.tabPage3);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TabPrincipal.Location = new System.Drawing.Point(2, 44);
-            this.TabPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.TabPrincipal.Location = new System.Drawing.Point(0, 42);
+            this.TabPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.TabPrincipal.Multiline = true;
             this.TabPrincipal.Name = "TabPrincipal";
+            this.TabPrincipal.Padding = new System.Drawing.Point(0, 0);
             this.TabPrincipal.SelectedIndex = 0;
-            this.TabPrincipal.Size = new System.Drawing.Size(1486, 715);
+            this.TabPrincipal.Size = new System.Drawing.Size(1490, 719);
             this.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.TabPrincipal.TabIndex = 1;
             this.TabPrincipal.SelectedIndexChanged += new System.EventHandler(this.TabPrincipal_SelectedIndexChanged);
@@ -166,9 +176,9 @@
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1478, 689);
+            this.tabPage1.Size = new System.Drawing.Size(1482, 693);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -182,14 +192,14 @@
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1472, 683);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 693);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoPrestamos
@@ -197,10 +207,10 @@
             this.DgvListadoPrestamos.AllowUserToAddRows = false;
             this.DgvListadoPrestamos.AllowUserToDeleteRows = false;
             this.DgvListadoPrestamos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle77;
             this.DgvListadoPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvListadoPrestamos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DgvListadoPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -212,13 +222,13 @@
             this.DgvListadoPrestamos.Name = "DgvListadoPrestamos";
             this.DgvListadoPrestamos.RowHeadersVisible = false;
             this.DgvListadoPrestamos.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle78.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle78;
             this.DgvListadoPrestamos.RowTemplate.Height = 24;
             this.DgvListadoPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoPrestamos.Size = new System.Drawing.Size(1468, 599);
+            this.DgvListadoPrestamos.Size = new System.Drawing.Size(1478, 609);
             this.DgvListadoPrestamos.TabIndex = 0;
             // 
             // Seleccionar
@@ -241,7 +251,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1468, 36);
+            this.panel2.Size = new System.Drawing.Size(1478, 36);
             this.panel2.TabIndex = 1;
             // 
             // btnRegistrarDevolucion
@@ -253,7 +263,7 @@
             this.btnRegistrarDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarDevolucion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarDevolucion.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarDevolucion.Location = new System.Drawing.Point(1293, 3);
+            this.btnRegistrarDevolucion.Location = new System.Drawing.Point(1303, 3);
             this.btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
             this.btnRegistrarDevolucion.Size = new System.Drawing.Size(136, 30);
             this.btnRegistrarDevolucion.TabIndex = 56;
@@ -269,7 +279,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.Firebrick;
             this.BtnEliminar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminar.Location = new System.Drawing.Point(1435, 2);
+            this.BtnEliminar.Location = new System.Drawing.Point(1445, 2);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(30, 29);
             this.BtnEliminar.TabIndex = 8;
@@ -286,7 +296,7 @@
             this.btnAgregarPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarPrestamo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPrestamo.Location = new System.Drawing.Point(1151, 3);
+            this.btnAgregarPrestamo.Location = new System.Drawing.Point(1161, 3);
             this.btnAgregarPrestamo.Name = "btnAgregarPrestamo";
             this.btnAgregarPrestamo.Size = new System.Drawing.Size(136, 30);
             this.btnAgregarPrestamo.TabIndex = 55;
@@ -330,10 +340,10 @@
             this.panel3.Controls.Add(this.RdbVerPrestamos);
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 645);
+            this.panel3.Location = new System.Drawing.Point(2, 655);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1468, 36);
+            this.panel3.Size = new System.Drawing.Size(1478, 36);
             this.panel3.TabIndex = 2;
             // 
             // RdbVerDevoluciones
@@ -375,10 +385,9 @@
             this.tabPage2.Controls.Add(this.tableLayoutPanel3);
             this.tabPage2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1478, 689);
+            this.tabPage2.Size = new System.Drawing.Size(1482, 693);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro de Préstamo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -393,21 +402,23 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.panel4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1474, 685);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 693);
             this.tableLayoutPanel3.TabIndex = 46;
             // 
             // panel4
             // 
+            this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.DtpFechaDevolucion);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.BtnInsertar);
+            this.panel4.Controls.Add(this.BtnInsertarPrestamo);
             this.panel4.Controls.Add(this.PicDevolucion);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.DgvProfesoresPrestamo);
@@ -425,9 +436,9 @@
             this.panel4.Controls.Add(this.PicProfesor);
             this.panel4.Controls.Add(this.picLibro);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(163, 3);
+            this.panel4.Location = new System.Drawing.Point(167, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1147, 679);
+            this.panel4.Size = new System.Drawing.Size(1147, 687);
             this.panel4.TabIndex = 0;
             // 
             // label4
@@ -468,20 +479,21 @@
             this.label2.TabIndex = 65;
             this.label2.Text = "Elección de Fecha Devolución";
             // 
-            // BtnInsertar
+            // BtnInsertarPrestamo
             // 
-            this.BtnInsertar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnInsertar.FlatAppearance.BorderSize = 0;
-            this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(915, 634);
-            this.BtnInsertar.Name = "BtnInsertar";
-            this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
-            this.BtnInsertar.TabIndex = 64;
-            this.BtnInsertar.Text = "Registrar Prestámo";
-            this.BtnInsertar.UseVisualStyleBackColor = false;
+            this.BtnInsertarPrestamo.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnInsertarPrestamo.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnInsertarPrestamo.FlatAppearance.BorderSize = 0;
+            this.BtnInsertarPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInsertarPrestamo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInsertarPrestamo.ForeColor = System.Drawing.Color.White;
+            this.BtnInsertarPrestamo.Location = new System.Drawing.Point(59, 722);
+            this.BtnInsertarPrestamo.Name = "BtnInsertarPrestamo";
+            this.BtnInsertarPrestamo.Size = new System.Drawing.Size(200, 30);
+            this.BtnInsertarPrestamo.TabIndex = 64;
+            this.BtnInsertarPrestamo.Text = "Registrar Prestámo";
+            this.BtnInsertarPrestamo.UseVisualStyleBackColor = false;
+            this.BtnInsertarPrestamo.Click += new System.EventHandler(this.BtnInsertarPrestamo_Click);
             // 
             // PicDevolucion
             // 
@@ -496,7 +508,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.DgvPrestamosActivos);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(577, 341);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(541, 224);
@@ -508,37 +520,61 @@
             // 
             this.DgvPrestamosActivos.AllowUserToAddRows = false;
             this.DgvPrestamosActivos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle79.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle79.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle79.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvPrestamosActivos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle79;
             this.DgvPrestamosActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvPrestamosActivos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle80.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle80.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvPrestamosActivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle80;
             this.DgvPrestamosActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle81.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle81.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle81.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvPrestamosActivos.DefaultCellStyle = dataGridViewCellStyle81;
             this.DgvPrestamosActivos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvPrestamosActivos.Location = new System.Drawing.Point(3, 21);
+            this.DgvPrestamosActivos.Location = new System.Drawing.Point(3, 18);
             this.DgvPrestamosActivos.Margin = new System.Windows.Forms.Padding(2);
             this.DgvPrestamosActivos.Name = "DgvPrestamosActivos";
             this.DgvPrestamosActivos.ReadOnly = true;
+            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvPrestamosActivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle82;
             this.DgvPrestamosActivos.RowHeadersVisible = false;
             this.DgvPrestamosActivos.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle83.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvPrestamosActivos.RowsDefaultCellStyle = dataGridViewCellStyle83;
             this.DgvPrestamosActivos.RowTemplate.Height = 24;
             this.DgvPrestamosActivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPrestamosActivos.Size = new System.Drawing.Size(535, 200);
+            this.DgvPrestamosActivos.Size = new System.Drawing.Size(535, 203);
             this.DgvPrestamosActivos.TabIndex = 47;
             // 
             // DgvProfesoresPrestamo
             // 
             this.DgvProfesoresPrestamo.AllowUserToAddRows = false;
             this.DgvProfesoresPrestamo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresPrestamo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle73.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle73.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle73.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresPrestamo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle73;
             this.DgvProfesoresPrestamo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProfesoresPrestamo.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvProfesoresPrestamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -548,10 +584,10 @@
             this.DgvProfesoresPrestamo.ReadOnly = true;
             this.DgvProfesoresPrestamo.RowHeadersVisible = false;
             this.DgvProfesoresPrestamo.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresPrestamo.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle74.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresPrestamo.RowsDefaultCellStyle = dataGridViewCellStyle74;
             this.DgvProfesoresPrestamo.RowTemplate.Height = 24;
             this.DgvProfesoresPrestamo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProfesoresPrestamo.Size = new System.Drawing.Size(487, 186);
@@ -572,6 +608,7 @@
             this.BtnBuscarProfesorPrest.TabIndex = 62;
             this.BtnBuscarProfesorPrest.Text = "Buscar Profesor";
             this.BtnBuscarProfesorPrest.UseVisualStyleBackColor = false;
+            this.BtnBuscarProfesorPrest.Click += new System.EventHandler(this.BtnBuscarProfesorPrest_Click);
             // 
             // TxtBuscarPorNombrePrest
             // 
@@ -595,10 +632,10 @@
             // 
             this.DgvEjemplares.AllowUserToAddRows = false;
             this.DgvEjemplares.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle75.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle75.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle75.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle75;
             this.DgvEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -608,10 +645,10 @@
             this.DgvEjemplares.ReadOnly = true;
             this.DgvEjemplares.RowHeadersVisible = false;
             this.DgvEjemplares.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle76.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle76.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle76.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle76;
             this.DgvEjemplares.RowTemplate.Height = 24;
             this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEjemplares.Size = new System.Drawing.Size(1054, 161);
@@ -651,9 +688,14 @@
             // 
             this.CboCriterio.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.CboCriterio.FormattingEnabled = true;
-            this.CboCriterio.Location = new System.Drawing.Point(683, 74);
+            this.CboCriterio.Items.AddRange(new object[] {
+            "Título",
+            "Código Libro",
+            "Código Ejemplar",
+            "Editorial"});
+            this.CboCriterio.Location = new System.Drawing.Point(683, 77);
             this.CboCriterio.Name = "CboCriterio";
-            this.CboCriterio.Size = new System.Drawing.Size(127, 23);
+            this.CboCriterio.Size = new System.Drawing.Size(220, 23);
             this.CboCriterio.TabIndex = 53;
             // 
             // BtnBuscarLibro
@@ -664,12 +706,13 @@
             this.BtnBuscarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarLibro.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarLibro.Location = new System.Drawing.Point(831, 69);
+            this.BtnBuscarLibro.Location = new System.Drawing.Point(935, 72);
             this.BtnBuscarLibro.Name = "BtnBuscarLibro";
             this.BtnBuscarLibro.Size = new System.Drawing.Size(136, 30);
             this.BtnBuscarLibro.TabIndex = 55;
             this.BtnBuscarLibro.Text = "Buscar Libro";
             this.BtnBuscarLibro.UseVisualStyleBackColor = false;
+            this.BtnBuscarLibro.Click += new System.EventHandler(this.BtnBuscarLibro_Click);
             // 
             // TxtBuscarPorLibro
             // 
@@ -713,9 +756,9 @@
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel4);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1478, 689);
+            this.tabPage3.Size = new System.Drawing.Size(1482, 693);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Registro de Devolucion";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -730,16 +773,17 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1472, 683);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1482, 693);
             this.tableLayoutPanel4.TabIndex = 47;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BtnCancelar2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.BtnRegistraDevolucion);
             this.panel1.Controls.Add(this.groupBox2);
@@ -751,9 +795,9 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(162, 3);
+            this.panel1.Location = new System.Drawing.Point(167, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 677);
+            this.panel1.Size = new System.Drawing.Size(1147, 687);
             this.panel1.TabIndex = 0;
             // 
             // label7
@@ -774,17 +818,18 @@
             this.BtnRegistraDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistraDevolucion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistraDevolucion.ForeColor = System.Drawing.Color.White;
-            this.BtnRegistraDevolucion.Location = new System.Drawing.Point(901, 634);
+            this.BtnRegistraDevolucion.Location = new System.Drawing.Point(90, 622);
             this.BtnRegistraDevolucion.Name = "BtnRegistraDevolucion";
             this.BtnRegistraDevolucion.Size = new System.Drawing.Size(200, 30);
             this.BtnRegistraDevolucion.TabIndex = 75;
             this.BtnRegistraDevolucion.Text = "Registrar Devolución";
             this.BtnRegistraDevolucion.UseVisualStyleBackColor = false;
+            this.BtnRegistraDevolucion.Click += new System.EventHandler(this.BtnRegistraDevolucion_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.DgvActivosDevolucion);
-            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(87, 370);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1017, 224);
@@ -796,28 +841,52 @@
             // 
             this.DgvActivosDevolucion.AllowUserToAddRows = false;
             this.DgvActivosDevolucion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvActivosDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle84.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvActivosDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle84;
             this.DgvActivosDevolucion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvActivosDevolucion.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvActivosDevolucion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle85;
             this.DgvActivosDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvActivosDevolucion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.seleccionarDevolucion});
+            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle86.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvActivosDevolucion.DefaultCellStyle = dataGridViewCellStyle86;
             this.DgvActivosDevolucion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvActivosDevolucion.Location = new System.Drawing.Point(3, 21);
+            this.DgvActivosDevolucion.Location = new System.Drawing.Point(3, 18);
             this.DgvActivosDevolucion.Margin = new System.Windows.Forms.Padding(2);
             this.DgvActivosDevolucion.Name = "DgvActivosDevolucion";
+            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle87.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle87.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle87.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle87.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvActivosDevolucion.RowHeadersDefaultCellStyle = dataGridViewCellStyle87;
             this.DgvActivosDevolucion.RowHeadersVisible = false;
             this.DgvActivosDevolucion.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvActivosDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle88.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle88.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle88.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvActivosDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle88;
             this.DgvActivosDevolucion.RowTemplate.Height = 24;
             this.DgvActivosDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivosDevolucion.Size = new System.Drawing.Size(1011, 200);
+            this.DgvActivosDevolucion.Size = new System.Drawing.Size(1011, 203);
             this.DgvActivosDevolucion.TabIndex = 47;
             // 
             // seleccionarDevolucion
@@ -830,10 +899,10 @@
             // 
             this.DgvProfesoresDevolucion.AllowUserToAddRows = false;
             this.DgvProfesoresDevolucion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle89.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle89.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle89.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresDevolucion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle89;
             this.DgvProfesoresDevolucion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProfesoresDevolucion.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvProfesoresDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -842,10 +911,10 @@
             this.DgvProfesoresDevolucion.Name = "DgvProfesoresDevolucion";
             this.DgvProfesoresDevolucion.RowHeadersVisible = false;
             this.DgvProfesoresDevolucion.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProfesoresDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle90.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProfesoresDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle90;
             this.DgvProfesoresDevolucion.RowTemplate.Height = 24;
             this.DgvProfesoresDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProfesoresDevolucion.Size = new System.Drawing.Size(1019, 186);
@@ -866,6 +935,7 @@
             this.BtnBuscarProfesorDevolucion.TabIndex = 73;
             this.BtnBuscarProfesorDevolucion.Text = "Buscar Profesor";
             this.BtnBuscarProfesorDevolucion.UseVisualStyleBackColor = false;
+            this.BtnBuscarProfesorDevolucion.Click += new System.EventHandler(this.BtnBuscarProfesorDevolucion_Click);
             // 
             // TxtBuscarPorNombreDev
             // 
@@ -918,6 +988,30 @@
             // ErrorIcono
             // 
             this.ErrorIcono.ContainerControl = this;
+            // 
+            // BtnCancelar2
+            // 
+            this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar2.Location = new System.Drawing.Point(904, 622);
+            this.BtnCancelar2.Name = "BtnCancelar2";
+            this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
+            this.BtnCancelar2.TabIndex = 76;
+            this.BtnCancelar2.Text = "Cancelar";
+            this.BtnCancelar2.UseVisualStyleBackColor = true;
+            this.BtnCancelar2.Visible = false;
+            this.BtnCancelar2.Click += new System.EventHandler(this.BtnCancelar2_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(918, 722);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(200, 30);
+            this.btnCancelar.TabIndex = 70;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // FrmPrestamo
             // 
@@ -1010,7 +1104,7 @@
         private System.Windows.Forms.DateTimePicker DtpFechaDevolucion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BtnInsertar;
+        private System.Windows.Forms.Button BtnInsertarPrestamo;
         private System.Windows.Forms.PictureBox PicDevolucion;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -1031,5 +1125,7 @@
         private System.Windows.Forms.Button btnRegistrarDevolucion;
         private System.Windows.Forms.RadioButton RdbVerDevoluciones;
         private System.Windows.Forms.RadioButton RdbVerPrestamos;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button BtnCancelar2;
     }
 }

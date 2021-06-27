@@ -20,6 +20,7 @@ namespace SistemaBiblioteca.Datos
         public System.DateTime FechaPrestamo { get; set; }
         public Nullable<System.DateTime> FechaDevolucion { get; set; }
         public Nullable<bool> Estado { get; set; }
+        public Nullable<System.DateTime> FechaDevuelto { get; set; }
     
         public virtual Ejemplar Ejemplar { get; set; }
         public virtual Usuario Usuario { get; set; }

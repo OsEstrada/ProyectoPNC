@@ -155,22 +155,10 @@ namespace SistemaBiblioteca.Presentacion
 
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            TabPrincipal.SelectedIndex = 0;
-            Limpiar();
-            TabPrincipal.Controls.Remove(tabPage2);
-        }
-
         private void TabPrincipal_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TabPrincipal.SelectedIndex == 0)
                 RdbVerPrestamos.Checked = true;
-        }
-
-        private void BtnCancelar2_Click(object sender, EventArgs e)
-        {
-            this.BtnCancelar_Click(sender, e);
         }
 
         private void FrmPrestamos_Load(object sender, EventArgs e)
@@ -222,6 +210,124 @@ namespace SistemaBiblioteca.Presentacion
         private void DgvProfesoresDevolucion_SelectionChanged(object sender, EventArgs e)
         {
             this.ListarPrestamosActivosDeProfesorDev(Convert.ToInt32(DgvProfesoresDevolucion.CurrentRow.Cells[0].Value));
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            TabPrincipal.SelectedIndex = 0;
+            Limpiar();
+            TabPrincipal.Controls.Remove(tabPage2);
+        }
+
+        private void BtnCancelar2_Click_1(object sender, EventArgs e)
+        {
+            TabPrincipal.SelectedIndex = 0;
+            Limpiar();
+            TabPrincipal.Controls.Remove(tabPage3);
+
+        }
+
+        private void BtnBuscarProfesorDevolucion_Click(object sender, EventArgs e)
+        {
+            this.BuscarProfesor(false, TxtBuscarPorNombreDev.Text);
+        }
+
+        private void BtnBuscarProfesorPrest_Click(object sender, EventArgs e)
+        {
+            this.BuscarProfesor(true, TxtBuscarPorNombrePrest.Text);
+        }
+
+        private void BuscarProfesor(bool esPrestamo, string valor)
+        {
+            try
+            {
+                if (esPrestamo)
+                {
+                    DgvProfesoresPrestamo.DataSource = NUsuario.BuscarProfesor(valor);
+                }
+                else
+                {
+                    DgvProfesoresDevolucion.DataSource = NUsuario.BuscarProfesor(valor);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnRegistraDevolucion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+
+                Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells[0].Value), DateTime.UtcNow.Date);
+
+                if (char.IsDigit(Rpta[0]))
+                {
+                    this.MensajeOk(Rpta);
+                }
+                else
+                {
+                    this.MensajeError(Rpta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnInsertarPrestamo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+
+                Rpta = NPrestamo.Insertar(Convert.ToInt32(DgvProfesoresPrestamo.CurrentRow.Cells[0].Value), Convert.ToInt32(DgvEjemplares.CurrentRow.Cells[0].Value),
+                        DateTime.UtcNow.Date, DtpFechaDevolucion.Value.Date);
+
+                if (char.IsDigit(Rpta[0]))
+                {
+                    this.MensajeOk(Rpta);
+                }
+                else
+                {
+                    this.MensajeError(Rpta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnBuscarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (CboCriterio.SelectedIndex)
+                {
+                    case 0:
+                        DgvEjemplares.DataSource = NEjemplar.BuscarPorLibro(TxtBuscarPorLibro.Text.Trim());
+                        break;
+                    case 1:
+                        DgvEjemplares.DataSource = NEjemplar.BuscarPorCodigoLibro(TxtBuscarPorLibro.Text.Trim());
+                        break;
+                    case 2:
+                        DgvEjemplares.DataSource = NEjemplar.BuscarPorCodigoEjemplar(TxtBuscarPorLibro.Text.Trim());
+                        break;
+                    case 3:
+                        DgvEjemplares.DataSource = NEjemplar.BuscarPorEditorial(TxtBuscarPorLibro.Text.Trim());
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }

@@ -174,5 +174,41 @@ namespace SistemaBiblioteca.Datos
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarEjemplaresDisponibles_Result>("ListarEjemplaresDisponibles");
         }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorCodigoEjemplar_Result> BuscarEjemplaresPorCodigoEjemplar(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoEjemplar_Result>("BuscarEjemplaresPorCodigoEjemplar", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorCodigoLibro_Result> BuscarEjemplaresPorCodigoLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorCodigoLibro_Result>("BuscarEjemplaresPorCodigoLibro", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorEditorial_Result> BuscarEjemplaresPorEditorial(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorEditorial_Result>("BuscarEjemplaresPorEditorial", valorParameter);
+        }
+    
+        public virtual ObjectResult<BuscarEjemplaresPorLibro_Result> BuscarEjemplaresPorLibro(string valor)
+        {
+            var valorParameter = valor != null ?
+                new ObjectParameter("valor", valor) :
+                new ObjectParameter("valor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BuscarEjemplaresPorLibro_Result>("BuscarEjemplaresPorLibro", valorParameter);
+        }
     }
 }

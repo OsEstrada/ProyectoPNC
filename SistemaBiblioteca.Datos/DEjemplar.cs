@@ -43,6 +43,73 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
+        public List<BuscarEjemplaresPorCodigoEjemplar_Result> BuscarEjemplaresPorCodigoEjemplar(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarEjemplaresPorCodigoEjemplar(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<BuscarEjemplaresPorCodigoLibro_Result> BuscarEjemplaresPorCodigoLibro(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarEjemplaresPorCodigoLibro(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<BuscarEjemplaresPorLibro_Result> BuscarEjemplaresPorLibro(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarEjemplaresPorLibro(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<BuscarEjemplaresPorEditorial_Result> BuscarEjemplaresPorEditorial(string valor)
+        {
+            try
+            {
+                using (BibliotecaEntities db = new BibliotecaEntities())
+                {
+                    var list = db.BuscarEjemplaresPorEditorial(valor).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         public List<BuscarEjemplares_Result> Buscar(string valor, int IdLibro)
         {

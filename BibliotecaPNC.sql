@@ -46,6 +46,7 @@ IdEjemplar int not null,
 IdUsuario int not null,
 FechaPrestamo date not null,
 FechaDevolucion date,
+FechaDevuelto date,
 Estado bit default 1,  --Si es 1, esta activo si es 0, esta inactivo
 constraint FK_PRESTAMO_EJEMPLAR	foreign key(IdEjemplar) references Ejemplar(IdEjemplar),
 constraint FK_PRESTAMO_USUARIO foreign key(IdUsuario) references Usuario(IdUsuario)
@@ -285,7 +286,7 @@ create or alter procedure BuscarPrestamosActivosProfesor
 @valor int
 as begin
 	select p.IdUsuario, p.IdPrestamo 'Id', u.Nombres+' '+u.Apellidos 'Profesor', l.Titulo, e.IdEjemplar 'Numero Ejemplar',
-			p.FechaPrestamo 'Fecha Prestamo'
+			p.FechaPrestamo 'Fecha Prestamo', p.FechaDevolucion 'Fecha Limite de Devolucion'
 	from Prestamo p inner join Usuario u on p.IdUsuario = u.IdUsuario
 	inner join Ejemplar e on p.IdEjemplar = e.IdEjemplar
 	inner join Libro l on e.IdLibro = l.IdLibro
@@ -305,6 +306,46 @@ as begin
 		where (p.IdPrestamo like '%'+@valor+'%' or u.Nombres like '%'+@valor+'%' or u.Apellidos like '%'+@valor+'%'
 			   or l.Titulo like '%'+@valor+'%' or e.IdEjemplar like '%'+@valor+'%') and p.Estado = 0
 		order by FechaPrestamo desc;
+end;
+go;
+
+create or alter procedure BuscarEjemplaresPorLibro
+@valor varchar(150)
+as begin
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where (l.Titulo like '%' + @valor + '%')  
+	order by e.IdEjemplar desc;
+end;
+go;
+
+create or alter procedure BuscarEjemplaresPorCodigoLibro
+@valor varchar(150)
+as begin
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where (l.IdLibro like '%' + @valor + '%')  
+	order by e.IdEjemplar desc;
+end;
+go;
+
+create or alter procedure BuscarEjemplaresPorCodigoEjemplar
+@valor varchar(150)
+as begin
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where (e.IdEjemplar like '%' + @valor + '%')  
+	order by e.IdEjemplar desc;
+end;
+go;
+
+create or alter procedure BuscarEjemplaresPorEditorial
+@valor varchar(150)
+as begin
+	select e.IdEjemplar as Id, l.Titulo, e.Ubicacion, e.Editorial, e.Idioma, e.Pais
+	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
+	where (e.Editorial like '%' + @valor + '%')  
+	order by e.IdEjemplar desc;
 end;
 go;
 

@@ -139,7 +139,7 @@ namespace SistemaBiblioteca.Datos
                 {
                     Prestamo prestamo = db.Prestamo.Find(idPrestamo);
                     prestamo.Estado = true;
-                    prestamo.FechaDevolucion = FechaDevolucion;
+                    prestamo.FechaDevuelto = FechaDevolucion;
                     db.SaveChanges();
                 }
             }
