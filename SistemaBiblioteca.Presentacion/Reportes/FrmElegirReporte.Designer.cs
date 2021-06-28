@@ -37,7 +37,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.CboReporte);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(31, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(344, 99);
@@ -47,13 +47,14 @@
             // 
             // CboReporte
             // 
+            this.CboReporte.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboReporte.FormattingEnabled = true;
             this.CboReporte.Items.AddRange(new object[] {
             "Libros Registrados",
             "Préstamos Activos"});
             this.CboReporte.Location = new System.Drawing.Point(27, 44);
             this.CboReporte.Name = "CboReporte";
-            this.CboReporte.Size = new System.Drawing.Size(288, 21);
+            this.CboReporte.Size = new System.Drawing.Size(288, 23);
             this.CboReporte.TabIndex = 0;
             // 
             // BtnMostrar

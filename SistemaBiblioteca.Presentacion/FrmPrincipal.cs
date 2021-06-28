@@ -128,9 +128,22 @@ namespace SistemaBiblioteca.Presentacion
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reportes.FrmElegirReporte frm = new Reportes.FrmElegirReporte();
+            frm.ShowDialog();
 
-            frm.MdiParent = this;
-            frm.Show();
+            if (frm.esReporteLibro)
+            {
+                Reportes.FrmReporteLibros rpt = new Reportes.FrmReporteLibros();
+                rpt.MdiParent = this;
+                rpt.Show();
+            }
+            else
+            {
+                Reportes.FrmReportePrestamos rpt = new Reportes.FrmReportePrestamos();
+                rpt.MdiParent = this;
+                rpt.Show();
+            }
+
+            frm.Close();
         }
     }
 }
