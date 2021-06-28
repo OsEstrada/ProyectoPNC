@@ -124,6 +124,23 @@ SELECT * FROM Prestamo
 
 go;
 
+
+create or alter trigger CreatePrestamo
+on Prestamo
+for INSERT
+as begin
+	set NOCOUNT on;
+	declare @idEjemplar int;
+	declare @Estado bit;
+	select @idEjemplar = i.IdEjemplar, @Estado = i.Estado from inserted i
+	IF @Estado = 1
+	begin
+		update Ejemplar set Estado = 0 where IdEjemplar = @idEjemplar
+	end
+end;
+go
+
+
 create or alter trigger UpdateAfterDevolucion
 on Prestamo
 for UPDATE
