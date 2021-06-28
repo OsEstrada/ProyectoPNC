@@ -297,10 +297,10 @@ namespace SistemaBiblioteca.Presentacion
             {
                 string Rpta = "";
 
-                Rpta = NPrestamo.Insertar(Convert.ToInt32(DgvProfesoresPrestamo.CurrentRow.Cells[0].Value), Convert.ToInt32(DgvEjemplares.CurrentRow.Cells[0].Value),
+                Rpta = NPrestamo.Insertar(Convert.ToInt32(DgvProfesoresPrestamo.CurrentRow.Cells["Id"].Value), Convert.ToInt32(DgvEjemplares.CurrentRow.Cells["Id"].Value),
                         DateTime.UtcNow.Date, DtpFechaDevolucion.Value.Date);
 
-                if (char.IsDigit(Rpta[0]))
+                if (Rpta.Equals("OK"))
                 {
                     this.MensajeOk("Registro agregado con éxito.");
                 }
