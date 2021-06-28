@@ -9,6 +9,7 @@ namespace SistemaBiblioteca.Presentacion
     {
         private bool Estado = true;
         private int ejemplarId, libroId;
+        public int IdRol;
 
 
         public FrmEjemplarPrincipal()
@@ -239,6 +240,25 @@ namespace SistemaBiblioteca.Presentacion
 
         private void FrmEjemplarPrincipal_Load(object sender, EventArgs e)
         {
+            if(IdRol == 2)
+            {
+                btnAgregar.Enabled = false;
+                btnAgregar.Visible = false;
+                btnEditar.Enabled = false;
+                btnEditar.Visible = false;
+                BtnEliminar.Enabled = false;
+                BtnEliminar.Visible = false;
+            }
+            else if (IdRol == 1)
+            {
+                btnAgregar.Enabled = true;
+                btnAgregar.Visible = true;
+                btnEditar.Enabled = true;
+                btnEditar.Visible = true;
+                BtnEliminar.Enabled = true;
+                BtnEliminar.Visible = true;
+            }
+            
             this.Listar();
             TabPrincipal.Controls.Remove(tabPage2);
         }

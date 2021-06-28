@@ -12,6 +12,9 @@ namespace SistemaBiblioteca.Presentacion
 {
     public partial class FrmPrincipal : Form
     {
+        public int IdUsuario;
+        public int IdRol;
+        public string Nombre;
         private int childFormNumber = 0;
 
         public FrmPrincipal()
@@ -121,6 +124,7 @@ namespace SistemaBiblioteca.Presentacion
         private void ejemplaresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmEjemplarPrincipal frm = new FrmEjemplarPrincipal();
+            frm.IdRol = IdRol;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -131,6 +135,37 @@ namespace SistemaBiblioteca.Presentacion
 
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            if(IdRol == 2)
+            {
+                MnuLibros.Enabled = false;
+                MnuLibros.Visible = false;
+                MnuEjemplares.Enabled = true;
+                MnuEjemplares.Visible = true;
+                MnuPrestamos.Enabled = false;
+                MnuPrestamos.Visible = false;
+                MnuReportes.Enabled = false;
+                MnuReportes.Visible = false;
+
+            }else if(IdRol == 1)
+            {
+                MnuLibros.Enabled = true;
+                MnuLibros.Visible = true;
+                MnuEjemplares.Enabled = true;
+                MnuEjemplares.Visible = true;
+                MnuPrestamos.Enabled = true;
+                MnuPrestamos.Visible = true;
+                MnuReportes.Enabled = true;
+                MnuReportes.Visible = true;
+            }
         }
     }
 }
