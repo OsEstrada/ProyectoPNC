@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.46042in</Width>
+              <Width>2.43642in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.96042in</Width>
+              <Width>1.71767in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86667in</Width>
+              <Width>0.76258in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.95in</Width>
+              <Width>0.88433in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.22083in</Width>
+              <Width>1.28233in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Número Ejemplar</Value>
+                              <Value>No. Ejemplar</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>SemiBold</FontWeight>
@@ -310,6 +310,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -407,9 +408,8 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.29389in</Top>
-        <Left>0.24875in</Left>
         <Height>0.61458in</Height>
-        <Width>9.45834in</Width>
+        <Width>7.08333in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -420,7 +420,7 @@
     <Height>1.20709in</Height>
     <Style />
   </Body>
-  <Width>9.90625in</Width>
+  <Width>7.08333in</Width>
   <Page>
     <PageHeader>
       <Height>0.81944in</Height>
@@ -480,7 +480,7 @@
               <Top>0.43056in</Top>
               <Left>4.91667in</Left>
               <Height>0.375in</Height>
-              <Width>4.98958in</Width>
+              <Width>2.16666in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -495,7 +495,7 @@
           </ReportItems>
           <KeepTogether>true</KeepTogether>
           <Height>0.81944in</Height>
-          <Width>9.90625in</Width>
+          <Width>7.08333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -539,7 +539,7 @@
           <rd:DefaultName>Textbox9</rd:DefaultName>
           <Top>0.23958in</Top>
           <Height>0.25in</Height>
-          <Width>9.90625in</Width>
+          <Width>7.08333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -557,10 +557,10 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
