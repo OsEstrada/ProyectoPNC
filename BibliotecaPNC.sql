@@ -53,49 +53,24 @@ constraint FK_PRESTAMO_USUARIO foreign key(IdUsuario) references Usuario(IdUsuar
 );
 
 --Insert libros
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'La niña de oro', N'Austin Garrett', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El libro de los gnomos, los gigantes y los duendes', N'Cedric Rosales', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Historia de Malik y Luna Llena', N'Cedric Rosales', N'978-987-24500')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El cascanueces y el rey de los ratones', N'Hanae Fuller', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos + cuentos', N'Cedric Rosales', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Sección policiales', N'Athena Daniels', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Callejón sin salida', N'Hanna Lamb', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El Gigante Amapolas + El matadero', N'Ava Cohen', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Prometeo encadenado + Una libra de carne', N'Jacob Walsh', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Los libros sagrados - Mitología griega', N'Aurelia Maynard', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Los relatos del tiempo', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'El centroforward murió al amanecer', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Siete fantásticos latinoamericanos', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Del terror al horror', N'Anonimo', N'978-987-1565-')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Las aventuras de Gilgamesh', N'Anonimo', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Las Mil y una noches', N'Hanae Fuller', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos policiales para chicos curiosos', N'Austin Garrett', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Cuentos populares de pícaros y necios', N'Anonimo', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'Antiguas leyendas de héroes y princesas', N'Jacob Walsh', N'978-987-24143')
-INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN]) VALUES (N'La isla misteriosa', N'Hanna Lamb', N'978-987-24500')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y la piedra filosofal', N'J. K. Rowling', N'978-987-24500',N'Literatura',N'1997',1,20500,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y la cámara secreta', N'J. K. Rowling', N'138-887-12500',N'Literatura',N'1998',2,10500,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y el prisionero de Azkaban', N'J. K. Rowling', N'278-587-24350',N'Literatura',N'1999',1,1500,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y el cáliz de fuego', N'J. K. Rowling', N'278-487-84500',N'Literatura',N'2000',1,2500,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y la Orden del Fénix', N'J. K. Rowling', N'778-287-34400',N'Literatura',N'2003',1,3500,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y el misterio del príncipe', N'J. K. Rowling',N'368-687-24700',N'Literatura',N'2005',1,4300,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y las reliquias de la Muerte', N'J. K. Rowling',N'578-887-24500',N'Literatura',N'2007',2,4220,N'Fantasia')
+INSERT [dbo].[Libro] ([Titulo], [Autor], [ISBN],[Materia],[AnioEdicion],[NoEdicion],[NoPaginas],[Descripcion]) VALUES (N'Harry Potter y el legado maldito', N'J. K. Rowling',N'678-987-22400',N'Literatura',N'2009',2,2320,N'Fantasia')
 
 --Insert Ejemplar
-
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (1,'Planta Baja')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (2,'Primera Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (3,'Primera Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (4,'Tercer Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (5,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (6,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (7,'Tercer Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (8,'Primera Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (9,'Planta Baja')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (10,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (11,'Tercer Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (12,'Tercer Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (13,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (14,'Primera Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (15,'Primera Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (16,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (17,'Planta Baja')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (18,'Segunda Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (19,'Tercer Planta')
-INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion]) VALUES (20,'Tercer Planta')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (1,'Tercer Planta','Bloomsbury Publishing','Ingles','Reino Unido')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (1,'Segunda Planta','Bloomsbury Publishing','Español','España')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (3,'Segunda Planta','Bloomsbury Publishing','Ingles','Reino Unido')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (4,'Tercer Planta','Bloomsbury Publishing','Ingles','Reino Unido')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (5,'Primera Planta','Bloomsbury Publishing','Ingles','Reino Unido')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (6,'Planta Baja','Bloomsbury Publishing','Ingles','Reino Unido')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (6,'Tercer Planta','Bloomsbury Publishing','Español','México')
+INSERT [dbo].[Ejemplar]([IdLibro], [Ubicacion],[Editorial],[Idioma],[Pais]) VALUES (8,'Primera Planta','Bloomsbury Publishing','Ingles','Reino Unido')
 
 --Insert Rol
 INSERT [dbo].[Rol]([Nombre]) VALUES ('Admin')
@@ -104,17 +79,20 @@ INSERT [dbo].[Rol]([Nombre]) VALUES ('Profesor')
 --Insert Usuario
 INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('aspleitez','Adriana Sofia', 'Pleitez Perez','root', 1)
 INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('cloarca','Carlos', 'Loarca','rootroot', 1)
-INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('nexxtor','Nestor', 'Aldana','rootx3', 2)
+INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('enxel','Enmanuel', 'Amaya','rootx4', 2)
+INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('dasosa','Daniel', 'Sosa','hola', 2)
+INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('evarela','Erick', 'Varela','holis', 2)
+INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('rcanizales','Ronaldo', 'Canizales','god', 2)
+INSERT [dbo].[Usuario]([Username], [Nombres], [Apellidos], [Password], [IdRol]) VALUES ('oestrada','Oscar Alejandro', 'Estrada Corena','12345', 2)
+
 
 --Insert Prestamo
-
-INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion]) VALUES (2,3,'2021-06-06 15:00:00.000','2021-06-15 15:00:00.000')
-INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo]) VALUES (19,3,'2021-06-08 15:00:00.000')
-INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion]) VALUES (7,2,'2021-06-06 15:00:00.000','2021-06-17 15:00:00.000')
-INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo]) VALUES (10,1,'2021-06-07 15:00:00.000')
-INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion]) VALUES (14,2,'2021-06-09 15:00:00.000','2021-06-24 15:00:00.000')
-
-
+select * from Prestamo
+INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion], [estado]) VALUES (1,3,'2021-06-30 15:00:00.000','2021-07-15 15:00:00.000', 1)
+INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion], [estado], [FechaDevuelto]) VALUES (4,3,'2021-06-08 15:00:00.000','2021-07-03 15:00:00.000', 0, '2021-07-01 15:00:00.000')
+INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion], [estado]) VALUES (5,2,'2021-06-06 15:00:00.000','2021-07-17 15:00:00.000', 1)
+INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion], [estado], [FechaDevuelto]) VALUES (6,1,'2021-06-07 15:00:00.000','2021-07-06 15:00:00.000', 0, '2021-07-01 15:00:00.000')
+INSERT [dbo].[Prestamo]([IdEjemplar], [IdUsuario], [FechaPrestamo], [FechaDevolucion], [estado]) VALUES (7,2,'2021-06-09 15:00:00.000','2021-07-24 15:00:00.000', 1)
 
 SELECT * FROM LIBRO
 SELECT * FROM Ejemplar
@@ -122,7 +100,7 @@ SELECT * FROM Rol
 SELECT * FROM Usuario
 SELECT * FROM Prestamo
 
-go;
+go
 
 
 create or alter trigger CreatePrestamo
@@ -155,7 +133,7 @@ as begin
 		update Ejemplar set Estado = 1 where IdEjemplar = @IdEjemplar;
 	END
 end;
-go;
+go
 
 create or alter procedure InsertarLibros
 @Titulo varchar(150),
@@ -177,7 +155,7 @@ as begin
 	set @Id = -1;
 	end catch
 end;
-go;
+go
 
 create or alter procedure ListarLibros
 as begin
@@ -186,7 +164,7 @@ as begin
 	from Libro l
 	order by l.IdLibro desc;
 end;
-go;
+go
 
 create or alter procedure BuscarLibro
 @valor varchar(150)
@@ -197,7 +175,7 @@ as begin
 	where l.Titulo like '%' + @valor + '%' or l.IdLibro like '%' + @valor + '%'
 	order by l.IdLibro desc
 end;
-go;
+go
 
 create or alter procedure BuscarLibroPorId
 @valor int
@@ -208,7 +186,7 @@ as begin
 	where l.IdLibro = @valor
 	order by l.IdLibro desc
 end;
-go;
+go
 
 create or alter procedure ListarEjemplares
 @idLibro int
@@ -218,7 +196,7 @@ as begin
 	where e.IdLibro = @idLibro
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure ListarTodosEjemplares
 as begin
@@ -226,7 +204,7 @@ as begin
 	from Ejemplar e inner join Libro l on e.IdLibro = l.IdLibro
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure ListarEjemplaresDisponibles
 as begin
@@ -235,7 +213,7 @@ as begin
 	where e.Estado = 1
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplares
 @valor varchar(150),
@@ -247,7 +225,7 @@ as begin
 		or e.Ubicacion like '%' + @valor + '%') and e.IdLibro = @idLibro
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplaresSinIdLibro
 @valor varchar(150)
@@ -258,7 +236,7 @@ as begin
 		or e.Ubicacion like '%' + @valor + '%' or e.Editorial like '%' + @valor + '%' or e.Pais like '%' + @valor + '%')
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure Login
 @username varchar(60),
@@ -268,7 +246,7 @@ as begin
 	from Usuario u inner join Rol r on u.IdRol = r.IdRol
 	where u.Username = @username and u.Password = @password
 end;
-go;
+go
 
 create or alter procedure ListarProfesores
 as begin
@@ -277,7 +255,7 @@ as begin
 	where IdRol = 2
 	order by Id;
 end;
-go;
+go
 
 create or alter procedure BuscarProfesor
 @valor varchar(150)
@@ -287,7 +265,7 @@ as begin
 	where IdRol = 2 and u.Nombres like '%' + @valor + '%' or u.Apellidos like '%' + @valor + '%'
 	order by Id;
 end;
-go;
+go
 
 create or alter procedure ListarPrestamos
 as begin
@@ -299,7 +277,7 @@ as begin
 	where p.Estado = 1
 	order by FechaPrestamo desc;
 end;
-go;
+go
 
 create or alter procedure ListarDevoluciones
 as begin
@@ -311,7 +289,7 @@ as begin
 	where p.Estado = 0
 	order by FechaPrestamo desc;
 end;
-go;
+go
 
 create or alter procedure BuscarPrestamos
 @valor varchar(150)
@@ -326,7 +304,7 @@ as begin
 		order by FechaPrestamo desc;
 
 end;
-go;
+go
 
 create or alter procedure BuscarPrestamosActivosProfesor
 @valor int
@@ -339,7 +317,7 @@ as begin
 	where p.Estado = 1 and p.IdUsuario = @valor and u.IdRol = 2
 	order by FechaPrestamo desc;
 end;
-go;
+go
 
 create or alter procedure BuscarDevoluciones
 @valor varchar(150)
@@ -353,7 +331,7 @@ as begin
 			   or l.Titulo like '%'+@valor+'%' or e.IdEjemplar like '%'+@valor+'%') and p.Estado = 0
 		order by FechaPrestamo desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplaresPorLibro
 @valor varchar(150)
@@ -363,7 +341,7 @@ as begin
 	where (l.Titulo like '%' + @valor + '%')  
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplaresPorCodigoLibro
 @valor varchar(150)
@@ -373,7 +351,7 @@ as begin
 	where (l.IdLibro like '%' + @valor + '%')  
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplaresPorCodigoEjemplar
 @valor varchar(150)
@@ -383,7 +361,7 @@ as begin
 	where (e.IdEjemplar like '%' + @valor + '%')  
 	order by e.IdEjemplar desc;
 end;
-go;
+go
 
 create or alter procedure BuscarEjemplaresPorEditorial
 @valor varchar(150)
@@ -393,5 +371,4 @@ as begin
 	where (e.Editorial like '%' + @valor + '%')  
 	order by e.IdEjemplar desc;
 end;
-go;
-
+go
