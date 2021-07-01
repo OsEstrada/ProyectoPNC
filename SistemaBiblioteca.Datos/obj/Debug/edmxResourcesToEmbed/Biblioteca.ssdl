@@ -35,8 +35,8 @@
     <Property Name="IdUsuario" Type="int" Nullable="false" />
     <Property Name="FechaPrestamo" Type="date" Nullable="false" />
     <Property Name="FechaDevolucion" Type="date" />
-    <Property Name="Estado" Type="bit" />
     <Property Name="FechaDevuelto" Type="date" />
+    <Property Name="Estado" Type="bit" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>

@@ -37,8 +37,8 @@
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
           <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
           <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="FechaDevuelto" ColumnName="FechaDevuelto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
