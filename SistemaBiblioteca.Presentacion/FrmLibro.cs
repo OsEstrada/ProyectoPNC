@@ -41,7 +41,7 @@ namespace SistemaBiblioteca.Presentacion
             BtnCancelar.Visible = true;
             DgvEjemplares.DataSource = null;
             ErrorIcono.Clear();
-            this.ListarEjemplares();
+            this.Listar();
         }
 
         private void Buscar()
@@ -72,7 +72,6 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 DgvListadoLibros.DataSource = NLibro.Listar();
-                this.Limpiar();
                 LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoLibros.Rows.Count);
             }
             catch (Exception ex)
@@ -100,8 +99,9 @@ namespace SistemaBiblioteca.Presentacion
             if (!string.IsNullOrEmpty(LblidLibro.Text))
             {
                 DgvEjemplares.DataSource = NEjemplar.Listar(Convert.ToInt32(LblidLibro.Text.Trim()));
+                //DgvEjemplares.Columns[5].Visible = false;
             }
-            
+
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
@@ -244,12 +244,12 @@ namespace SistemaBiblioteca.Presentacion
                     int Codigo;
                     string Rpta = "";
 
-                    Codigo = Convert.ToInt32(DgvEjemplares.CurrentRow.Cells[1].Value);
+                    Codigo = Convert.ToInt32(DgvEjemplares.CurrentRow.Cells[0].Value);
                     Rpta = NEjemplar.Eliminar(Codigo);
 
                     if (Rpta.Equals("OK"))
                     {
-                        this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(DgvEjemplares.CurrentRow.Cells[1].Value));
+                        this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(DgvEjemplares.CurrentRow.Cells[0].Value));
                     }
                     else
                     {
@@ -335,6 +335,8 @@ namespace SistemaBiblioteca.Presentacion
             {
                 CboEdicionAnio.Items.Add(i);
             }
+
+            CboEdicionAnio.Text = Convert.ToString(DateTime.Today.Year);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace SistemaBiblioteca.Presentacion
             TxtUbicacion.Clear();
             CboEstado.SelectedIndex = 0;
             DgvListadoLibro.DataSource = null;
-            btnAgregar.Visible = true;
+            BtnAgregarEjemplar.Visible = true;
             BtnActualizar.Visible = false;
             ErrorIcono.Clear();
         }
@@ -61,6 +61,10 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 DgvListadoEjemplares.DataSource = NEjemplar.ListarTodosEjemplares();
+                DgvListadoEjemplares.Columns[1].Visible = false;
+                DgvListadoEjemplares.Columns[7].Visible = false;
+
+
                 this.Limpiar();
                 LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoEjemplares.Rows.Count);
             }
@@ -134,7 +138,7 @@ namespace SistemaBiblioteca.Presentacion
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro.");
-                        Dispose();
+                        this.BtnCancelar2_Click(sender, e);
                     }
                     else
                     {
@@ -150,45 +154,35 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (DgvListadoEjemplares.SelectedRows.Count == 0)
-                MessageBox.Show("No se ha seleccionado ningun libro para eliminar");
-            else
+            try
             {
-                try
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente deseas eliminar el(los) ejemplar(es)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
                 {
-                    DialogResult Opcion;
-                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) ejemplar(es)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (Opcion == DialogResult.OK)
+                    int Codigo;
+                    string Rpta = "";
+
+                    Codigo = Convert.ToInt32(DgvListadoEjemplares.CurrentRow.Cells[0].Value);
+                    Rpta = NEjemplar.Eliminar(Codigo);
+
+                    if (Rpta.Equals("OK"))
                     {
-                        int Codigo;
-                        string Rpta = "";
-
-                        foreach (DataGridViewRow row in DgvListadoEjemplares.SelectedRows)
-                        {
-                            if (Convert.ToBoolean(row.Cells[0].Value))
-                            {
-                                Codigo = Convert.ToInt32(row.Cells["Id"].Value);
-                                Rpta = NEjemplar.Eliminar(Codigo);
-
-                                if (Rpta.Equals("OK"))
-                                {
-                                    this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(row.Cells["Id"].Value));
-                                }
-                                else
-                                {
-                                    this.MensajeError(Rpta);
-                                }
-                            }
-                        }
-                        this.Listar();
+                        this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(DgvListadoEjemplares.CurrentRow.Cells[0].Value));
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+
+                    this.Listar();
                 }
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
         }
 
         private void TabPrincipal_SelectedIndexChanged(object sender, EventArgs e)
@@ -232,7 +226,7 @@ namespace SistemaBiblioteca.Presentacion
             if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
             TabPrincipal.SelectedIndex = 1;
 
-            btnAgregar.Visible = false;
+            BtnAgregarEjemplar.Visible = false;
             BtnActualizar.Visible = true;
 
             Cursor.Current = Cursors.Default;

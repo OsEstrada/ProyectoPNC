@@ -40,7 +40,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DgvListadoEjemplares = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -167,14 +166,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DgvListadoEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvListadoEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvListadoEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DgvListadoEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DgvListadoEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListadoEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
             this.DgvListadoEjemplares.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvListadoEjemplares.Location = new System.Drawing.Point(0, 40);
             this.DgvListadoEjemplares.Margin = new System.Windows.Forms.Padding(0);
             this.DgvListadoEjemplares.Name = "DgvListadoEjemplares";
+            this.DgvListadoEjemplares.ReadOnly = true;
             this.DgvListadoEjemplares.RowHeadersVisible = false;
             this.DgvListadoEjemplares.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -185,13 +183,6 @@
             this.DgvListadoEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListadoEjemplares.Size = new System.Drawing.Size(1482, 655);
             this.DgvListadoEjemplares.TabIndex = 0;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Width = 69;
             // 
             // panel2
             // 
@@ -363,9 +354,10 @@
             this.panel4.Controls.Add(this.DgvListadoLibro);
             this.panel4.Controls.Add(this.BtnActualizar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(264, 3);
+            this.panel4.Location = new System.Drawing.Point(271, 10);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(953, 729);
+            this.panel4.Size = new System.Drawing.Size(939, 715);
             this.panel4.TabIndex = 0;
             // 
             // BtnAgregarEjemplar
@@ -702,7 +694,6 @@
         private System.Windows.Forms.Button BtnCancelar2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label2;
