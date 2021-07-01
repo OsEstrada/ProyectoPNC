@@ -281,8 +281,9 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Usuario" ColumnName="Usuario" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-          <ScalarProperty Name="Numero_Ejemplar" ColumnName="Numero Ejemplar" />
-          <ScalarProperty Name="Fecha_Prestamo" ColumnName="Fecha Prestamo" />
+          <ScalarProperty Name="NumeroEjemplar" ColumnName="NumeroEjemplar" />
+          <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
+          <ScalarProperty Name="FechaLimiteDevolucion" ColumnName="FechaLimiteDevolucion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

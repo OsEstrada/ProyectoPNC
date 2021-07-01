@@ -94,17 +94,17 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1490, 761);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -115,26 +115,26 @@
             this.TabPrincipal.Controls.Add(this.tabPage2);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TabPrincipal.Location = new System.Drawing.Point(0, 23);
+            this.TabPrincipal.Location = new System.Drawing.Point(0, 0);
             this.TabPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.TabPrincipal.Multiline = true;
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.Padding = new System.Drawing.Point(0, 0);
             this.TabPrincipal.SelectedIndex = 0;
-            this.TabPrincipal.Size = new System.Drawing.Size(1490, 738);
+            this.TabPrincipal.Size = new System.Drawing.Size(1490, 761);
             this.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabPrincipal.TabIndex = 1;
             this.TabPrincipal.SelectedIndexChanged += new System.EventHandler(this.TabPrincipal_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1482, 712);
+            this.tabPage1.Size = new System.Drawing.Size(1482, 735);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             // 
@@ -154,7 +154,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 712);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoEjemplares
@@ -183,7 +183,7 @@
             this.DgvListadoEjemplares.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvListadoEjemplares.RowTemplate.Height = 24;
             this.DgvListadoEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoEjemplares.Size = new System.Drawing.Size(1482, 632);
+            this.DgvListadoEjemplares.Size = new System.Drawing.Size(1482, 655);
             this.DgvListadoEjemplares.TabIndex = 0;
             // 
             // Seleccionar
@@ -195,6 +195,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.BtnEliminar);
@@ -289,9 +290,10 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 672);
+            this.panel3.Location = new System.Drawing.Point(0, 695);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1482, 40);
@@ -313,7 +315,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1482, 712);
+            this.tabPage2.Size = new System.Drawing.Size(1482, 735);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -321,7 +323,7 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoScroll = true;
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 959F));
@@ -332,7 +334,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 712);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel3.TabIndex = 46;
             // 
             // panel4
@@ -363,7 +365,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(264, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(953, 706);
+            this.panel4.Size = new System.Drawing.Size(953, 729);
             this.panel4.TabIndex = 0;
             // 
             // BtnAgregarEjemplar
@@ -374,7 +376,7 @@
             this.BtnAgregarEjemplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregarEjemplar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarEjemplar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(72, 590);
+            this.BtnAgregarEjemplar.Location = new System.Drawing.Point(72, 519);
             this.BtnAgregarEjemplar.Name = "BtnAgregarEjemplar";
             this.BtnAgregarEjemplar.Size = new System.Drawing.Size(200, 30);
             this.BtnAgregarEjemplar.TabIndex = 65;
@@ -419,7 +421,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(69, 343);
+            this.label3.Location = new System.Drawing.Point(69, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 13);
             this.label3.TabIndex = 61;
@@ -429,7 +431,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 324);
+            this.label2.Location = new System.Drawing.Point(68, 314);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 19);
             this.label2.TabIndex = 59;
@@ -438,7 +440,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 324);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 314);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -451,7 +453,7 @@
             this.CboEstado.Items.AddRange(new object[] {
             "Disponible",
             "Prestado"});
-            this.CboEstado.Location = new System.Drawing.Point(158, 504);
+            this.CboEstado.Location = new System.Drawing.Point(158, 469);
             this.CboEstado.MaxDropDownItems = 4;
             this.CboEstado.Name = "CboEstado";
             this.CboEstado.Size = new System.Drawing.Size(290, 21);
@@ -461,7 +463,7 @@
             // 
             this.LblEstado.AutoSize = true;
             this.LblEstado.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblEstado.Location = new System.Drawing.Point(80, 507);
+            this.LblEstado.Location = new System.Drawing.Point(80, 472);
             this.LblEstado.Name = "LblEstado";
             this.LblEstado.Size = new System.Drawing.Size(54, 13);
             this.LblEstado.TabIndex = 46;
@@ -471,7 +473,7 @@
             // 
             this.LblIdioma.AutoSize = true;
             this.LblIdioma.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblIdioma.Location = new System.Drawing.Point(489, 468);
+            this.LblIdioma.Location = new System.Drawing.Point(489, 433);
             this.LblIdioma.Name = "LblIdioma";
             this.LblIdioma.Size = new System.Drawing.Size(40, 13);
             this.LblIdioma.TabIndex = 47;
@@ -480,7 +482,7 @@
             // TxtIdioma
             // 
             this.TxtIdioma.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtIdioma.Location = new System.Drawing.Point(551, 465);
+            this.TxtIdioma.Location = new System.Drawing.Point(551, 430);
             this.TxtIdioma.Name = "TxtIdioma";
             this.TxtIdioma.Size = new System.Drawing.Size(282, 22);
             this.TxtIdioma.TabIndex = 54;
@@ -488,7 +490,7 @@
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.txtPais.Location = new System.Drawing.Point(158, 465);
+            this.txtPais.Location = new System.Drawing.Point(158, 430);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(290, 22);
             this.txtPais.TabIndex = 53;
@@ -497,7 +499,7 @@
             // 
             this.LblPais.AutoSize = true;
             this.LblPais.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblPais.Location = new System.Drawing.Point(80, 468);
+            this.LblPais.Location = new System.Drawing.Point(80, 433);
             this.LblPais.Name = "LblPais";
             this.LblPais.Size = new System.Drawing.Size(27, 13);
             this.LblPais.TabIndex = 48;
@@ -506,7 +508,7 @@
             // TxtUbicacion
             // 
             this.TxtUbicacion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtUbicacion.Location = new System.Drawing.Point(158, 397);
+            this.TxtUbicacion.Location = new System.Drawing.Point(158, 362);
             this.TxtUbicacion.Name = "TxtUbicacion";
             this.TxtUbicacion.Size = new System.Drawing.Size(675, 22);
             this.TxtUbicacion.TabIndex = 51;
@@ -515,7 +517,7 @@
             // 
             this.LblUbicacion.AutoSize = true;
             this.LblUbicacion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblUbicacion.Location = new System.Drawing.Point(80, 400);
+            this.LblUbicacion.Location = new System.Drawing.Point(80, 365);
             this.LblUbicacion.Name = "LblUbicacion";
             this.LblUbicacion.Size = new System.Drawing.Size(69, 13);
             this.LblUbicacion.TabIndex = 49;
@@ -524,7 +526,7 @@
             // TxtEditorial
             // 
             this.TxtEditorial.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtEditorial.Location = new System.Drawing.Point(158, 428);
+            this.TxtEditorial.Location = new System.Drawing.Point(158, 393);
             this.TxtEditorial.Name = "TxtEditorial";
             this.TxtEditorial.Size = new System.Drawing.Size(675, 22);
             this.TxtEditorial.TabIndex = 52;
@@ -533,7 +535,7 @@
             // 
             this.LblEditorial.AutoSize = true;
             this.LblEditorial.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblEditorial.Location = new System.Drawing.Point(80, 431);
+            this.LblEditorial.Location = new System.Drawing.Point(80, 396);
             this.LblEditorial.Name = "LblEditorial";
             this.LblEditorial.Size = new System.Drawing.Size(62, 13);
             this.LblEditorial.TabIndex = 50;
@@ -552,7 +554,7 @@
             // BtnCancelar2
             // 
             this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(712, 590);
+            this.BtnCancelar2.Location = new System.Drawing.Point(712, 519);
             this.BtnCancelar2.Name = "BtnCancelar2";
             this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar2.TabIndex = 45;
@@ -626,7 +628,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(72, 590);
+            this.BtnActualizar.Location = new System.Drawing.Point(72, 519);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
             this.BtnActualizar.TabIndex = 11;
@@ -643,7 +645,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1490, 761);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);

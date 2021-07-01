@@ -60,7 +60,6 @@
             this.GrpEjemplares = new System.Windows.Forms.GroupBox();
             this.btnAgregarEjemplar = new System.Windows.Forms.Button();
             this.btnModificarEjemplar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.BtnEliminarEjemplares = new System.Windows.Forms.Button();
             this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.SeleccionarEjemplar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -112,14 +111,14 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1490, 761);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -130,13 +129,13 @@
             this.TabPrincipal.Controls.Add(this.tabPage2);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TabPrincipal.Location = new System.Drawing.Point(0, 23);
+            this.TabPrincipal.Location = new System.Drawing.Point(0, 0);
             this.TabPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.TabPrincipal.Multiline = true;
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.Padding = new System.Drawing.Point(0, 0);
             this.TabPrincipal.SelectedIndex = 0;
-            this.TabPrincipal.Size = new System.Drawing.Size(1490, 738);
+            this.TabPrincipal.Size = new System.Drawing.Size(1490, 761);
             this.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabPrincipal.TabIndex = 1;
             this.TabPrincipal.SelectedIndexChanged += new System.EventHandler(this.TabPrincipal_SelectedIndexChanged);
@@ -149,7 +148,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1482, 712);
+            this.tabPage1.Size = new System.Drawing.Size(1482, 735);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             // 
@@ -169,7 +168,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 712);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoLibros
@@ -182,7 +181,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvListadoLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DgvListadoLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvListadoLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
@@ -198,7 +197,7 @@
             this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvListadoLibros.RowTemplate.Height = 24;
             this.DgvListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoLibros.Size = new System.Drawing.Size(1482, 632);
+            this.DgvListadoLibros.Size = new System.Drawing.Size(1482, 655);
             this.DgvListadoLibros.TabIndex = 0;
             // 
             // Seleccionar
@@ -210,6 +209,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.BtnEliminar);
@@ -304,9 +304,10 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 672);
+            this.panel3.Location = new System.Drawing.Point(0, 695);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1482, 40);
@@ -328,7 +329,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1482, 712);
+            this.tabPage2.Size = new System.Drawing.Size(1482, 735);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -336,7 +337,7 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoScroll = true;
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 800F));
@@ -347,7 +348,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 712);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel3.TabIndex = 46;
             // 
             // panel4
@@ -380,9 +381,10 @@
             this.panel4.Controls.Add(this.NmEdicionNo);
             this.panel4.Controls.Add(this.CboEdicionAnio);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(344, 3);
+            this.panel4.Location = new System.Drawing.Point(344, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(794, 706);
+            this.panel4.Size = new System.Drawing.Size(794, 732);
             this.panel4.TabIndex = 0;
             // 
             // LblId
@@ -390,7 +392,7 @@
             this.LblId.AutoSize = true;
             this.LblId.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.LblId.ForeColor = System.Drawing.Color.DarkRed;
-            this.LblId.Location = new System.Drawing.Point(668, 26);
+            this.LblId.Location = new System.Drawing.Point(668, 12);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(25, 13);
             this.LblId.TabIndex = 0;
@@ -401,7 +403,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(68, 20);
+            this.label15.Location = new System.Drawing.Point(68, 6);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(153, 19);
             this.label15.TabIndex = 0;
@@ -410,7 +412,7 @@
             // BtnCancelar2
             // 
             this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(566, 649);
+            this.BtnCancelar2.Location = new System.Drawing.Point(566, 579);
             this.BtnCancelar2.Name = "BtnCancelar2";
             this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar2.TabIndex = 45;
@@ -422,7 +424,7 @@
             // picLibro
             // 
             this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.picLibro.Location = new System.Drawing.Point(29, 20);
+            this.picLibro.Location = new System.Drawing.Point(29, 6);
             this.picLibro.Name = "picLibro";
             this.picLibro.Size = new System.Drawing.Size(33, 31);
             this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -433,15 +435,14 @@
             // 
             this.GrpEjemplares.Controls.Add(this.btnAgregarEjemplar);
             this.GrpEjemplares.Controls.Add(this.btnModificarEjemplar);
-            this.GrpEjemplares.Controls.Add(this.label2);
             this.GrpEjemplares.Controls.Add(this.BtnEliminarEjemplares);
             this.GrpEjemplares.Controls.Add(this.DgvEjemplares);
             this.GrpEjemplares.Controls.Add(this.LblTotalEjemplares);
             this.GrpEjemplares.Controls.Add(this.picEditorial);
             this.GrpEjemplares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpEjemplares.Location = new System.Drawing.Point(39, 336);
+            this.GrpEjemplares.Location = new System.Drawing.Point(39, 305);
             this.GrpEjemplares.Name = "GrpEjemplares";
-            this.GrpEjemplares.Size = new System.Drawing.Size(727, 283);
+            this.GrpEjemplares.Size = new System.Drawing.Size(727, 266);
             this.GrpEjemplares.TabIndex = 44;
             this.GrpEjemplares.TabStop = false;
             this.GrpEjemplares.Text = "          ";
@@ -478,16 +479,6 @@
             this.btnModificarEjemplar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificarEjemplar.UseVisualStyleBackColor = true;
             this.btnModificarEjemplar.Click += new System.EventHandler(this.btnModificarEjemplar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label2.Location = new System.Drawing.Point(30, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 13);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Mantenimiento de ejemplares";
             // 
             // BtnEliminarEjemplares
             // 
@@ -551,7 +542,7 @@
             this.DgvEjemplares.RowHeadersWidth = 51;
             this.DgvEjemplares.RowTemplate.Height = 24;
             this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvEjemplares.Size = new System.Drawing.Size(684, 186);
+            this.DgvEjemplares.Size = new System.Drawing.Size(684, 170);
             this.DgvEjemplares.TabIndex = 10;
             // 
             // SeleccionarEjemplar
@@ -565,7 +556,7 @@
             // 
             this.LblTotalEjemplares.AutoSize = true;
             this.LblTotalEjemplares.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTotalEjemplares.Location = new System.Drawing.Point(30, 254);
+            this.LblTotalEjemplares.Location = new System.Drawing.Point(30, 236);
             this.LblTotalEjemplares.Name = "LblTotalEjemplares";
             this.LblTotalEjemplares.Size = new System.Drawing.Size(90, 13);
             this.LblTotalEjemplares.TabIndex = 41;
@@ -585,7 +576,7 @@
             // 
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTitulo.Location = new System.Drawing.Point(69, 74);
+            this.LblTitulo.Location = new System.Drawing.Point(69, 60);
             this.LblTitulo.Name = "LblTitulo";
             this.LblTitulo.Size = new System.Drawing.Size(49, 13);
             this.LblTitulo.TabIndex = 0;
@@ -596,7 +587,7 @@
             this.LblidLibro.AutoSize = true;
             this.LblidLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.LblidLibro.ForeColor = System.Drawing.Color.DarkRed;
-            this.LblidLibro.Location = new System.Drawing.Point(699, 26);
+            this.LblidLibro.Location = new System.Drawing.Point(699, 12);
             this.LblidLibro.Name = "LblidLibro";
             this.LblidLibro.Size = new System.Drawing.Size(0, 13);
             this.LblidLibro.TabIndex = 42;
@@ -605,7 +596,7 @@
             // 
             this.LblAutor.AutoSize = true;
             this.LblAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAutor.Location = new System.Drawing.Point(68, 109);
+            this.LblAutor.Location = new System.Drawing.Point(68, 95);
             this.LblAutor.Name = "LblAutor";
             this.LblAutor.Size = new System.Drawing.Size(51, 13);
             this.LblAutor.TabIndex = 0;
@@ -614,7 +605,7 @@
             // TxtTitulo
             // 
             this.TxtTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtTitulo.Location = new System.Drawing.Point(148, 71);
+            this.TxtTitulo.Location = new System.Drawing.Point(148, 57);
             this.TxtTitulo.Name = "TxtTitulo";
             this.TxtTitulo.Size = new System.Drawing.Size(608, 22);
             this.TxtTitulo.TabIndex = 1;
@@ -622,10 +613,10 @@
             // TxtDescripcion
             // 
             this.TxtDescripcion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtDescripcion.Location = new System.Drawing.Point(147, 181);
+            this.TxtDescripcion.Location = new System.Drawing.Point(147, 167);
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(609, 55);
+            this.TxtDescripcion.Size = new System.Drawing.Size(609, 43);
             this.TxtDescripcion.TabIndex = 5;
             // 
             // BtnInsertar
@@ -636,7 +627,7 @@
             this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(70, 290);
+            this.BtnInsertar.Location = new System.Drawing.Point(70, 261);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
             this.BtnInsertar.TabIndex = 11;
@@ -648,7 +639,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label13.Location = new System.Drawing.Point(68, 184);
+            this.label13.Location = new System.Drawing.Point(68, 170);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 13);
             this.label13.TabIndex = 0;
@@ -657,7 +648,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(556, 290);
+            this.BtnCancelar.Location = new System.Drawing.Point(556, 261);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar.TabIndex = 12;
@@ -668,7 +659,7 @@
             // TxtMateria
             // 
             this.TxtMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtMateria.Location = new System.Drawing.Point(511, 144);
+            this.TxtMateria.Location = new System.Drawing.Point(511, 130);
             this.TxtMateria.Name = "TxtMateria";
             this.TxtMateria.Size = new System.Drawing.Size(245, 22);
             this.TxtMateria.TabIndex = 4;
@@ -678,7 +669,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(68, 39);
+            this.label3.Location = new System.Drawing.Point(68, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 13);
             this.label3.TabIndex = 0;
@@ -692,7 +683,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(39, 649);
+            this.BtnActualizar.Location = new System.Drawing.Point(39, 579);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
             this.BtnActualizar.TabIndex = 11;
@@ -703,7 +694,7 @@
             // TxtAutor
             // 
             this.TxtAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtAutor.Location = new System.Drawing.Point(148, 106);
+            this.TxtAutor.Location = new System.Drawing.Point(148, 92);
             this.TxtAutor.Name = "TxtAutor";
             this.TxtAutor.Size = new System.Drawing.Size(608, 22);
             this.TxtAutor.TabIndex = 2;
@@ -712,7 +703,7 @@
             // 
             this.LblMateria.AutoSize = true;
             this.LblMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblMateria.Location = new System.Drawing.Point(440, 147);
+            this.LblMateria.Location = new System.Drawing.Point(440, 133);
             this.LblMateria.Name = "LblMateria";
             this.LblMateria.Size = new System.Drawing.Size(46, 13);
             this.LblMateria.TabIndex = 0;
@@ -722,7 +713,7 @@
             // 
             this.LblISBN.AutoSize = true;
             this.LblISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblISBN.Location = new System.Drawing.Point(68, 147);
+            this.LblISBN.Location = new System.Drawing.Point(68, 133);
             this.LblISBN.Name = "LblISBN";
             this.LblISBN.Size = new System.Drawing.Size(30, 13);
             this.LblISBN.TabIndex = 0;
@@ -732,7 +723,7 @@
             // 
             this.LblNoPaginas.AutoSize = true;
             this.LblNoPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoPaginas.Location = new System.Drawing.Point(568, 248);
+            this.LblNoPaginas.Location = new System.Drawing.Point(568, 219);
             this.LblNoPaginas.Name = "LblNoPaginas";
             this.LblNoPaginas.Size = new System.Drawing.Size(79, 13);
             this.LblNoPaginas.TabIndex = 35;
@@ -741,7 +732,7 @@
             // TxtISBN
             // 
             this.TxtISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtISBN.Location = new System.Drawing.Point(147, 144);
+            this.TxtISBN.Location = new System.Drawing.Point(147, 130);
             this.TxtISBN.Name = "TxtISBN";
             this.TxtISBN.Size = new System.Drawing.Size(245, 22);
             this.TxtISBN.TabIndex = 3;
@@ -750,7 +741,7 @@
             // 
             this.LblNoEdicion.AutoSize = true;
             this.LblNoEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoEdicion.Location = new System.Drawing.Point(347, 248);
+            this.LblNoEdicion.Location = new System.Drawing.Point(347, 219);
             this.LblNoEdicion.Name = "LblNoEdicion";
             this.LblNoEdicion.Size = new System.Drawing.Size(76, 13);
             this.LblNoEdicion.TabIndex = 29;
@@ -759,7 +750,7 @@
             // NmPaginas
             // 
             this.NmPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmPaginas.Location = new System.Drawing.Point(673, 246);
+            this.NmPaginas.Location = new System.Drawing.Point(673, 217);
             this.NmPaginas.Name = "NmPaginas";
             this.NmPaginas.Size = new System.Drawing.Size(83, 23);
             this.NmPaginas.TabIndex = 8;
@@ -774,7 +765,7 @@
             // 
             this.LblAnioEdicion.AutoSize = true;
             this.LblAnioEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 248);
+            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 219);
             this.LblAnioEdicion.Name = "LblAnioEdicion";
             this.LblAnioEdicion.Size = new System.Drawing.Size(64, 13);
             this.LblAnioEdicion.TabIndex = 28;
@@ -783,7 +774,7 @@
             // NmEdicionNo
             // 
             this.NmEdicionNo.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmEdicionNo.Location = new System.Drawing.Point(443, 246);
+            this.NmEdicionNo.Location = new System.Drawing.Point(443, 217);
             this.NmEdicionNo.Name = "NmEdicionNo";
             this.NmEdicionNo.Size = new System.Drawing.Size(83, 23);
             this.NmEdicionNo.TabIndex = 7;
@@ -798,7 +789,7 @@
             // 
             this.CboEdicionAnio.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.CboEdicionAnio.FormattingEnabled = true;
-            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 246);
+            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 217);
             this.CboEdicionAnio.Name = "CboEdicionAnio";
             this.CboEdicionAnio.Size = new System.Drawing.Size(127, 23);
             this.CboEdicionAnio.TabIndex = 6;
@@ -812,7 +803,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1490, 761);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
@@ -821,6 +812,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLibro";
+            this.Opacity = 0.8D;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -893,7 +885,6 @@
         private System.Windows.Forms.Label LblidLibro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrpEjemplares;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnEliminarEjemplares;
         private System.Windows.Forms.Button BtnCancelar2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;

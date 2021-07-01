@@ -70,5 +70,11 @@ namespace SistemaBiblioteca.Negocio
             return Datos.Devolver(idPrestamo, FechaDevolucion);
         }
 
+        public static string Eliminar(int id)
+        {
+            DPrestamo Datos = new DPrestamo();
+            return Datos.Eliminar(id);
+        }
+
     }
 }

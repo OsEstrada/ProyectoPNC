@@ -348,8 +348,9 @@
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Usuario" Nullable="true" MaxLength="121" />
     <Property Type="String" Name="Titulo" Nullable="true" MaxLength="150" />
-    <Property Type="Int32" Name="Numero_Ejemplar" Nullable="false" />
-    <Property Type="DateTime" Name="Fecha_Prestamo" Nullable="false" />
+    <Property Type="Int32" Name="NumeroEjemplar" Nullable="false" />
+    <Property Type="DateTime" Name="FechaPrestamo" Nullable="false" />
+    <Property Type="DateTime" Name="FechaLimiteDevolucion" Nullable="true" />
   </ComplexType>
   <ComplexType Name="ListarProfesores_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />

@@ -30,17 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DsBiblioteca = new SistemaBiblioteca.Presentacion.Reportes.DsBiblioteca();
             this.ListarPrestamosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DsBiblioteca = new SistemaBiblioteca.Presentacion.Reportes.DsBiblioteca();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ListarPrestamosTableAdapter = new SistemaBiblioteca.Presentacion.Reportes.DsBibliotecaTableAdapters.ListarPrestamosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DsBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarPrestamosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DsBiblioteca)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ListarPrestamosBindingSource
+            // 
+            this.ListarPrestamosBindingSource.DataMember = "ListarPrestamos";
+            this.ListarPrestamosBindingSource.DataSource = this.DsBiblioteca;
+            // 
+            // DsBiblioteca
+            // 
+            this.DsBiblioteca.DataSetName = "DsBiblioteca";
+            this.DsBiblioteca.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.BackColor = System.Drawing.Color.Silver;
+            this.reportViewer1.BackColor = System.Drawing.Color.DimGray;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.ListarPrestamosBindingSource;
@@ -51,16 +61,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DsBiblioteca
-            // 
-            this.DsBiblioteca.DataSetName = "DsBiblioteca";
-            this.DsBiblioteca.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ListarPrestamosBindingSource
-            // 
-            this.ListarPrestamosBindingSource.DataMember = "ListarPrestamos";
-            this.ListarPrestamosBindingSource.DataSource = this.DsBiblioteca;
             // 
             // ListarPrestamosTableAdapter
             // 
@@ -76,8 +76,8 @@
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteLibros_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DsBiblioteca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ListarPrestamosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DsBiblioteca)).EndInit();
             this.ResumeLayout(false);
 
         }

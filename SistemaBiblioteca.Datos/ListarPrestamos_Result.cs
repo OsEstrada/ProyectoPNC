@@ -18,7 +18,8 @@ namespace SistemaBiblioteca.Datos
         public int Id { get; set; }
         public string Usuario { get; set; }
         public string Titulo { get; set; }
-        public int Numero_Ejemplar { get; set; }
-        public System.DateTime Fecha_Prestamo { get; set; }
+        public int NumeroEjemplar { get; set; }
+        public System.DateTime FechaPrestamo { get; set; }
+        public Nullable<System.DateTime> FechaLimiteDevolucion { get; set; }
     }
 }

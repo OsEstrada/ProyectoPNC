@@ -46,7 +46,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DgvListadoPrestamos = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrarDevolucion = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -92,6 +91,7 @@
             this.BtnRegistraDevolucion = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DgvActivosDevolucion = new System.Windows.Forms.DataGridView();
+            this.seleccionarDevolucion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DgvProfesoresDevolucion = new System.Windows.Forms.DataGridView();
             this.BtnBuscarProfesorDevolucion = new System.Windows.Forms.Button();
             this.TxtBuscarPorNombreDev = new System.Windows.Forms.TextBox();
@@ -100,7 +100,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.seleccionarDevolucion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.TabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -131,16 +130,15 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TabPrincipal, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1490, 761);
@@ -154,13 +152,13 @@
             this.TabPrincipal.Controls.Add(this.tabPage3);
             this.TabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabPrincipal.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TabPrincipal.Location = new System.Drawing.Point(0, 42);
+            this.TabPrincipal.Location = new System.Drawing.Point(0, 0);
             this.TabPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.TabPrincipal.Multiline = true;
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.Padding = new System.Drawing.Point(0, 0);
             this.TabPrincipal.SelectedIndex = 0;
-            this.TabPrincipal.Size = new System.Drawing.Size(1490, 719);
+            this.TabPrincipal.Size = new System.Drawing.Size(1490, 761);
             this.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.TabPrincipal.TabIndex = 1;
             this.TabPrincipal.SelectedIndexChanged += new System.EventHandler(this.TabPrincipal_SelectedIndexChanged);
@@ -172,7 +170,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1482, 693);
+            this.tabPage1.Size = new System.Drawing.Size(1482, 735);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -193,7 +191,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 693);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // DgvListadoPrestamos
@@ -206,14 +204,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DgvListadoPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvListadoPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvListadoPrestamos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DgvListadoPrestamos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DgvListadoPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListadoPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
             this.DgvListadoPrestamos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvListadoPrestamos.Location = new System.Drawing.Point(2, 42);
             this.DgvListadoPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.DgvListadoPrestamos.Name = "DgvListadoPrestamos";
+            this.DgvListadoPrestamos.ReadOnly = true;
             this.DgvListadoPrestamos.RowHeadersVisible = false;
             this.DgvListadoPrestamos.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -222,19 +219,12 @@
             this.DgvListadoPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvListadoPrestamos.RowTemplate.Height = 24;
             this.DgvListadoPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListadoPrestamos.Size = new System.Drawing.Size(1478, 609);
+            this.DgvListadoPrestamos.Size = new System.Drawing.Size(1478, 651);
             this.DgvListadoPrestamos.TabIndex = 0;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Width = 69;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnRegistrarDevolucion);
             this.panel2.Controls.Add(this.BtnEliminar);
             this.panel2.Controls.Add(this.btnAgregarPrestamo);
@@ -331,12 +321,12 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.RdbVerDevoluciones);
             this.panel3.Controls.Add(this.RdbVerPrestamos);
             this.panel3.Controls.Add(this.LblTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 655);
+            this.panel3.Location = new System.Drawing.Point(2, 697);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1478, 36);
@@ -385,7 +375,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1482, 693);
+            this.tabPage2.Size = new System.Drawing.Size(1482, 735);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro de Préstamo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -393,7 +383,7 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoScroll = true;
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1153F));
@@ -404,7 +394,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 693);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel3.TabIndex = 46;
             // 
             // panel4
@@ -434,15 +424,18 @@
             this.panel4.Controls.Add(this.PicProfesor);
             this.panel4.Controls.Add(this.picLibro);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(167, 3);
+            this.panel4.Location = new System.Drawing.Point(164, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1147, 687);
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.panel4.Size = new System.Drawing.Size(1153, 735);
             this.panel4.TabIndex = 0;
             // 
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(918, 787);
+            this.btnCancelar.Location = new System.Drawing.Point(915, 753);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(200, 30);
             this.btnCancelar.TabIndex = 70;
@@ -496,7 +489,7 @@
             this.BtnInsertarPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInsertarPrestamo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInsertarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertarPrestamo.Location = new System.Drawing.Point(59, 787);
+            this.BtnInsertarPrestamo.Location = new System.Drawing.Point(59, 753);
             this.BtnInsertarPrestamo.Name = "BtnInsertarPrestamo";
             this.BtnInsertarPrestamo.Size = new System.Drawing.Size(200, 30);
             this.BtnInsertarPrestamo.TabIndex = 64;
@@ -743,7 +736,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1482, 693);
+            this.tabPage3.Size = new System.Drawing.Size(1482, 735);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Registro de Devolucion";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -751,7 +744,7 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.AutoScroll = true;
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1153F));
@@ -762,11 +755,12 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1482, 693);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1482, 735);
             this.tableLayoutPanel4.TabIndex = 47;
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.BtnCancelar2);
             this.panel1.Controls.Add(this.label7);
@@ -780,15 +774,16 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(167, 3);
+            this.panel1.Location = new System.Drawing.Point(167, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 687);
+            this.panel1.Size = new System.Drawing.Size(1147, 732);
             this.panel1.TabIndex = 0;
             // 
             // BtnCancelar2
             // 
             this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(904, 622);
+            this.BtnCancelar2.Location = new System.Drawing.Point(904, 563);
             this.BtnCancelar2.Name = "BtnCancelar2";
             this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar2.TabIndex = 76;
@@ -800,7 +795,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(81, 332);
+            this.label7.Location = new System.Drawing.Point(81, 283);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(245, 19);
             this.label7.TabIndex = 67;
@@ -814,7 +809,7 @@
             this.BtnRegistraDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistraDevolucion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistraDevolucion.ForeColor = System.Drawing.Color.White;
-            this.BtnRegistraDevolucion.Location = new System.Drawing.Point(90, 622);
+            this.BtnRegistraDevolucion.Location = new System.Drawing.Point(90, 563);
             this.BtnRegistraDevolucion.Name = "BtnRegistraDevolucion";
             this.BtnRegistraDevolucion.Size = new System.Drawing.Size(200, 30);
             this.BtnRegistraDevolucion.TabIndex = 75;
@@ -826,7 +821,7 @@
             // 
             this.groupBox2.Controls.Add(this.DgvActivosDevolucion);
             this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(87, 370);
+            this.groupBox2.Location = new System.Drawing.Point(87, 321);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1017, 224);
             this.groupBox2.TabIndex = 74;
@@ -861,6 +856,12 @@
             this.DgvActivosDevolucion.Size = new System.Drawing.Size(1011, 203);
             this.DgvActivosDevolucion.TabIndex = 47;
             // 
+            // seleccionarDevolucion
+            // 
+            this.seleccionarDevolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.seleccionarDevolucion.HeaderText = "Seleccionar";
+            this.seleccionarDevolucion.Name = "seleccionarDevolucion";
+            // 
             // DgvProfesoresDevolucion
             // 
             this.DgvProfesoresDevolucion.AllowUserToAddRows = false;
@@ -872,7 +873,7 @@
             this.DgvProfesoresDevolucion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvProfesoresDevolucion.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvProfesoresDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProfesoresDevolucion.Location = new System.Drawing.Point(85, 121);
+            this.DgvProfesoresDevolucion.Location = new System.Drawing.Point(85, 101);
             this.DgvProfesoresDevolucion.Margin = new System.Windows.Forms.Padding(2);
             this.DgvProfesoresDevolucion.Name = "DgvProfesoresDevolucion";
             this.DgvProfesoresDevolucion.RowHeadersVisible = false;
@@ -883,7 +884,7 @@
             this.DgvProfesoresDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvProfesoresDevolucion.RowTemplate.Height = 24;
             this.DgvProfesoresDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProfesoresDevolucion.Size = new System.Drawing.Size(1019, 186);
+            this.DgvProfesoresDevolucion.Size = new System.Drawing.Size(1019, 163);
             this.DgvProfesoresDevolucion.TabIndex = 72;
             this.DgvProfesoresDevolucion.SelectionChanged += new System.EventHandler(this.DgvProfesoresDevolucion_SelectionChanged);
             // 
@@ -895,7 +896,7 @@
             this.BtnBuscarProfesorDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarProfesorDevolucion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarProfesorDevolucion.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarProfesorDevolucion.Location = new System.Drawing.Point(436, 83);
+            this.BtnBuscarProfesorDevolucion.Location = new System.Drawing.Point(436, 63);
             this.BtnBuscarProfesorDevolucion.Name = "BtnBuscarProfesorDevolucion";
             this.BtnBuscarProfesorDevolucion.Size = new System.Drawing.Size(136, 30);
             this.BtnBuscarProfesorDevolucion.TabIndex = 73;
@@ -906,7 +907,7 @@
             // TxtBuscarPorNombreDev
             // 
             this.TxtBuscarPorNombreDev.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtBuscarPorNombreDev.Location = new System.Drawing.Point(85, 89);
+            this.TxtBuscarPorNombreDev.Location = new System.Drawing.Point(85, 69);
             this.TxtBuscarPorNombreDev.Name = "TxtBuscarPorNombreDev";
             this.TxtBuscarPorNombreDev.Size = new System.Drawing.Size(326, 22);
             this.TxtBuscarPorNombreDev.TabIndex = 71;
@@ -915,7 +916,7 @@
             // 
             this.LblNombreDev.AutoSize = true;
             this.LblNombreDev.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNombreDev.Location = new System.Drawing.Point(82, 70);
+            this.LblNombreDev.Location = new System.Drawing.Point(82, 50);
             this.LblNombreDev.Name = "LblNombreDev";
             this.LblNombreDev.Size = new System.Drawing.Size(98, 13);
             this.LblNombreDev.TabIndex = 68;
@@ -925,7 +926,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(83, 37);
+            this.label6.Location = new System.Drawing.Point(83, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(175, 19);
             this.label6.TabIndex = 69;
@@ -934,7 +935,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.profesor;
-            this.pictureBox2.Location = new System.Drawing.Point(44, 31);
+            this.pictureBox2.Location = new System.Drawing.Point(44, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -944,7 +945,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.devolucion;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 332);
+            this.pictureBox1.Location = new System.Drawing.Point(42, 283);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -955,18 +956,12 @@
             // 
             this.ErrorIcono.ContainerControl = this;
             // 
-            // seleccionarDevolucion
-            // 
-            this.seleccionarDevolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.seleccionarDevolucion.HeaderText = "Seleccionar";
-            this.seleccionarDevolucion.Name = "seleccionarDevolucion";
-            // 
             // FrmPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1490, 761);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
@@ -975,6 +970,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPrestamo";
+            this.Opacity = 0.8D;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1031,7 +1027,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView DgvPrestamosActivos;
         private System.Windows.Forms.DataGridView DgvProfesoresPrestamo;

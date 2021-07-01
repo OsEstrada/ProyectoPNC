@@ -291,8 +291,8 @@ go;
 
 create or alter procedure ListarPrestamos
 as begin
-	select p.IdEjemplar, p.IdUsuario, p.IdPrestamo 'Id', u.Nombres+' '+u.Apellidos 'Usuario', l.Titulo, e.IdEjemplar 'Numero Ejemplar',
-			p.FechaPrestamo 'Fecha Prestamo', p.FechaDevolucion 'Fecha Límite Devolución'
+	select p.IdEjemplar, p.IdUsuario, p.IdPrestamo 'Id', u.Nombres+' '+u.Apellidos 'Usuario', l.Titulo, e.IdEjemplar 'NumeroEjemplar',
+			p.FechaPrestamo 'FechaPrestamo', p.FechaDevolucion 'FechaLimiteDevolucion'
 	from Prestamo p inner join Usuario u on p.IdUsuario = u.IdUsuario
 	inner join Ejemplar e on p.IdEjemplar = e.IdEjemplar
 	inner join Libro l on e.IdLibro = l.IdLibro

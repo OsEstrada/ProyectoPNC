@@ -30,14 +30,14 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.LblUser = new System.Windows.Forms.Label();
-            this.LblContrasenia = new System.Windows.Forms.Label();
-            this.BtnIniciarSesion = new System.Windows.Forms.Button();
-            this.LblIniciarSesion = new System.Windows.Forms.Label();
+            this.MtbContrasenia = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MtbContrasenia = new System.Windows.Forms.MaskedTextBox();
+            this.LblIniciarSesion = new System.Windows.Forms.Label();
+            this.BtnIniciarSesion = new System.Windows.Forms.Button();
+            this.LblContrasenia = new System.Windows.Forms.Label();
+            this.LblUser = new System.Windows.Forms.Label();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,13 +59,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1150, 581);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(604, 357);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::SistemaBiblioteca.Presentacion.Properties.Resources.black;
             this.panel1.Controls.Add(this.MtbContrasenia);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -75,68 +74,22 @@
             this.panel1.Controls.Add(this.LblUser);
             this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(288, 100);
+            this.panel1.Location = new System.Drawing.Point(15, -11);
             this.panel1.MaximumSize = new System.Drawing.Size(579, 389);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 380);
             this.panel1.TabIndex = 0;
             // 
-            // TxtUsuario
+            // MtbContrasenia
             // 
-            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(168, 146);
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(321, 25);
-            this.TxtUsuario.TabIndex = 1;
-            // 
-            // LblUser
-            // 
-            this.LblUser.AutoSize = true;
-            this.LblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LblUser.Location = new System.Drawing.Point(77, 151);
-            this.LblUser.Name = "LblUser";
-            this.LblUser.Size = new System.Drawing.Size(47, 15);
-            this.LblUser.TabIndex = 0;
-            this.LblUser.Text = "Usuario";
-            // 
-            // LblContrasenia
-            // 
-            this.LblContrasenia.AutoSize = true;
-            this.LblContrasenia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContrasenia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LblContrasenia.Location = new System.Drawing.Point(57, 192);
-            this.LblContrasenia.Name = "LblContrasenia";
-            this.LblContrasenia.Size = new System.Drawing.Size(67, 15);
-            this.LblContrasenia.TabIndex = 0;
-            this.LblContrasenia.Text = "Contraseña";
-            // 
-            // BtnIniciarSesion
-            // 
-            this.BtnIniciarSesion.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.BtnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.BtnIniciarSesion.Location = new System.Drawing.Point(168, 250);
-            this.BtnIniciarSesion.Name = "BtnIniciarSesion";
-            this.BtnIniciarSesion.Size = new System.Drawing.Size(321, 30);
-            this.BtnIniciarSesion.TabIndex = 3;
-            this.BtnIniciarSesion.Text = "Iniciar Sesión";
-            this.BtnIniciarSesion.UseVisualStyleBackColor = false;
-            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
-            // 
-            // LblIniciarSesion
-            // 
-            this.LblIniciarSesion.AutoSize = true;
-            this.LblIniciarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIniciarSesion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LblIniciarSesion.Location = new System.Drawing.Point(196, 64);
-            this.LblIniciarSesion.Name = "LblIniciarSesion";
-            this.LblIniciarSesion.Size = new System.Drawing.Size(214, 37);
-            this.LblIniciarSesion.TabIndex = 0;
-            this.LblIniciarSesion.Text = "INICIAR SESIÓN";
+            this.MtbContrasenia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.MtbContrasenia.ForeColor = System.Drawing.Color.Black;
+            this.MtbContrasenia.Location = new System.Drawing.Point(168, 187);
+            this.MtbContrasenia.Name = "MtbContrasenia";
+            this.MtbContrasenia.PromptChar = '*';
+            this.MtbContrasenia.Size = new System.Drawing.Size(321, 25);
+            this.MtbContrasenia.TabIndex = 2;
+            this.MtbContrasenia.UseSystemPasswordChar = true;
             // 
             // pictureBox2
             // 
@@ -158,27 +111,75 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // MtbContrasenia
+            // LblIniciarSesion
             // 
-            this.MtbContrasenia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.MtbContrasenia.ForeColor = System.Drawing.Color.Black;
-            this.MtbContrasenia.Location = new System.Drawing.Point(168, 187);
-            this.MtbContrasenia.Name = "MtbContrasenia";
-            this.MtbContrasenia.PromptChar = '*';
-            this.MtbContrasenia.Size = new System.Drawing.Size(321, 25);
-            this.MtbContrasenia.TabIndex = 2;
-            this.MtbContrasenia.UseSystemPasswordChar = true;
+            this.LblIniciarSesion.AutoSize = true;
+            this.LblIniciarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIniciarSesion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblIniciarSesion.Location = new System.Drawing.Point(196, 64);
+            this.LblIniciarSesion.Name = "LblIniciarSesion";
+            this.LblIniciarSesion.Size = new System.Drawing.Size(214, 37);
+            this.LblIniciarSesion.TabIndex = 0;
+            this.LblIniciarSesion.Text = "INICIAR SESIÓN";
             // 
-            // FrmRegistro
+            // BtnIniciarSesion
+            // 
+            this.BtnIniciarSesion.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.BtnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.BtnIniciarSesion.Location = new System.Drawing.Point(168, 250);
+            this.BtnIniciarSesion.Name = "BtnIniciarSesion";
+            this.BtnIniciarSesion.Size = new System.Drawing.Size(321, 30);
+            this.BtnIniciarSesion.TabIndex = 3;
+            this.BtnIniciarSesion.Text = "Iniciar Sesión";
+            this.BtnIniciarSesion.UseVisualStyleBackColor = false;
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
+            // 
+            // LblContrasenia
+            // 
+            this.LblContrasenia.AutoSize = true;
+            this.LblContrasenia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblContrasenia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblContrasenia.Location = new System.Drawing.Point(57, 192);
+            this.LblContrasenia.Name = "LblContrasenia";
+            this.LblContrasenia.Size = new System.Drawing.Size(67, 15);
+            this.LblContrasenia.TabIndex = 0;
+            this.LblContrasenia.Text = "Contraseña";
+            // 
+            // LblUser
+            // 
+            this.LblUser.AutoSize = true;
+            this.LblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblUser.Location = new System.Drawing.Point(77, 151);
+            this.LblUser.Name = "LblUser";
+            this.LblUser.Size = new System.Drawing.Size(47, 15);
+            this.LblUser.TabIndex = 0;
+            this.LblUser.Text = "Usuario";
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(168, 146);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(321, 25);
+            this.TxtUsuario.TabIndex = 1;
+            // 
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SistemaBiblioteca.Presentacion.Properties.Resources.BibliotecaFondo;
-            this.ClientSize = new System.Drawing.Size(1150, 581);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(604, 357);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmRegistro";
-            this.Text = "FrmRegistro";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FrmLogin";
+            this.Opacity = 0.85D;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

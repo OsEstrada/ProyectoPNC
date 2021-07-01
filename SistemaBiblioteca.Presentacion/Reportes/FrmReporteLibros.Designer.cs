@@ -50,7 +50,7 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.BackColor = System.Drawing.Color.Silver;
+            this.reportViewer1.BackColor = System.Drawing.Color.DimGray;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ListadoLibros";
             reportDataSource1.Value = this.ListarLibrosBindingSource;
