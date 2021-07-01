@@ -123,5 +123,10 @@ namespace SistemaBiblioteca.Presentacion
                 MnuReportes.Visible = true;
             }
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }
