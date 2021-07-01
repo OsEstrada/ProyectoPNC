@@ -40,8 +40,8 @@
           <Property Name="IdUsuario" Type="int" Nullable="false" />
           <Property Name="FechaPrestamo" Type="date" Nullable="false" />
           <Property Name="FechaDevolucion" Type="date" />
-          <Property Name="Estado" Type="bit" />
           <Property Name="FechaDevuelto" Type="date" />
+          <Property Name="Estado" Type="bit" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -237,8 +237,8 @@
           <Property Name="IdUsuario" Type="Int32" Nullable="false" />
           <Property Name="FechaPrestamo" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="FechaDevolucion" Type="DateTime" Precision="0" />
-          <Property Name="Estado" Type="Boolean" />
           <Property Name="FechaDevuelto" Type="DateTime" Precision="0" />
+          <Property Name="Estado" Type="Boolean" />
           <NavigationProperty Name="Ejemplar" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Prestamo" ToRole="Ejemplar" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_PRESTAMO_USUARIO" FromRole="Prestamo" ToRole="Usuario" />
         </EntityType>
@@ -618,8 +618,8 @@
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
                 <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="FechaDevuelto" ColumnName="FechaDevuelto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -922,7 +922,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -24,8 +24,6 @@ namespace SistemaBiblioteca.Presentacion
             DgvProfesoresDevolucion.DataSource = null;
 
             RdbVerPrestamos.Checked = true;
-
-            this.ListarPrestamos();
         }
 
         private void Buscar()
@@ -60,10 +58,6 @@ namespace SistemaBiblioteca.Presentacion
             try
             {
                 DgvListadoPrestamos.DataSource = NPrestamo.ListarPrestamos();
-
-                DgvListadoPrestamos.Columns[0].Visible = false;
-                DgvListadoPrestamos.Columns[1].Visible = false;
-
                 LblTotal.Text = "Total registros: " + Convert.ToString(DgvListadoPrestamos.Rows.Count);
             }
             catch (Exception ex)
@@ -126,35 +120,44 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (DgvListadoPrestamos.SelectedRows.Count == 0)
+                MessageBox.Show("No se ha seleccionado ningun registro para eliminar");
+            else
             {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("¿Realmente deseas eliminar el registro?", "Sistema de préstamo y devoluciones", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (Opcion == DialogResult.OK)
+                try
                 {
-                    int Codigo;
-                    string Rpta = "";
-
-                    Codigo = Convert.ToInt32(DgvListadoPrestamos.CurrentRow.Cells[2].Value);
-                    Rpta = NPrestamo.Eliminar(Codigo);
-
-                    if (Rpta.Equals("OK"))
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) registro(s)?", "Sistema de préstamo y devoluciones", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (Opcion == DialogResult.OK)
                     {
-                        this.MensajeOk("Se eliminó el registro: " + Convert.ToString(DgvListadoPrestamos.CurrentRow.Cells[2].Value));
-                    }
-                    else
-                    {
-                        this.MensajeError(Rpta);
-                    }
+                        int Codigo;
+                        string Rpta = "";
 
-                    RdbVerPrestamos.Checked = true;
-                    ListarPrestamos();
+                        foreach (DataGridViewRow row in DgvListadoPrestamos.SelectedRows)
+                        {
+                            if (Convert.ToBoolean(row.Cells[0].Value))
+                            {
+                                Codigo = Convert.ToInt32(row.Cells[1].Value);
+                                Rpta = NLibro.Eliminar(Codigo);
+
+                                if (Rpta.Equals("OK"))
+                                {
+                                    this.MensajeOk("Se eliminó el registro: " + Convert.ToString(row.Cells[1].Value));
+                                }
+                                else
+                                {
+                                    this.MensajeError(Rpta);
+                                }
+                            }
+                        }
+
+                        RdbVerPrestamos.Checked = true;
+                    }
                 }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
             }
 
         }
@@ -267,18 +270,23 @@ namespace SistemaBiblioteca.Presentacion
             {
                 string Rpta = "";
 
-                Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells["Id"].Value), DateTime.UtcNow.Date);
+                foreach (DataGridViewRow row in DgvActivosDevolucion.SelectedRows)
+                {
+                    Rpta = NPrestamo.Devolver(Convert.ToInt32(row.Cells["Id"].Value), DateTime.UtcNow.Date);
 
-                if (Rpta.Equals("OK"))
-                {
-                    this.MensajeOk("Registro agregado con éxito.");
-                    this.BtnCancelar2_Click_1(sender, e);
-                }
-                else
-                {
-                    this.MensajeError("Hubo un error. Favor Intente de nuevo");
-                    MessageBox.Show(Rpta);
-                }
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Registro agregado con éxito.");
+                        Limpiar();
+                        TabPrincipal.Controls.Remove(tabPage3);
+
+                    }
+                    else
+                    {
+                        this.MensajeError("Hubo un error. Favor Intente de nuevo");
+                        MessageBox.Show(Rpta);
+                    }
+                }   
             }
             catch (Exception ex)
             {
@@ -298,7 +306,9 @@ namespace SistemaBiblioteca.Presentacion
                 if (Rpta.Equals("OK"))
                 {
                     this.MensajeOk("Registro agregado con éxito.");
-                    this.btnCancelar_Click_1(sender, e);
+                    Limpiar();
+                    TabPrincipal.Controls.Remove(tabPage2);
+
                 }
                 else
                 {

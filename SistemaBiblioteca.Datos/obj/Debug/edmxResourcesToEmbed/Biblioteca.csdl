@@ -38,8 +38,8 @@
     <Property Name="IdUsuario" Type="Int32" Nullable="false" />
     <Property Name="FechaPrestamo" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="FechaDevolucion" Type="DateTime" Precision="0" />
-    <Property Name="Estado" Type="Boolean" />
     <Property Name="FechaDevuelto" Type="DateTime" Precision="0" />
+    <Property Name="Estado" Type="Boolean" />
     <NavigationProperty Name="Ejemplar" Relationship="Self.FK_PRESTAMO_EJEMPLAR" FromRole="Prestamo" ToRole="Ejemplar" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_PRESTAMO_USUARIO" FromRole="Prestamo" ToRole="Usuario" />
   </EntityType>
