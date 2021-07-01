@@ -23,26 +23,6 @@ namespace SistemaBiblioteca.Presentacion
             childForm.Show();
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ///toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
         private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.ArrangeIcons);
@@ -85,15 +65,19 @@ namespace SistemaBiblioteca.Presentacion
 
             if (frm.esReporteLibro)
             {
+                Cursor.Current = Cursors​.WaitCursor;
                 Reportes.FrmReporteLibros rpt = new Reportes.FrmReporteLibros();
                 rpt.MdiParent = this;
                 rpt.Show();
+                Cursor.Current = Cursors​.Default;
             }
             else
             {
+                Cursor.Current = Cursors​.WaitCursor;
                 Reportes.FrmReportePrestamos rpt = new Reportes.FrmReportePrestamos();
                 rpt.MdiParent = this;
                 rpt.Show();
+                Cursor.Current = Cursors​.Default;
             }
 
             frm.Close();

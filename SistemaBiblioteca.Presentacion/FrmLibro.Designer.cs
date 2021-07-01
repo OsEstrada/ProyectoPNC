@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DgvListadoLibros = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -62,8 +61,6 @@
             this.btnModificarEjemplar = new System.Windows.Forms.Button();
             this.BtnEliminarEjemplares = new System.Windows.Forms.Button();
             this.DgvEjemplares = new System.Windows.Forms.DataGridView();
-            this.SeleccionarEjemplar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.LblTotalEjemplares = new System.Windows.Forms.Label();
             this.picEditorial = new System.Windows.Forms.PictureBox();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.LblidLibro = new System.Windows.Forms.Label();
@@ -176,36 +173,28 @@
             this.DgvListadoLibros.AllowUserToAddRows = false;
             this.DgvListadoLibros.AllowUserToDeleteRows = false;
             this.DgvListadoLibros.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.DgvListadoLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvListadoLibros.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DgvListadoLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListadoLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
             this.DgvListadoLibros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvListadoLibros.Location = new System.Drawing.Point(0, 40);
             this.DgvListadoLibros.Margin = new System.Windows.Forms.Padding(0);
             this.DgvListadoLibros.Name = "DgvListadoLibros";
+            this.DgvListadoLibros.ReadOnly = true;
             this.DgvListadoLibros.RowHeadersVisible = false;
             this.DgvListadoLibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvListadoLibros.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.DgvListadoLibros.RowTemplate.Height = 24;
             this.DgvListadoLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListadoLibros.Size = new System.Drawing.Size(1482, 655);
             this.DgvListadoLibros.TabIndex = 0;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Width = 69;
             // 
             // panel2
             // 
@@ -392,7 +381,7 @@
             this.LblId.AutoSize = true;
             this.LblId.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.LblId.ForeColor = System.Drawing.Color.DarkRed;
-            this.LblId.Location = new System.Drawing.Point(668, 12);
+            this.LblId.Location = new System.Drawing.Point(668, 34);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(25, 13);
             this.LblId.TabIndex = 0;
@@ -403,7 +392,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(68, 6);
+            this.label15.Location = new System.Drawing.Point(68, 28);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(153, 19);
             this.label15.TabIndex = 0;
@@ -412,7 +401,7 @@
             // BtnCancelar2
             // 
             this.BtnCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar2.Location = new System.Drawing.Point(566, 579);
+            this.BtnCancelar2.Location = new System.Drawing.Point(566, 560);
             this.BtnCancelar2.Name = "BtnCancelar2";
             this.BtnCancelar2.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar2.TabIndex = 45;
@@ -424,7 +413,7 @@
             // picLibro
             // 
             this.picLibro.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.libro;
-            this.picLibro.Location = new System.Drawing.Point(29, 6);
+            this.picLibro.Location = new System.Drawing.Point(29, 28);
             this.picLibro.Name = "picLibro";
             this.picLibro.Size = new System.Drawing.Size(33, 31);
             this.picLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -437,15 +426,14 @@
             this.GrpEjemplares.Controls.Add(this.btnModificarEjemplar);
             this.GrpEjemplares.Controls.Add(this.BtnEliminarEjemplares);
             this.GrpEjemplares.Controls.Add(this.DgvEjemplares);
-            this.GrpEjemplares.Controls.Add(this.LblTotalEjemplares);
             this.GrpEjemplares.Controls.Add(this.picEditorial);
             this.GrpEjemplares.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrpEjemplares.Location = new System.Drawing.Point(39, 305);
+            this.GrpEjemplares.Location = new System.Drawing.Point(39, 302);
             this.GrpEjemplares.Name = "GrpEjemplares";
-            this.GrpEjemplares.Size = new System.Drawing.Size(727, 266);
+            this.GrpEjemplares.Size = new System.Drawing.Size(727, 233);
             this.GrpEjemplares.TabIndex = 44;
             this.GrpEjemplares.TabStop = false;
-            this.GrpEjemplares.Text = "          ";
+            this.GrpEjemplares.Text = "              Mantenimiento de Ejemplares";
             this.GrpEjemplares.Visible = false;
             // 
             // btnAgregarEjemplar
@@ -456,7 +444,7 @@
             this.btnAgregarEjemplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEjemplar.ForeColor = System.Drawing.Color.Firebrick;
             this.btnAgregarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.más_24;
-            this.btnAgregarEjemplar.Location = new System.Drawing.Point(624, 23);
+            this.btnAgregarEjemplar.Location = new System.Drawing.Point(624, 9);
             this.btnAgregarEjemplar.Name = "btnAgregarEjemplar";
             this.btnAgregarEjemplar.Size = new System.Drawing.Size(30, 29);
             this.btnAgregarEjemplar.TabIndex = 48;
@@ -472,7 +460,7 @@
             this.btnModificarEjemplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarEjemplar.ForeColor = System.Drawing.Color.Firebrick;
             this.btnModificarEjemplar.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.Editar;
-            this.btnModificarEjemplar.Location = new System.Drawing.Point(657, 23);
+            this.btnModificarEjemplar.Location = new System.Drawing.Point(657, 9);
             this.btnModificarEjemplar.Name = "btnModificarEjemplar";
             this.btnModificarEjemplar.Size = new System.Drawing.Size(30, 29);
             this.btnModificarEjemplar.TabIndex = 47;
@@ -488,7 +476,7 @@
             this.BtnEliminarEjemplares.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminarEjemplares.ForeColor = System.Drawing.Color.Firebrick;
             this.BtnEliminarEjemplares.Image = global::SistemaBiblioteca.Presentacion.Properties.Resources.basura_24;
-            this.BtnEliminarEjemplares.Location = new System.Drawing.Point(685, 23);
+            this.BtnEliminarEjemplares.Location = new System.Drawing.Point(685, 9);
             this.BtnEliminarEjemplares.Name = "BtnEliminarEjemplares";
             this.BtnEliminarEjemplares.Size = new System.Drawing.Size(30, 29);
             this.BtnEliminarEjemplares.TabIndex = 44;
@@ -501,66 +489,48 @@
             this.DgvEjemplares.AllowUserToAddRows = false;
             this.DgvEjemplares.AllowUserToDeleteRows = false;
             this.DgvEjemplares.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvEjemplares.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DgvEjemplares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvEjemplares.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SeleccionarEjemplar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEjemplares.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DgvEjemplares.Location = new System.Drawing.Point(31, 57);
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEjemplares.DefaultCellStyle = dataGridViewCellStyle17;
+            this.DgvEjemplares.Location = new System.Drawing.Point(31, 43);
             this.DgvEjemplares.Margin = new System.Windows.Forms.Padding(2);
             this.DgvEjemplares.Name = "DgvEjemplares";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEjemplares.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DgvEjemplares.ReadOnly = true;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEjemplares.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.DgvEjemplares.RowHeadersVisible = false;
             this.DgvEjemplares.RowHeadersWidth = 51;
             this.DgvEjemplares.RowTemplate.Height = 24;
             this.DgvEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEjemplares.Size = new System.Drawing.Size(684, 170);
             this.DgvEjemplares.TabIndex = 10;
-            // 
-            // SeleccionarEjemplar
-            // 
-            this.SeleccionarEjemplar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SeleccionarEjemplar.HeaderText = "Seleccionar";
-            this.SeleccionarEjemplar.Name = "SeleccionarEjemplar";
-            this.SeleccionarEjemplar.Width = 71;
-            // 
-            // LblTotalEjemplares
-            // 
-            this.LblTotalEjemplares.AutoSize = true;
-            this.LblTotalEjemplares.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTotalEjemplares.Location = new System.Drawing.Point(30, 236);
-            this.LblTotalEjemplares.Name = "LblTotalEjemplares";
-            this.LblTotalEjemplares.Size = new System.Drawing.Size(90, 13);
-            this.LblTotalEjemplares.TabIndex = 41;
-            this.LblTotalEjemplares.Text = "Total Ejemplares:";
             // 
             // picEditorial
             // 
@@ -576,7 +546,7 @@
             // 
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblTitulo.Location = new System.Drawing.Point(69, 60);
+            this.LblTitulo.Location = new System.Drawing.Point(69, 82);
             this.LblTitulo.Name = "LblTitulo";
             this.LblTitulo.Size = new System.Drawing.Size(49, 13);
             this.LblTitulo.TabIndex = 0;
@@ -587,7 +557,7 @@
             this.LblidLibro.AutoSize = true;
             this.LblidLibro.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.LblidLibro.ForeColor = System.Drawing.Color.DarkRed;
-            this.LblidLibro.Location = new System.Drawing.Point(699, 12);
+            this.LblidLibro.Location = new System.Drawing.Point(699, 34);
             this.LblidLibro.Name = "LblidLibro";
             this.LblidLibro.Size = new System.Drawing.Size(0, 13);
             this.LblidLibro.TabIndex = 42;
@@ -596,7 +566,7 @@
             // 
             this.LblAutor.AutoSize = true;
             this.LblAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAutor.Location = new System.Drawing.Point(68, 95);
+            this.LblAutor.Location = new System.Drawing.Point(68, 117);
             this.LblAutor.Name = "LblAutor";
             this.LblAutor.Size = new System.Drawing.Size(51, 13);
             this.LblAutor.TabIndex = 0;
@@ -605,7 +575,7 @@
             // TxtTitulo
             // 
             this.TxtTitulo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtTitulo.Location = new System.Drawing.Point(148, 57);
+            this.TxtTitulo.Location = new System.Drawing.Point(148, 79);
             this.TxtTitulo.Name = "TxtTitulo";
             this.TxtTitulo.Size = new System.Drawing.Size(608, 22);
             this.TxtTitulo.TabIndex = 1;
@@ -613,7 +583,7 @@
             // TxtDescripcion
             // 
             this.TxtDescripcion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtDescripcion.Location = new System.Drawing.Point(147, 167);
+            this.TxtDescripcion.Location = new System.Drawing.Point(147, 189);
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(609, 43);
@@ -627,7 +597,7 @@
             this.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnInsertar.Location = new System.Drawing.Point(70, 261);
+            this.BtnInsertar.Location = new System.Drawing.Point(70, 288);
             this.BtnInsertar.Name = "BtnInsertar";
             this.BtnInsertar.Size = new System.Drawing.Size(200, 30);
             this.BtnInsertar.TabIndex = 11;
@@ -639,7 +609,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.label13.Location = new System.Drawing.Point(68, 170);
+            this.label13.Location = new System.Drawing.Point(68, 192);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 13);
             this.label13.TabIndex = 0;
@@ -648,7 +618,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Location = new System.Drawing.Point(556, 261);
+            this.BtnCancelar.Location = new System.Drawing.Point(556, 288);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(200, 30);
             this.BtnCancelar.TabIndex = 12;
@@ -659,7 +629,7 @@
             // TxtMateria
             // 
             this.TxtMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtMateria.Location = new System.Drawing.Point(511, 130);
+            this.TxtMateria.Location = new System.Drawing.Point(511, 152);
             this.TxtMateria.Name = "TxtMateria";
             this.TxtMateria.Size = new System.Drawing.Size(245, 22);
             this.TxtMateria.TabIndex = 4;
@@ -669,7 +639,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(68, 25);
+            this.label3.Location = new System.Drawing.Point(68, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 13);
             this.label3.TabIndex = 0;
@@ -683,7 +653,7 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(39, 579);
+            this.BtnActualizar.Location = new System.Drawing.Point(39, 560);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(200, 30);
             this.BtnActualizar.TabIndex = 11;
@@ -694,7 +664,7 @@
             // TxtAutor
             // 
             this.TxtAutor.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtAutor.Location = new System.Drawing.Point(148, 92);
+            this.TxtAutor.Location = new System.Drawing.Point(148, 114);
             this.TxtAutor.Name = "TxtAutor";
             this.TxtAutor.Size = new System.Drawing.Size(608, 22);
             this.TxtAutor.TabIndex = 2;
@@ -703,7 +673,7 @@
             // 
             this.LblMateria.AutoSize = true;
             this.LblMateria.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblMateria.Location = new System.Drawing.Point(440, 133);
+            this.LblMateria.Location = new System.Drawing.Point(440, 155);
             this.LblMateria.Name = "LblMateria";
             this.LblMateria.Size = new System.Drawing.Size(46, 13);
             this.LblMateria.TabIndex = 0;
@@ -713,7 +683,7 @@
             // 
             this.LblISBN.AutoSize = true;
             this.LblISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblISBN.Location = new System.Drawing.Point(68, 133);
+            this.LblISBN.Location = new System.Drawing.Point(68, 155);
             this.LblISBN.Name = "LblISBN";
             this.LblISBN.Size = new System.Drawing.Size(30, 13);
             this.LblISBN.TabIndex = 0;
@@ -723,7 +693,7 @@
             // 
             this.LblNoPaginas.AutoSize = true;
             this.LblNoPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoPaginas.Location = new System.Drawing.Point(568, 219);
+            this.LblNoPaginas.Location = new System.Drawing.Point(568, 241);
             this.LblNoPaginas.Name = "LblNoPaginas";
             this.LblNoPaginas.Size = new System.Drawing.Size(79, 13);
             this.LblNoPaginas.TabIndex = 35;
@@ -732,7 +702,7 @@
             // TxtISBN
             // 
             this.TxtISBN.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.TxtISBN.Location = new System.Drawing.Point(147, 130);
+            this.TxtISBN.Location = new System.Drawing.Point(147, 152);
             this.TxtISBN.Name = "TxtISBN";
             this.TxtISBN.Size = new System.Drawing.Size(245, 22);
             this.TxtISBN.TabIndex = 3;
@@ -741,7 +711,7 @@
             // 
             this.LblNoEdicion.AutoSize = true;
             this.LblNoEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblNoEdicion.Location = new System.Drawing.Point(347, 219);
+            this.LblNoEdicion.Location = new System.Drawing.Point(347, 241);
             this.LblNoEdicion.Name = "LblNoEdicion";
             this.LblNoEdicion.Size = new System.Drawing.Size(76, 13);
             this.LblNoEdicion.TabIndex = 29;
@@ -750,7 +720,7 @@
             // NmPaginas
             // 
             this.NmPaginas.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmPaginas.Location = new System.Drawing.Point(673, 217);
+            this.NmPaginas.Location = new System.Drawing.Point(673, 239);
             this.NmPaginas.Name = "NmPaginas";
             this.NmPaginas.Size = new System.Drawing.Size(83, 23);
             this.NmPaginas.TabIndex = 8;
@@ -765,7 +735,7 @@
             // 
             this.LblAnioEdicion.AutoSize = true;
             this.LblAnioEdicion.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 219);
+            this.LblAnioEdicion.Location = new System.Drawing.Point(68, 241);
             this.LblAnioEdicion.Name = "LblAnioEdicion";
             this.LblAnioEdicion.Size = new System.Drawing.Size(64, 13);
             this.LblAnioEdicion.TabIndex = 28;
@@ -774,7 +744,7 @@
             // NmEdicionNo
             // 
             this.NmEdicionNo.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.NmEdicionNo.Location = new System.Drawing.Point(443, 217);
+            this.NmEdicionNo.Location = new System.Drawing.Point(443, 239);
             this.NmEdicionNo.Name = "NmEdicionNo";
             this.NmEdicionNo.Size = new System.Drawing.Size(83, 23);
             this.NmEdicionNo.TabIndex = 7;
@@ -789,7 +759,7 @@
             // 
             this.CboEdicionAnio.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.CboEdicionAnio.FormattingEnabled = true;
-            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 217);
+            this.CboEdicionAnio.Location = new System.Drawing.Point(147, 239);
             this.CboEdicionAnio.Name = "CboEdicionAnio";
             this.CboEdicionAnio.Size = new System.Drawing.Size(127, 23);
             this.CboEdicionAnio.TabIndex = 6;
@@ -832,7 +802,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLibro)).EndInit();
             this.GrpEjemplares.ResumeLayout(false);
-            this.GrpEjemplares.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEjemplares)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEditorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NmPaginas)).EndInit();
@@ -881,7 +850,6 @@
         private System.Windows.Forms.PictureBox picLibro;
         private System.Windows.Forms.PictureBox picEditorial;
         private System.Windows.Forms.DataGridView DgvEjemplares;
-        private System.Windows.Forms.Label LblTotalEjemplares;
         private System.Windows.Forms.Label LblidLibro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrpEjemplares;
@@ -890,8 +858,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label LblId;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SeleccionarEjemplar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregarEjemplar;

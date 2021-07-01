@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(434, 297);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CboEstado);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.TxtEditorial);
             this.Controls.Add(this.LblEditorial);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmEjemplar";
             this.ShowIcon = false;

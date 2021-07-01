@@ -101,7 +101,6 @@ namespace SistemaBiblioteca.Presentacion
             {
                 DgvEjemplares.DataSource = NEjemplar.Listar(Convert.ToInt32(LblidLibro.Text.Trim()));
             }
-            LblTotalEjemplares.Text = "Total Ejemplares: " + Convert.ToString(DgvEjemplares.Rows.Count);
             
         }
 
@@ -184,45 +183,36 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (DgvListadoLibros.SelectedRows.Count == 0)
-                MessageBox.Show("No se ha seleccionado ningun libro para eliminar");
-            else
+            try
             {
-                try
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente deseas eliminar este libro?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
                 {
-                    DialogResult Opcion;
-                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) libro(s)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (Opcion == DialogResult.OK)
+                    int Codigo;
+                    string Rpta = "";
+
+                    Codigo = Convert.ToInt32(DgvListadoLibros.CurrentRow.Cells[0].Value);
+                    Rpta = NLibro.Eliminar(Codigo);
+
+                    if (Rpta.Equals("OK"))
                     {
-                        int Codigo;
-                        string Rpta = "";
-
-                        foreach (DataGridViewRow row in DgvListadoLibros.SelectedRows)
-                        {
-                            if (Convert.ToBoolean(row.Cells[0].Value))
-                            {
-                                Codigo = Convert.ToInt32(row.Cells[1].Value);
-                                Rpta = NLibro.Eliminar(Codigo);
-
-                                if (Rpta.Equals("OK"))
-                                {
-                                    this.MensajeOk("Se eliminó el libro: " + Convert.ToString(row.Cells[2].Value));
-                                }
-                                else
-                                {
-                                    this.MensajeError(Rpta);
-                                }
-                            }
-                        }
-                        this.Listar();
+                        this.MensajeOk("Se eliminó el libro: " + Convert.ToString(DgvListadoLibros.CurrentRow.Cells[1].Value));
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    else
+                    {
+                        this.MensajeError(Rpta);
+
+                    }
+
+                    this.Listar();
                 }
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -245,44 +235,34 @@ namespace SistemaBiblioteca.Presentacion
 
         private void BtnEliminarEjemplares_Click(object sender, EventArgs e)
         {
-            if (DgvEjemplares.SelectedRows.Count == 0)
-                MessageBox.Show("No se ha seleccionado ningun ejemplar para eliminar");
-            else
+            try
             {
-                try
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente deseas eliminar este ejemplar?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
                 {
-                    DialogResult Opcion;
-                    Opcion = MessageBox.Show("Realmente deseas eliminar el(los) ejemplar(es)?", "Sistema de libros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (Opcion == DialogResult.OK)
+                    int Codigo;
+                    string Rpta = "";
+
+                    Codigo = Convert.ToInt32(DgvEjemplares.CurrentRow.Cells[1].Value);
+                    Rpta = NEjemplar.Eliminar(Codigo);
+
+                    if (Rpta.Equals("OK"))
                     {
-                        int Codigo;
-                        string Rpta = "";
-
-                        foreach (DataGridViewRow row in DgvEjemplares.SelectedRows)
-                        {
-                            if (Convert.ToBoolean(row.Cells[0].Value))
-                            {
-                                Codigo = Convert.ToInt32(row.Cells["Id"].Value);
-                                Rpta = NEjemplar.Eliminar(Codigo);
-
-                                if (Rpta.Equals("OK"))
-                                {
-                                    this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(row.Cells["Id"].Value));
-                                }
-                                else
-                                {
-                                    this.MensajeError(Rpta);
-                                }
-                            }
-                        }
-                        this.ListarEjemplares();
+                        this.MensajeOk("Se eliminó el ejemplar: " + Convert.ToString(DgvEjemplares.CurrentRow.Cells[1].Value));
                     }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+
+                    this.ListarEjemplares();
                 }
-                    catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
-                }
-        }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -292,6 +272,7 @@ namespace SistemaBiblioteca.Presentacion
                 TabPrincipal.Controls.Add(tabPage2);
             }
             TabPrincipal.SelectedIndex = 1;
+            this.LlenarAnios();
         }
 
         private void btnAgregarEjemplar_Click(object sender, EventArgs e)
@@ -346,6 +327,14 @@ namespace SistemaBiblioteca.Presentacion
             if (TabPrincipal.TabPages.Count < 2) TabPrincipal.Controls.Add(tabPage2);
             TabPrincipal.SelectedIndex = 1;
             Cursor.Current = Cursors.WaitCursor;
+        }
+
+        private void LlenarAnios()
+        {
+            for (int i = 1900; i <= DateTime.Today.Year; i++)
+            {
+                CboEdicionAnio.Items.Add(i);
+            }
         }
     }
 }
