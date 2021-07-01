@@ -24,6 +24,8 @@ namespace SistemaBiblioteca.Presentacion
             DgvProfesoresDevolucion.DataSource = null;
 
             RdbVerPrestamos.Checked = true;
+
+            this.ListarPrestamos();
         }
 
         private void Buscar()
@@ -265,21 +267,18 @@ namespace SistemaBiblioteca.Presentacion
             {
                 string Rpta = "";
 
-                foreach (DataGridViewRow row in DgvActivosDevolucion.SelectedRows)
-                {
-                    Rpta = NPrestamo.Devolver(Convert.ToInt32(row.Cells["Id"].Value), DateTime.UtcNow.Date);
+                Rpta = NPrestamo.Devolver(Convert.ToInt32(DgvActivosDevolucion.CurrentRow.Cells["Id"].Value), DateTime.UtcNow.Date);
 
-                    if (Rpta.Equals("OK"))
-                    {
-                        this.MensajeOk("Registro agregado con éxito.");
-                        this.BtnCancelar2_Click_1(sender, e);
-                    }
-                    else
-                    {
-                        this.MensajeError("Hubo un error. Favor Intente de nuevo");
-                        MessageBox.Show(Rpta);
-                    }
-                }   
+                if (Rpta.Equals("OK"))
+                {
+                    this.MensajeOk("Registro agregado con éxito.");
+                    this.BtnCancelar2_Click_1(sender, e);
+                }
+                else
+                {
+                    this.MensajeError("Hubo un error. Favor Intente de nuevo");
+                    MessageBox.Show(Rpta);
+                }
             }
             catch (Exception ex)
             {

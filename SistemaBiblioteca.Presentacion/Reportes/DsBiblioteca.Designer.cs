@@ -1827,9 +1827,6 @@ namespace SistemaBiblioteca.Presentacion.Reportes.DsBibliotecaTableAdapters {
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
             tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            tableMapping.ColumnMappings.Add("Numero Ejemplar", "NumeroEjemplar");
-            tableMapping.ColumnMappings.Add("Fecha Prestamo", "FechaPrestamo");
-            tableMapping.ColumnMappings.Add("Fecha Límite Devolución", "FechaLimiteDevolucion");
             tableMapping.ColumnMappings.Add("NumeroEjemplar", "NumeroEjemplar");
             tableMapping.ColumnMappings.Add("FechaPrestamo", "FechaPrestamo");
             tableMapping.ColumnMappings.Add("FechaLimiteDevolucion", "FechaLimiteDevolucion");

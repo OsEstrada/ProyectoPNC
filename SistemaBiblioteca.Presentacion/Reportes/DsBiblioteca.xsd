@@ -35,7 +35,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListarPrestamosTableAdapter" GeneratorDataComponentClassName="ListarPrestamosTableAdapter" Name="ListarPrestamos" UserDataComponentName="ListarPrestamosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BibliotecaConnectionString (Settings)" DbObjectName="Biblioteca.dbo.ListarPrestamos" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BibliotecaConnectionString (Settings)" DbObjectName="Biblioteca.dbo.ListarPrestamos" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ListarPrestamos</CommandText>
@@ -52,9 +52,6 @@
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
               <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
-              <Mapping SourceColumn="Numero Ejemplar" DataSetColumn="NumeroEjemplar" />
-              <Mapping SourceColumn="Fecha Prestamo" DataSetColumn="FechaPrestamo" />
-              <Mapping SourceColumn="Fecha Límite Devolución" DataSetColumn="FechaLimiteDevolucion" />
               <Mapping SourceColumn="NumeroEjemplar" DataSetColumn="NumeroEjemplar" />
               <Mapping SourceColumn="FechaPrestamo" DataSetColumn="FechaPrestamo" />
               <Mapping SourceColumn="FechaLimiteDevolucion" DataSetColumn="FechaLimiteDevolucion" />
@@ -69,7 +66,7 @@
   <xs:element name="DsBiblioteca" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsBiblioteca" msprop:Generator_UserDSName="DsBiblioteca">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ListarLibros" msprop:Generator_TableClassName="ListarLibrosDataTable" msprop:Generator_TableVarName="tableListarLibros" msprop:Generator_TablePropName="ListarLibros" msprop:Generator_RowDeletingName="ListarLibrosRowDeleting" msprop:Generator_RowChangingName="ListarLibrosRowChanging" msprop:Generator_RowEvHandlerName="ListarLibrosRowChangeEventHandler" msprop:Generator_RowDeletedName="ListarLibrosRowDeleted" msprop:Generator_UserTableName="ListarLibros" msprop:Generator_RowChangedName="ListarLibrosRowChanged" msprop:Generator_RowEvArgName="ListarLibrosRowChangeEvent" msprop:Generator_RowClassName="ListarLibrosRow">
+        <xs:element name="ListarLibros" msprop:Generator_TableClassName="ListarLibrosDataTable" msprop:Generator_TableVarName="tableListarLibros" msprop:Generator_RowChangedName="ListarLibrosRowChanged" msprop:Generator_TablePropName="ListarLibros" msprop:Generator_RowDeletingName="ListarLibrosRowDeleting" msprop:Generator_RowChangingName="ListarLibrosRowChanging" msprop:Generator_RowEvHandlerName="ListarLibrosRowChangeEventHandler" msprop:Generator_RowDeletedName="ListarLibrosRowDeleted" msprop:Generator_RowClassName="ListarLibrosRow" msprop:Generator_UserTableName="ListarLibros" msprop:Generator_RowEvArgName="ListarLibrosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
