@@ -19,6 +19,7 @@ namespace SistemaBiblioteca.Presentacion
         {
             this.Listar();
             TabPrincipal.Controls.Remove(tabPage2);
+            BtnActualizar.Visible = false;
         }
 
         private void Limpiar()
@@ -41,7 +42,6 @@ namespace SistemaBiblioteca.Presentacion
             BtnCancelar.Visible = true;
             DgvEjemplares.DataSource = null;
             ErrorIcono.Clear();
-            this.Listar();
         }
 
         private void Buscar()
@@ -123,6 +123,7 @@ namespace SistemaBiblioteca.Presentacion
                     {
                         this.MensajeOk("Se actualizó de forma correcta el registro");
                         this.BtnCancelar_Click(sender, e);
+                        this.Limpiar();
                         this.Listar();
                     }
                     else
@@ -219,6 +220,7 @@ namespace SistemaBiblioteca.Presentacion
         {
             TabPrincipal.SelectedIndex = 0;
             Limpiar();
+            this.Listar();
             TabPrincipal.Controls.Remove(tabPage2);
         }
 
